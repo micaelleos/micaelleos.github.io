@@ -7,7 +7,7 @@ google_analytics: # Tracking ID, e.g. "UA-000000-01"
 # Author
 author:
   name: Micaelle O. Souza
-  desc: Hello, welcame!
+  desc: Hello, welcome!
   email: micaelle.oliveira10@hotmail.com
   selfie: assets/img/profile.jpg
 
@@ -19,7 +19,7 @@ social:
   dribbble:
   facebook: 
   flickr:
-  github: https://github.com/micaelleos
+  github: micaelleos
   google_plus:
   instagram:
   keybase:
