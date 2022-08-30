@@ -1,6 +1,6 @@
 # Site settings
 title: M.O.S
-baseurl: "/inicio"
+baseurl: 
 url: "https://micaelleos.github.io"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
 
