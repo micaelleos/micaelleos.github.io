@@ -11,14 +11,8 @@ title: "Página Inicial"
   </div>
 </header>
 
-<section class="about">
-  <h2>Sobre Mim</h2>
-  <p>Trabalho na área de Inteligência Artificial, criando soluções inovadoras que resolvem problemas reais. Tenho um forte foco em aprendizado de máquina e visão computacional, e sou apaixonado por transformar necessidades em produtos escaláveis e de impacto.</p>
-  <a href="/about">Leia mais sobre minha jornada profissional</a>
-</section>
-
 <section class="portfolio">
-  <h2>Meu Portfólio</h2>
+  <h2>Portfólio</h2>
   <div class="portfolio-items">
     <div class="portfolio-item">
       <h3>Projeto 1</h3>
@@ -45,6 +39,12 @@ title: "Página Inicial"
       </div>
     {% endfor %}
   </div>
+</section>
+
+<section class="about">
+  <h2>Sobre</h2>
+  <p>Trabalho na área de Inteligência Artificial, criando soluções inovadoras que resolvem problemas reais. Tenho um forte foco em aprendizado de máquina e visão computacional, e sou apaixonado por transformar necessidades em produtos escaláveis e de impacto.</p>
+  <a href="/about">Leia mais sobre minha jornada profissional</a>
 </section>
 
 <!-- Seção de Contato (Exemplo) -->
