@@ -1,79 +1,88 @@
+/* Definindo um container centralizado para a página */
+.page-container {
+  margin: 0 auto; /* Garante que o conteúdo esteja centralizado */
+  max-width: 800px; /* Largura máxima para evitar que o conteúdo fique muito largo */
+  padding: 0 20px; /* Espaçamento nas laterais para evitar que o conteúdo toque nas bordas da tela */
+}
+
+/* Estilo para a navegação */
 .nav {
-  position: sticky; /* Faz com que a barra fique fixa no topo */
+  position: sticky; /* Faz com que a barra de navegação fique fixa no topo */
   top: 0; /* Define o ponto de sticky no topo */
   z-index: 10; /* Garante que a navegação esteja acima de outros elementos */
-  background-color: rgb(255, 255, 255); /* Define um fundo sólido para a barra */
+  background-color: rgb(255, 255, 255); /* Fundo sólido para a barra */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra abaixo da navegação */
   overflow: auto;
-
-  &-container {
-    margin: 1rem auto;
-    position: relative;
-    text-align: center;
-  }
-
-  &-title {
-    @include transition(all .2s ease-out);
-    color: $default-color;
-    display: inline-block;
-    margin: 0;
-    padding-right: .2rem;
-
-    &:hover,
-    &:focus {
-      opacity: .6;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    margin: 1rem 0 0;
-    padding: 0;
-    text-align: center;
-  }
-
-  li {
-    @include transition(all .2s ease-out);
-    color: $default-color;
-    display: inline-block;
-    opacity: .6;
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    &:hover,
-    &:focus {
-      opacity: 1;
-    }
-  }
-
-  a {
-    color: $default-color;
-    font-family: $sans-serif;
-    padding: 0.5rem 1rem; /* Padding vertical e horizontal */
-    display: inline-block; /* Garante que o padding seja aplicado corretamente */
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 4px; /* (Opcional) Bordas arredondadas para destaque */
-  }
-
-  a:hover,
-  a:focus {
-    background-color: rgba(0, 0, 0, 0.05); /* Adiciona um leve fundo ao passar o mouse */
-  }
 }
 
+.nav-container {
+  margin: 1rem auto;
+  position: relative;
+  text-align: center;
+  max-width: 1200px; /* Limita a largura da navegação */
+  padding: 0 20px; /* Espaçamento nas laterais */
+}
+
+.nav-title {
+  transition: all .2s ease-out;
+  color: #333; /* Cor do título */
+  display: inline-block;
+  margin: 0;
+  padding-right: .2rem;
+}
+
+.nav-title:hover,
+.nav-title:focus {
+  opacity: .6;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.nav li {
+  transition: all .2s ease-out;
+  color: #333; /* Cor dos itens de navegação */
+  display: inline-block;
+  opacity: .6;
+  padding: 0 2rem 0 0;
+}
+
+.nav li:last-child {
+  padding-right: 0;
+}
+
+.nav li:hover,
+.nav li:focus {
+  opacity: 1;
+}
+
+.nav a {
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  padding: 0.5rem 1rem; /* Padding vertical e horizontal */
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.nav a:hover,
+.nav a:focus {
+  background-color: rgba(0, 0, 0, 0.05); /* Efeito de hover */
+}
+
+/* Responsividade para telas maiores */
 @media (min-width: 600px) {
-  .nav {
-    &-container {
-      text-align: left;
-    }
+  .nav-container {
+    text-align: left;
+  }
 
-    ul {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-    }
+  .nav ul {
+    bottom: 0;
+    position: absolute;
+    right: 0;
   }
 }
-

@@ -1,7 +1,8 @@
 /* Hero Section */
 .hero {
-  background-color: #f4f4f4;
-  padding: 50px 20px;
+  background: linear-gradient(135deg, #b8d7e5, #d29bf4);
+  color: #fff;
+  padding: 150px 0 100px;
   text-align: center;
 }
 
@@ -15,9 +16,26 @@
   color: #666;
 }
 
+.hero .btn-contact {
+  display: inline-block;
+  background-color: #fff;
+  color: #af50ea;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .btn-contact:hover {
+  background-color: #af50ea;
+  color: #fff;
+}
+
 /* Blog Section */
 .blog {
-  margin: 50px 0;
+  margin: 50px auto; /* Centraliza a seção de blog */
+  max-width: 1000px; /* Define uma largura máxima para a seção */
+  padding: 0 20px; /* Adiciona espaçamento nas laterais */
 }
 
 .blog h2 {
@@ -61,6 +79,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 50px auto; /* Centraliza a seção de blog */
+  max-width: 1000px; /* Define uma largura máxima para a seção */
+  padding: 0 20px; /* Adiciona espaçamento nas laterais */
 }
 
 .portfolio-item {
@@ -91,6 +112,9 @@
 .about {
   padding: 50px 20px;
   text-align: center;
+  margin: 50px auto; /* Centraliza a seção de blog */
+  max-width: 1000px; /* Define uma largura máxima para a seção */
+  padding: 0 20px; /* Adiciona espaçamento nas laterais */
 }
 
 .about h2 {
