@@ -10,11 +10,6 @@ Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few
 * Change "Post" to "Project Portfolio"
   * You can manage your project experience just like running a blog.
 
-
-# Preview
-[![AP Screenshot](https://github.com/kssim/ap/blob/master/screenshot.png?raw=true)](https://kssim.github.io/ap/)
-
-
 # Usage
 1. Fork and clone the AP repo:
     * git clone https://github.com/kssim/ap.git

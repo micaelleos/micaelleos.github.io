@@ -4,6 +4,7 @@ title:  "Análise Financeira de Startups"
 info: "toy project"
 tech: "python"
 type: Project 
+image: https://vradvogados.com.br/wp-content/uploads/2024/11/071124_2.png
 ---
 
 O projeto completo pode ser encontrado em: [Análise Financeira de Startups](https://github.com/micaelleos/Portfolio-Data-Science/blob/main/ProfitPrediction/dataanalisys.ipynb)

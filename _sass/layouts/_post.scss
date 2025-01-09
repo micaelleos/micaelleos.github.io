@@ -13,11 +13,12 @@
   }
 
   &-title {
-    text-shadow: 0 1px 2px #3f3f3f;
     font-family: $sans-serif;
     font-size: 3rem;
     margin: 1rem 0;
-    text-align: center;
+    text-align: left; /* Alinha o título à esquerda */
+    padding-bottom: 1rem; /* Adiciona padding abaixo do título */
+    color: $default-shade; /* Ajusta a cor do título */
   }
 
   &-line {
@@ -48,4 +49,16 @@
     font-style: normal;
     text-align: center;
   }
+}
+
+/* Estilo da imagem do header do post sem sombra e bordas */
+.post-header-image {
+  width: 100%; /* A imagem ocupará toda a largura disponível */
+  height: 400px; /* Ajuste a altura conforme necessário */
+  object-fit: cover; /* A imagem será recortada para cobrir a área especificada, sem distorção */
+  display: block; /* Para garantir que a imagem seja exibida corretamente */
+  margin: 0 auto; /* Centraliza a imagem */
+  /* Removendo a borda e a sombra */
+  border-radius: 0; /* Sem bordas arredondadas */
+  box-shadow: none; /* Removendo a sombra */
 }

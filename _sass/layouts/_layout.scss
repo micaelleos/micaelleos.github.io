@@ -1,20 +1,9 @@
-.container {
-  margin: 0 auto;
-  max-width: 800px;
-  width: 80%;
-}
-
-main,
-footer,
-.nav-container {
-  display: block;
-  margin: 0 auto;
-  max-width: 800px;
-  width: 80%;
-}
-
 .nav {
-  box-shadow: 0 2px 2px -2px $shadow-color;
+  position: sticky; /* Faz com que a barra fique fixa no topo */
+  top: 0; /* Define o ponto de sticky no topo */
+  z-index: 10; /* Garante que a navegação esteja acima de outros elementos */
+  background-color: rgb(255, 255, 255); /* Define um fundo sólido para a barra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra abaixo da navegação */
   overflow: auto;
 
   &-container {
@@ -48,7 +37,6 @@ footer,
     color: $default-color;
     display: inline-block;
     opacity: .6;
-    padding: 0 2rem 0 0;
 
     &:last-child {
       padding-right: 0;
@@ -63,6 +51,15 @@ footer,
   a {
     color: $default-color;
     font-family: $sans-serif;
+    padding: 0.5rem 1rem; /* Padding vertical e horizontal */
+    display: inline-block; /* Garante que o padding seja aplicado corretamente */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 4px; /* (Opcional) Bordas arredondadas para destaque */
+  }
+
+  a:hover,
+  a:focus {
+    background-color: rgba(0, 0, 0, 0.05); /* Adiciona um leve fundo ao passar o mouse */
   }
 }
 
@@ -80,13 +77,3 @@ footer,
   }
 }
 
-footer {
-  font-family: $serif-secondary;
-  padding: 2rem 0;
-  text-align: center;
-
-  span {
-    color: $default-color;
-    font-size: .8rem;
-  }
-}

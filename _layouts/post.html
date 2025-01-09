@@ -3,8 +3,12 @@ layout: base
 ---
 
 <div class="post">
+
   <h2 class="post-title">{{ page.title }}</h2>
-  <div class="post-line"></div>
+  
+  {% if page.image %}
+  <img src="{{ page.image }}" alt="{{ page.title }}" class="post-header-image">
+  {% endif %}
 
   {{ content }}
 
