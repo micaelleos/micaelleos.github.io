@@ -1,5 +1,7 @@
 .post {
-  padding: 3rem 0;
+  max-width: 800px; /* Define a largura máxima do conteúdo principal */
+  margin: 50px auto; /* Centraliza horizontalmente e adiciona espaço vertical */
+  padding: 3rem 1rem;
 
   &-info {
     color: $default-tint;
@@ -14,11 +16,11 @@
 
   &-title {
     font-family: $sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 1rem 0;
-    text-align: left; /* Alinha o título à esquerda */
-    padding-bottom: 1rem; /* Adiciona padding abaixo do título */
-    color: $default-shade; /* Ajusta a cor do título */
+    text-align: center;
+    padding-bottom: 1rem;
+    color: $default-shade;
   }
 
   &-line {
@@ -31,34 +33,37 @@
   p {
     margin: 0 0 1rem;
     text-align: justify;
+    line-height: 1.6;
   }
 
   a:hover {
     text-decoration: underline;
   }
-
-  img {
-    margin: 0 auto 0.5rem;
-  }
-
-  img + em {
-    color: $default-tint;
-    display: block;
-    font-family: $sans-serif;
-    font-size: 0.9rem;
-    font-style: normal;
-    text-align: center;
-  }
 }
 
-/* Estilo da imagem do header do post sem sombra e bordas */
+/* Estilo da imagem do header do post */
 .post-header-image {
-  width: 100%; /* A imagem ocupará toda a largura disponível */
-  height: 400px; /* Ajuste a altura conforme necessário */
-  object-fit: cover; /* A imagem será recortada para cobrir a área especificada, sem distorção */
-  display: block; /* Para garantir que a imagem seja exibida corretamente */
-  margin: 0 auto; /* Centraliza a imagem */
-  /* Removendo a borda e a sombra */
-  border-radius: 0; /* Sem bordas arredondadas */
-  box-shadow: none; /* Removendo a sombra */
+  width: 100%; /* A imagem ocupa toda a largura do container principal */
+  max-width: 800px; /* Define a largura máxima */
+  height: 300px; /* Define uma altura fixa para garantir o formato retangular */
+  margin: 0 auto 2rem; /* Centraliza horizontalmente e adiciona espaço abaixo */
+  display: block;
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (Opcional) Adiciona sombra para destaque */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .post {
+    padding: 2rem 1rem;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  .post-header-image {
+    width: 100%; /* Ocupa toda a largura em dispositivos menores */
+    height: 250px; /* Altura reduzida para telas menores */
+  }
 }
