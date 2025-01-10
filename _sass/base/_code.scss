@@ -1,46 +1,53 @@
+/* Estilos para blocos de código e trechos de código */
 pre,
 code {
-  font-family: $monospaced;
+  font-family: 'Fira Code', monospace; /* Fonte moderna e monoespaçada */
 }
 
 code {
-  background-color: $grey-3;
-  border-radius: 3px;
-  color: $code-color;
-  font-size: 85%;
-  padding: .25em .5em;
+  background-color: #f4f4f6; /* Fundo cinza claro */
+  border-radius: 5px; /* Bordas arredondadas */
+  color: #2d2d2d; /* Texto em cinza escuro */
+  font-size: 0.9rem; /* Tamanho levemente reduzido */
+  padding: 0.3em 0.6em; /* Espaçamento interno */
 }
 
 pre {
-  margin: 0 0 1rem;
+  background-color: #2d2d2d; /* Fundo escuro para destacar blocos */
+  color: #f4f4f6; /* Texto claro para contraste */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 1.2rem; /* Espaçamento interno maior */
+  margin: 0 0 1.5rem; /* Espaço inferior */
+  overflow-x: auto; /* Scroll horizontal para códigos longos */
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra para destaque */
 }
 
 pre code {
-  background-color: transparent;
-  color: rgb(22, 19, 105);
-  font-size: 100%;
+  background-color: transparent; /* Remove o fundo duplicado */
+  color: #f4f4f6; /* Mantém o texto claro */
+  font-size: 1rem; /* Mantém o tamanho do código dentro do bloco */
   padding: 0;
 }
 
 .highlight {
-  background-color: $grey-3;
-  border-radius: 3px;
-  line-height: 1.4;
-  margin: 0 0 1rem;
-  padding: 1rem;
+  background-color: #2d2d2d; /* Fundo para realce */
+  border-radius: 8px; /* Bordas arredondadas */
+  line-height: 1.6; /* Espaçamento confortável */
+  margin: 0 0 1.5rem; /* Espaçamento inferior */
+  padding: 1.2rem; /* Espaçamento interno */
+}
 
-  pre {
-    margin-bottom: 0;
-    overflow-x: auto;
-  }
+.highlight pre {
+  margin-bottom: 0;
+  overflow-x: auto; /* Scroll horizontal para códigos longos */
+}
 
-  .lineno {
-    color: $default-tint;
-    display: inline-block; // Ensures the null space also isn't selectable
-    padding: 0 .75rem 0 .25rem;
-    // Make sure numbers aren't selectable
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
+.highlight .lineno {
+  color: #888; /* Números de linha em cinza médio */
+  display: inline-block; /* Garante alinhamento correto */
+  padding: 0 1rem 0 0.5rem; /* Espaçamento nos números de linha */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none; /* Números não podem ser selecionados */
 }

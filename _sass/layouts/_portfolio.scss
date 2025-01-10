@@ -1,49 +1,120 @@
-.portfolio {
-  &-item {
-    border-bottom: 1px solid $grey-2;
-    color: $default-color;
-    display: inline-block;
-    padding: 2rem 0;
+/* Estilos CSS */
+:root {
+  --primary-color: #b874e3;
+  --secondary-color: #7199ab;
+  --text-color: #333;
+  --bg-color: #f9f9f9;
+}
+/* Estilos para a página de listagem de posts (portfólio) */
+.blog {
+  font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+  display: flex;
+  flex-direction: column; /* Alinha os itens em coluna */
+  align-items: center; /* Centraliza os itens no eixo horizontal */
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
 
-    &:hover .portfolio-line,
-    &:focus .portfolio-line {
-      width: 5rem;
-    }
+.blog-item {
+  background-color: #fff; /* Fundo mais claro e neutro */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombras mais leves */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #333; /* Cor do texto mais neutra */
+  display: block;
+  padding: 20px;
+  width: 80%; /* Torna a caixa comprida */
+  max-width: 1200px;
+}
 
-    &:last-child {
-      border: 0;
-    }
+.blog-item:hover {
+  transform: translateY(-3px); /* Reduz a elevação ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  color:var(--primary-color); /* Substituir por um tom de cinza */
+  margin-bottom: 10px;
+}
+
+.blog-title:hover{
+  color:var(--secondary-color); /* Substituir por um tom de cinza */
+}
+
+.blog-line {
+  height: 2px;
+  background-color: #ddd; /* Linha mais suave */
+  margin-bottom: 15px;
+}
+
+.blog-content {
+  font-size: 0.9rem;
+  color: #666; /* Texto mais claro */
+}
+
+.blog-icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blog-icon i {
+  color: #777; /* Ícones em um cinza médio */
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.blog-icon-text {
+  color: #666;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Fundo neutro */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination a {
+  padding: 10px 20px;
+  background-color: #ddd; /* Botões menos vibrantes */
+  color: #333; /* Texto do botão em cinza escuro */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #bbb; /* Tom levemente mais escuro ao passar o mouse */
+}
+
+.pagination span {
+  font-weight: bold;
+  color: #555; /* Texto neutro */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .blog-item {
+    width: 95%; /* Ocupa quase toda a largura da tela */
   }
-  
-  &-title {
-    color: $default-shade;
-    display: block;
-    font-family: $sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: .5rem 0;
+
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  &-line {
-    @include transition(all .3s ease-out);
-    border-top: .2rem solid $default-shade;
-    display: block;
-    width: 2rem;
-  }
-
-  &-content {
-    margin-top: 1rem;
-    color: $default-shade;
-    font-family: $sans-serif;
-    font-size: 1rem;
-  }
-
-  &-icon {
-    margin-left: 1.3rem;
-    line-height: 2rem;
-  }
-
-  &-icon-text {
-    margin-left: 0.8rem;
+  .pagination a {
+    width: 100%;
+    text-align: center;
   }
 }

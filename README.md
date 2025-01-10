@@ -20,7 +20,7 @@ Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few
 4. Customize the theme
     * update _config.yml
 5. Run the Jekyll server
-    * jekyll serve
+    * bundle exec jekyll serve
 
 
 ## Structure

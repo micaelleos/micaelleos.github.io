@@ -1,69 +1,84 @@
+/* Estilos para a página de post */
 .post {
-  max-width: 800px; /* Define a largura máxima do conteúdo principal */
-  margin: 50px auto; /* Centraliza horizontalmente e adiciona espaço vertical */
-  padding: 3rem 1rem;
-
-  &-info {
-    color: $default-tint;
-    font-family: $serif-secondary;
-    letter-spacing: 0.5px;
-    text-align: center;
-
-    span {
-      font-style: italic;
-    }
-  }
-
-  &-title {
-    font-family: $sans-serif;
-    font-size: 2.5rem;
-    margin: 1rem 0;
-    text-align: center;
-    padding-bottom: 1rem;
-    color: $default-shade;
-  }
-
-  &-line {
-    border-top: 0.4rem solid $default-shade;
-    display: block;
-    margin: 0 auto 3rem;
-    width: 4rem;
-  }
-
-  p {
-    margin: 0 0 1rem;
-    text-align: justify;
-    line-height: 1.6;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff; /* Fundo suave */
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
-/* Estilo da imagem do header do post */
+.post-title {
+  font-size: 2rem; /* Tamanho reduzido */
+  color: #333; /* Cor neutra para o título */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .post-header-image {
-  width: 100%; /* A imagem ocupa toda a largura do container principal */
-  max-width: 800px; /* Define a largura máxima */
-  height: 300px; /* Define uma altura fixa para garantir o formato retangular */
-  margin: 0 auto 2rem; /* Centraliza horizontalmente e adiciona espaço abaixo */
-  display: block;
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* (Opcional) Adiciona sombra para destaque */
+  width: 100%;
+  max-height: 350px; /* Altura levemente reduzida */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-/* Responsividade */
+.post p {
+  font-size: 0.95rem; /* Tamanho levemente reduzido */
+  line-height: 1.6;
+  color: #555; /* Texto em cinza suave */
+  margin-bottom: 15px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 15px 20px; /* Padding menor */
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.pagination a {
+  padding: 8px 16px; /* Botões menores */
+  background-color: #4a90e2; /* Azul suave */
+  color: #fff; /* Texto branco */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500; /* Peso menor */
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #357ab8; /* Azul escuro ao passar o mouse */
+}
+
+.pagination .top {
+  background-color: #555; /* Cor neutra para o botão "topo" */
+}
+
+.pagination .top:hover {
+  background-color: #333; /* Escurece ao passar o mouse */
+}
+
 @media (max-width: 768px) {
-  .post {
-    padding: 2rem 1rem;
-  }
-
   .post-title {
-    font-size: 2rem;
+    font-size: 1.8rem; /* Reduz ainda mais em telas menores */
   }
 
-  .post-header-image {
-    width: 100%; /* Ocupa toda a largura em dispositivos menores */
-    height: 250px; /* Altura reduzida para telas menores */
+  .post p {
+    font-size: 0.9rem; /* Ajuste para fontes menores */
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pagination a {
+    width: 100%;
+    text-align: center;
   }
 }

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Micaelle O. Souza</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/">
+          <h2 class="nav-title">Micaelle O. Souza</h2>
+        </a>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <style>
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, p {
+    margin: 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Cabeçalho */
+.portfolio-header {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-header h1 {
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.portfolio-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Portfólio */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-info {
+    padding: 20px;
+    flex: 1;
+}
+
+.portfolio-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.portfolio-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.portfolio-image {
+    flex: 0 0 200px;
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .portfolio-item {
+    flex-direction: column;
+    }
+
+    .portfolio-image {
+    width: 100%;
+    height: 200px;
+    }
+
+    .portfolio-info {
+    text-align: center;
+    }
+}
+</style>
+
+
+  
+<main class="portfolio">
+<!-- Projetos serão inseridos aqui dinamicamente -->
+</main>
+
+<script>
+// Função para carregar e processar o arquivo Markdown
+async function loadProjects() {
+    const response = await fetch('../projects.md');
+    const markdown = await response.text();
+
+    // Converte o Markdown em objetos de projeto
+    const projects = parseMarkdown(markdown);
+
+    // Renderiza os projetos na página
+    const portfolioContainer = document.querySelector('.portfolio');
+    projects.forEach(project => {
+    const portfolioItem = document.createElement('div');
+    portfolioItem.classList.add('portfolio-item');
+
+    portfolioItem.innerHTML = `
+        <div class="portfolio-info">
+        <h2>${project.name}</h2>
+        <p>${project.description}</p>
+        <a href="${project.link}" target="_blank">Ver projeto</a>
+        </div>
+        <div class="portfolio-image">
+        <a href="${project.link}" target="_blank">
+            <img src="${project.image}" alt="${project.name}">
+        </a>
+        </div>
+    `;
+
+    portfolioContainer.appendChild(portfolioItem);
+    });
+}
+
+// Função para converter o Markdown em uma lista de objetos
+function parseMarkdown(markdown) {
+    const lines = markdown.split('\n');
+    const projects = [];
+    let currentProject = {};
+
+    lines.forEach(line => {
+    if (line.startsWith('### ')) {
+        if (Object.keys(currentProject).length) {
+        projects.push(currentProject);
+        }
+        currentProject = { name: line.replace('### ', '') };
+    } else if (line.startsWith('Descrição: ')) {
+        currentProject.description = line.replace('Descrição: ', '');
+    } else if (line.startsWith('Imagem: ')) {
+        currentProject.image = line.replace('Imagem: ', '');
+    } else if (line.startsWith('Link: ')) {
+        currentProject.link = line.replace('Link: ', '');
+    }
+    });
+
+    if (Object.keys(currentProject).length) {
+    projects.push(currentProject);
+    }
+
+    return projects;
+}
+
+// Carrega os projetos ao carregar a página
+document.addEventListener('DOMContentLoaded', loadProjects);
+</script>
+
+
+    </main>
+
+    <footer>
+      <p>&copy; 2025 - Micaelle O. Souza. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
