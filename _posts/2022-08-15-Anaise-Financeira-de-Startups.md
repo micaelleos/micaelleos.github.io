@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Análise Financeira de Startups"
-info: "toy project"
+info: Este artigo revela como a análise de dados pode ser a chave para o sucesso de startups, ajudando a prever lucros e otimizar investimentos. Ao entender os custos em áreas cruciais como administração, marketing e P&D, as empresas podem definir metas estratégicas claras, impulsionando seu crescimento e garantindo sua sobrevivência no mercado competitivo.
 tech: "python"
 type: Project 
 image: https://vradvogados.com.br/wp-content/uploads/2024/11/071124_2.png
