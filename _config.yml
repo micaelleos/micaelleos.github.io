@@ -1,12 +1,12 @@
 # Site settings
-title: Micaelle O. Souza
+title: MicaelleOS
 baseurl: 
 url: "https://micaelleos.github.io"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
 
 # Author
 author:
-  name: Micaelle O. Souza
+  name: Micaelle O.S.
   desc: Hello, welcome!
   email: micaelle.oliveira10@hotmail.com
   selfie: assets/img/profile.jpg
@@ -19,7 +19,7 @@ social:
   dribbble:
   facebook: 
   flickr:
-  github: micaelleos
+  github: https://github.com/micaelleos/
   google_plus:
   instagram:
   keybase:

@@ -9,7 +9,7 @@
 .nav {
   position: sticky; /* Faz com que a barra de navegação fique fixa no topo */
   top: 0; /* Define o ponto de sticky no topo */
-  z-index: 10; /* Garante que a navegação esteja acima de outros elementos */
+  z-index: 11; /* Garante que a navegação esteja acima de outros elementos */
   background-color: rgb(255, 255, 255); /* Fundo sólido para a barra */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra abaixo da navegação */
   overflow: auto;

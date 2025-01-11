@@ -7,7 +7,7 @@ title: "Página Inicial"
     <div class="container">
         <h1>Analista Funcional & Especialista em IA</h1>
         <p>Transformando ideias em soluções inovadoras de IA</p>
-        <a href="#contact" class="btn">Entre em contato</a>
+        <a href="#about" class="btn">Entre em contato</a>
     </div>
 
 </header>
@@ -27,13 +27,13 @@ title: "Página Inicial"
 
         <!-- Botões de redes sociais -->
         <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank" class="social-btn linkedin">
+            <a href="{{ site.social.linkedin }}" target="_blank" class="social-btn linkedin">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/seu-github" target="_blank" class="social-btn github">
+            <a href="{{ site.social.github }}" target="_blank" class="social-btn github">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:seuemail@dominio.com" class="social-btn email">
+            <a href="mailto:{{ site.author.email }}" class="social-btn email">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
@@ -96,27 +96,6 @@ title: "Página Inicial"
       {% endfor %}
     </div>
   </div>
-</section>
-
-<section id="contact" class="contact">
-    <div class="container">
-        <h2>Entre em Contato</h2>
-        <form class="contact-form" id="contact-form">
-            <div class="form-group">
-                <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensagem</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit" class="btn">Enviar Mensagem</button>
-        </form>
-    </div>
 </section>
 
 <script>
