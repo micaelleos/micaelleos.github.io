@@ -4,92 +4,92 @@ layout: base
 
 <style>
 /* Estilos Globais */
+:root {
+    --primary-color: #b874e3;
+    --secondary-color: #7199ab;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+}
+
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    padding: 10px;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-h1, p {
+h1, h2, p {
     margin: 0;
 }
 
 a {
-    color: #007BFF;
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #0056b3;
+    color: var(--secondary-color);
 }
 
-/* Cabeçalho */
-.portfolio-header {
-    text-align: center;
-    background-color: #fff;
-    padding: 40px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.portfolio-header h1 {
-    font-size: 2.5rem;
-    color: #222;
-}
-
-.portfolio-header p {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* Portfólio */
+/* Portfolio */
 .portfolio {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 40px 20px;
+    gap: 150px;
+    padding: 100px 50px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .portfolio-item {
     display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: left;
+    background-color: white;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.portfolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .portfolio-info {
-    padding: 20px;
+    padding: 30px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .portfolio-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #222;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
 }
 
 .portfolio-info p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.portfolio-info a {
+    align-self: flex-start;
+    padding: 5px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-info a:hover {
+    background-color: var(--secondary-color);
 }
 
 .portfolio-image {
-    flex: 0 0 200px;
+    flex: 0 0 250px;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .portfolio-image img {
@@ -100,32 +100,79 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-image img {
+.portfolio-image img {
     transform: scale(1.05);
 }
 
-/* Responsividade */
+.portfolio-intro {
+    text-align: left;
+    color: var(--text-color);
+    border-bottom: 1px solid #ddd;
+    padding: 80px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-intro h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+.portfolio-intro h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.3;
+}
+
+.portfolio-intro p {
+    font-size: 1rem;
+    max-width: 700px;
+    color: var(--text-color);
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
     .portfolio-item {
-    flex-direction: column;
+        flex-direction: column;
     }
 
     .portfolio-image {
-    width: 100%;
-    height: 200px;
+        width: 100%;
+        height: 250px;
     }
 
     .portfolio-info {
-    text-align: center;
+        text-align: center;
+    }
+
+    .portfolio-info a {
+        align-self: center;
     }
 }
+
+
 </style>
 
+<section class="portfolio-intro">
+    <div class="intro-content">
+        <h1>Portfolio</h1>
+        <h2>Projetos que Transformam Ideias em Soluções</h2>
+        <p>
+            Descubra minha coleção de projetos criados com paixão e expertise. 
+            Cada um deles combina inovação, design e funcionalidade para superar expectativas.
+        </p>
+    </div>
+</section>
 
-  
-<main class="portfolio">
+<section class="portfolio">
 <!-- Projetos serão inseridos aqui dinamicamente -->
-</main>
+</section>
 
 <script>
 // Função para carregar e processar o arquivo Markdown
