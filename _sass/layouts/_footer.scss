@@ -1,16 +1,40 @@
 .social-layer {
-  display: inline-block;
-  text-align: center;
+  display: flex; /* Usar flexbox para alinhamento em linha */
+  justify-content: center; /* Centralizar os itens */
+  align-items: center; /* Alinhar verticalmente ao centro */
   width: 100%;
-  color: lighten(gray, 50%);
+  color: #fff;
   font-size: 0.9em;
+  padding: 5px 0;
+}
 
-  .social-icons {
-    ul {
-     list-style: none;
-      li {
-        display: inline;
-      }
-    }
-  }
+.social-icons {
+  display: flex; /* Colocar os ícones na mesma linha */
+  gap: 20px; /* Espaçamento entre os ícones */
+  align-items: center; /* Garantir que os ícones e a p fiquem alinhados verticalmente */
+}
+
+.social-icons ul {
+  padding-inline-start: 0px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  list-style: none;
+  display: flex; /* Alinhar os itens em linha */
+}
+
+.social-icons li {
+  display: inline-block; /* Manter os ícones em linha */
+}
+
+.social-icons p {
+  margin: 0;
+  color: #fff;
+  padding: 0;
+  display: inline-block; /* Para que a tag p fique em linha com os ícones */
+  margin-left: 10px; /* Espaçamento à esquerda do texto */
+}
+
+footer {
+  background-color: #908e90;
+  padding: 0px 0; /* Adicionar padding para espaçamento interno */
 }
