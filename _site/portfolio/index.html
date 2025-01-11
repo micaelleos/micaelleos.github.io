@@ -136,7 +136,7 @@ a:hover {
     transition: transform 0.3s ease;
 }
 
-.portfolio-image img {
+.portfolio-image img:hover {
     transform: scale(1.05);
 }
 
@@ -173,6 +173,17 @@ a:hover {
 }
 
 /* Responsiveness */
+@media (max-width: 1024px) {
+    .portfolio {
+        padding: 50px 25px;
+        gap: 100px;
+    }
+
+    .portfolio-intro {
+        padding: 40px 40px;
+    }
+}
+
 @media (max-width: 768px) {
     .portfolio-item {
         flex-direction: column;
@@ -184,14 +195,33 @@ a:hover {
     }
 
     .portfolio-info {
-        text-align: center;
+        text-align: left;
     }
 
-    .portfolio-info a {
-        align-self: center;
+    .portfolio {
+        padding: 30px 15px;
+        gap: 75px;
+    }
+
+    .portfolio-intro {
+        padding: 30px 30px;
     }
 }
 
+@media (max-width: 480px) {
+    .portfolio {
+        padding: 20px 10px;
+        gap: 50px;
+    }
+
+    .portfolio-intro {
+        padding: 20px 20px;
+    }
+
+    .portfolio-info {
+        padding: 20px;
+    }
+}
 
 </style>
 
