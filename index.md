@@ -24,8 +24,23 @@ title: "Página Inicial"
                 <img src="/assets/img/profile.jpg" alt="Sua foto">
             </div>
         </div>
+
+        <!-- Botões de redes sociais -->
+        <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/seu-linkedin" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/seu-github" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:seuemail@dominio.com" class="social-btn email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </div>
 </section>
+
+
 
 <section id="specialties" class="specialties">
     <div class="container">

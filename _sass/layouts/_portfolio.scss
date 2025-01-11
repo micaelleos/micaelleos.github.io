@@ -7,7 +7,6 @@
 }
 /* Estilos para a página de listagem de posts (portfólio) */
 .blog {
-  font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
   display: flex;
   flex-direction: column; /* Alinha os itens em coluna */
   align-items: center; /* Centraliza os itens no eixo horizontal */
@@ -17,16 +16,17 @@
 }
 
 .blog-item {
+  font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
   background-color: #fff; /* Fundo mais claro e neutro */
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombras mais leves */
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  color: #333; /* Cor do texto mais neutra */
+  color: #666; /* Cor do texto mais neutra */
   display: block;
-  padding: 20px;
-  width: 80%; /* Torna a caixa comprida */
+  padding: 5px 20px;
+  width: 70%; /* Torna a caixa comprida */
   max-width: 1200px;
 }
 
@@ -63,13 +63,14 @@
 }
 
 .blog-icon i {
-  color: #777; /* Ícones em um cinza médio */
+  color: #666; /* Ícones em um cinza médio */
   margin-right: 10px;
   font-size: 1.2rem;
 }
 
 .blog-icon-text {
   color: #666;
+  font-weight: 500;
 }
 
 .pagination {
