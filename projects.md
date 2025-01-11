@@ -5,7 +5,7 @@ Link: https://greenwashingagent.streamlit.app/
 
 ### Functional AI Agent for Jira
 Descrição: Effortlessly create functional documentation with AI and integrate directly with Jira. Generate, refine, and export User Stories to your Jira project in just a few clicks! 🚀
-Imagem: https://via.placeholder.com/200
+Imagem: /assets/img/projects/Designer.jpeg
 Link: https://functionalagent.streamlit.app/
 
 ### AgenteEBI: AI para Estudos Bíblicos 
