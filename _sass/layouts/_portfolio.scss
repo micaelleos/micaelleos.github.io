@@ -5,55 +5,58 @@
   --text-color: #333;
   --bg-color: #f9f9f9;
 }
+
+
+
 /* Estilos para a página de listagem de posts (portfólio) */
 .blog {
   display: flex;
-  flex-direction: column; /* Alinha os itens em coluna */
-  align-items: center; /* Centraliza os itens no eixo horizontal */
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  flex: 1;
 }
 
 .blog-item {
   font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
-  background-color: #fff; /* Fundo mais claro e neutro */
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombras mais leves */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  color: #666; /* Cor do texto mais neutra */
+  color: #666;
   display: block;
   padding: 5px 20px;
-  width: 70%; /* Torna a caixa comprida */
+  width: 70%;
   max-width: 1200px;
 }
 
 .blog-item:hover {
-  transform: translateY(-3px); /* Reduz a elevação ao passar o mouse */
+  transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .blog-title {
   font-size: 1.5rem;
-  color:var(--primary-color); /* Substituir por um tom de cinza */
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
-.blog-title:hover{
-  color:var(--secondary-color); /* Substituir por um tom de cinza */
+.blog-title:hover {
+  color: var(--secondary-color);
 }
 
 .blog-line {
   height: 2px;
-  background-color: #ddd; /* Linha mais suave */
+  background-color: #ddd;
   margin-bottom: 15px;
 }
 
 .blog-content {
   font-size: 0.9rem;
-  color: #666; /* Texto mais claro */
+  color: #666;
 }
 
 .blog-icon {
@@ -63,7 +66,7 @@
 }
 
 .blog-icon i {
-  color: #666; /* Ícones em um cinza médio */
+  color: #666;
   margin-right: 10px;
   font-size: 1.2rem;
 }
@@ -73,49 +76,65 @@
   font-weight: 500;
 }
 
+.pagination-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  background-color: #f9f9f9;
+}
+
 .pagination {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #f9f9f9; /* Fundo neutro */
+  padding: 5px;
+  background-color: #f9f9f9;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .pagination a {
-  padding: 10px 20px;
-  background-color: #ddd; /* Botões menos vibrantes */
-  color: #333; /* Texto do botão em cinza escuro */
+  padding: 10px 10px;
+  background-color: #ddd;
+  color: #333;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  min-width: 100px;
+  text-align: center;
 }
 
 .pagination a:hover {
-  background-color: #bbb; /* Tom levemente mais escuro ao passar o mouse */
+  background-color: var(--primary-color);
 }
 
 .pagination span {
   font-weight: bold;
-  color: #555; /* Texto neutro */
+  color: var(--primary-color);
+  flex: 1;
+  text-align: center;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .blog-item {
-    width: 95%; /* Ocupa quase toda a largura da tela */
+  .blog-item,{
+    width: 95%;
   }
 
   .pagination {
     flex-direction: column;
     gap: 10px;
+    width: 100%;
   }
 
   .pagination a {
     width: 100%;
-    text-align: center;
+    min-width: unset;
+  }
+
+  .pagination span {
+    order: -1;
   }
 }
