@@ -5,7 +5,7 @@ Link: https://greenwashingagent.streamlit.app/
 
 ### Functional AI Agent for Jira
 Descrição: Effortlessly create functional documentation with AI and integrate directly with Jira. Generate, refine, and export User Stories to your Jira project in just a few clicks! 🚀
-Imagem: /assets/img/projects/Designer.jpeg
+Imagem: /assets/img/projects/DALL·E 2025-01-11 22.58.47 - A sleek and futuristic digital card showcasing an AI-powered tool for creating functional documentation and integrating with Jira. The card features a.webp
 Link: https://functionalagent.streamlit.app/
 
 ### AgenteEBI: AI para Estudos Bíblicos 
@@ -15,5 +15,5 @@ Link: https://ebiagent.streamlit.app/
 
 ### YoutubeQA
 Descrição: Agente Conversacional para Exploração de Vídeos do YouTube: Um assistente conversacional que utiliza transcrições de vídeos do YouTube para responder perguntas, fornecer resumos e destacar momentos importantes com timestamps.
-Imagem: https://via.placeholder.com/200
+Imagem: /assets/img/projects/DALL·E 2025-01-11 23.02.44 - A visually striking and futuristic website header for a project about a conversational AI assistant that explores YouTube videos. The design features .webp
 Link: https://chatytube.streamlit.app/
