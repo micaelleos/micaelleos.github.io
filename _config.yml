@@ -1,8 +1,8 @@
 # Site settings
 title: MicaelleOS
-baseurl: 
+baseurl: https://micaelleos.github.io/
 url: "https://micaelleos.github.io"
-google_analytics: # Tracking ID, e.g. "UA-000000-01"
+google_analytics: G-R4CWYLGXX1 # Tracking ID, e.g. "UA-000000-01"
 
 # Author
 author:
