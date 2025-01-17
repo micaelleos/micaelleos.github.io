@@ -70,6 +70,30 @@ title: "Página Inicial"
     </div>
 </section>
 
+<section id="badges" class="badges">
+    <div class="container">
+        <h2>Meus Badges</h2>
+        <div class="badges-grid">
+            <!-- Cole aqui o código de embedding do Credly para cada badge -->
+            <div class="badge-item">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="08294967-be69-4efa-817f-af0ce1e2952c" data-share-badge-host="https://www.credly.com">
+                </div>
+                <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge-item">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e93bd35b-d0f7-4a5e-a5e5-1d49d0370185" data-share-badge-host="https://www.credly.com"></div>
+                <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge-item">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bf0e01c8-ee64-4a9d-90fe-3907ad80fc3d" data-share-badge-host="https://www.credly.com"></div>
+                <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <!-- Adicione mais embeds conforme necessário -->
+        </div>
+    </div>
+</section>
+
+
 <section id="projects" class="projects">
     <div class="container">
         <h2>Projetos em Destaque</h2>

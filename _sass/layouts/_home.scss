@@ -113,6 +113,61 @@ section {
   margin-bottom: 20px;
 }
 
+/* Estilos para a seção de badge Credily */
+.badges {
+  background-color: #fff;
+  padding: 20px; /* Adicionado para espaçamento interno */
+}
+
+/* Grade responsiva */
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adapta a grade automaticamente */
+  gap: 20px; /* Reduzido para melhorar em telas menores */
+  justify-items: center;
+  justify-content: center;
+}
+
+/* Estilo do item de badge */
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px; /* Adicionado para um espaço interno melhor */
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Efeito hover */
+.badge-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .badges {
+    padding: 15px; /* Reduzido para telas menores */
+  }
+
+  .badges-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajuste de largura mínima */
+    gap: 30px; /* Espaço menor entre os itens */
+  }
+
+  .badge-item {
+    padding: 10px; /* Reduzido para manter proporção em telas pequenas */
+    transform: none; /* Remover transformações em dispositivos touch para evitar cliques acidentais */
+  }
+
+  .badge-item:hover {
+    transform: none; /* Desativa efeito hover em dispositivos móveis */
+    box-shadow: none; /* Remove sombras interativas */
+  }
+}
+
 /* Estilos para a seção de projetos */
 .projects {
   padding: 2rem 0;
