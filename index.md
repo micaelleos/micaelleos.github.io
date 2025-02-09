@@ -17,15 +17,13 @@ title: "Página Inicial"
         <h2>Sobre Mim</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Olá! Sou uma analista funcional apaixonada por desenvolver produtos de IA que transformam negócios e melhoram a vida das pessoas. Com anos de experiência na indústria, combino minha expertise técnica com uma abordagem centrada no usuário para criar soluções inovadoras e eficientes.</p>
-                <p>Minha missão é traduzir requisitos complexos em produtos de IA intuitivos e poderosos, sempre buscando o equilíbrio perfeito entre funcionalidade e usabilidade.</p>
+                <p>Olá! Sou engenheira eletrônica com uma paixão por Inteligência Artificial e inovação tecnológica. Minha trajetória combina expertise no desenvolvimento de soluções práticas em Machine Learning e LLMs com uma abordagem centrada no usuário, sempre buscando transformar desafios complexos em produtos que geram valor real.</p>
+                <p> Minha experiência me permite atuar como uma ponte estratégica entre as demandas de negócios e as melhores soluções técnicas, traduzindo requisitos complexos em ferramentas intuitivas e poderosas. Hoje, ajudo empresas e projetos a construírem soluções escaláveis e integradas com IA, desde a definição arquitetural até a implementação de pipelines completos — sempre com foco na eficiência e inovação. </p>
             </div>
             <div class="about-image">
-                <img src="/assets/img/profile.jpg" alt="Sua foto">
+                <img src="/assets/img/profile.jpg" alt="Minha foto">
             </div>
         </div>
-
-        <!-- Botões de redes sociais -->
         <div class="social-buttons">
             <a href="{{ site.social.linkedin }}" target="_blank" class="social-btn linkedin">
                 <i class="fab fa-linkedin"></i>
@@ -42,6 +40,7 @@ title: "Página Inicial"
 
 
 
+
 <section id="specialties" class="specialties">
     <div class="container">
         <h2>Minhas Especialidades</h2>
@@ -49,26 +48,27 @@ title: "Página Inicial"
             <div class="specialty-item">
                 <div class="specialty-icon">🧠</div>
                 <h3>Inteligência Artificial</h3>
-                <p>Desenvolvimento de soluções de IA personalizadas para diversos setores e aplicações.</p>
+                <p>Arquitetura e implementação de pipelines completos de Machine Learning e produtos com LLMs.</p>
+            </div>
+            <div class="specialty-item">
+                <div class="specialty-icon">🔍</div>
+                <h3>Integração de APIs Inteligentes</h3>
+                <p>Desenvolvimento de APIs inteligentes para automatização e entrega de soluções escaláveis.</p>
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">📊</div>
-                <h3>Análise Funcional</h3>
-                <p>Tradução de requisitos de negócios em especificações técnicas detalhadas.</p>
+                <h3>Tradução Técnica e Negócios</h3>
+                <p>Transformação de requisitos de negócios em soluções técnicas estratégicas.</p>
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">🚀</div>
-                <h3>Gestão de Projetos</h3>
-                <p>Coordenação eficiente de equipes e recursos para entregar projetos no prazo e dentro do orçamento.</p>
-            </div>
-            <div class="specialty-item">
-                <div class="specialty-icon">🎨</div>
-                <h3>UX/UI Design</h3>
-                <p>Criação de interfaces intuitivas e atraentes para produtos de IA.</p>
+                <h3>Análise Funcional e Prototipagem</h3>
+                <p>Levantamento de requisitos e prototipagem rápida com inteligência artificial integrada.</p>
             </div>
         </div>
     </div>
 </section>
+
 
 <section id="badges" class="badges">
     <div class="container">
