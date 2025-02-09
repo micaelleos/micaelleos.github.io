@@ -81,6 +81,12 @@ title: "Página Inicial"
                 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
             </div>
             <div class="badge-item">
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5166bd3e-c455-4389-99fe-ed84ecfddae1" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge-item">
+                    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7d132796-d481-41fb-b4ce-debb2c5af29d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge-item">
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="e93bd35b-d0f7-4a5e-a5e5-1d49d0370185" data-share-badge-host="https://www.credly.com"></div>
                 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
             </div>
@@ -123,6 +129,7 @@ title: "Página Inicial"
 </section>
 
 <script>
+    
     // JavaScript para animações e interatividade
     document.addEventListener('DOMContentLoaded', function() {
         // Animação suave de rolagem para links de navegação
