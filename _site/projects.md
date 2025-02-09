@@ -1,4 +1,4 @@
-### GRI SCORE: Análise de Relatórios ESG com Inteligência Artificial
+### GRI SCORE: Análise de Relatórios ESG com AI
 Descrição: Inteligência artificial para analisar relatórios ESG, detectar greenwashing e atribuir riscos com precisão. Inclui busca interativa via chat inteligente (RAG).
 Imagem: /assets/img/projects/DALL·E 2025-01-11 18.03.09 - A sleek and modern digital card showcasing a technology-themed design. The card highlights the concept of ESG (Environmental, Social, and Governance) .webp
 Link: https://greenwashingagent.streamlit.app/
