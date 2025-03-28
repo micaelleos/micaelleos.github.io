@@ -8,7 +8,7 @@ google_analytics: "G-R4CWYLGXX1" # Tracking ID, e.g. "UA-000000-01"
 author:
   name: Micaelle O.S.
   desc: Hello, welcome!
-  email: micaelle.oliveira10@hotmail.com
+  email: micaelle.osouza@gmail.com
   selfie: assets/img/profile.jpg
 
 # social
@@ -23,7 +23,7 @@ social:
   google_plus:
   instagram:
   keybase:
-  linkedin: https://www.linkedin.com/in/micaelle-oliveira-souza/
+  linkedin: https://www.linkedin.com/in/micaelle-souza/
   pinterest:
   reddit:
   soundcloud:
@@ -64,3 +64,10 @@ exclude:
 collections:
   certificates:
     permalink: /certificates/:path/
+
+
+# Idioma padrão do site
+default_lang: "en"
+
+# Configuração de idioma (pode ser 'en' ou 'pt' por exemplo)
+lang: "pt"
