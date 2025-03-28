@@ -1,27 +1,26 @@
 ---
 layout: base
-title: "Página Inicial"
+title: "Home Page"
 ---
 
 <header class="hero">
     <div class="container">
-        <h1>Analista Funcional & Especialista em IA</h1>
-        <p>Transformando ideias em soluções inovadoras de IA</p>
-        <a href="#about" class="btn">Entre em contato</a>
+        <h1>Functional Analyst & AI Specialist</h1>
+        <p>Transforming ideas into innovative AI solutions</p>
+        <a href="#about" class="btn">Contact Me</a>
     </div>
-
 </header>
 
 <section id="about" class="about">
     <div class="container">
-        <h2>Sobre Mim</h2>
+        <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Olá! Sou engenheira eletrônica com uma paixão por Inteligência Artificial e inovação tecnológica. Minha trajetória combina expertise no desenvolvimento de soluções práticas em Machine Learning e LLMs com uma abordagem centrada no usuário, sempre buscando transformar desafios complexos em produtos que geram valor real.</p>
-                <p> Minha experiência me permite atuar como uma ponte estratégica entre as demandas de negócios e as melhores soluções técnicas, traduzindo requisitos complexos em ferramentas intuitivas e poderosas. Hoje, ajudo empresas e projetos a construírem soluções escaláveis e integradas com IA, desde a definição arquitetural até a implementação de pipelines completos — sempre com foco na eficiência e inovação. </p>
+                <p>Hello! I am an electronic engineer with a passion for Artificial Intelligence and technological innovation. My journey combines expertise in developing practical solutions in Machine Learning and LLMs with a user-centered approach, always striving to turn complex challenges into products that deliver real value.</p>
+                <p> My experience allows me to act as a strategic bridge between business needs and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to full pipeline implementation — always focusing on efficiency and innovation. </p>
             </div>
             <div class="about-image">
-                <img src="/assets/img/profile.jpg" alt="Minha foto">
+                <img src="/assets/img/profile.jpg" alt="My photo">
             </div>
         </div>
         <div class="social-buttons">
@@ -38,43 +37,39 @@ title: "Página Inicial"
     </div>
 </section>
 
-
-
-
 <section id="specialties" class="specialties">
     <div class="container">
-        <h2>Minhas Especialidades</h2>
+        <h2>My Specialties</h2>
         <div class="specialty-grid">
             <div class="specialty-item">
                 <div class="specialty-icon">🧠</div>
-                <h3>Inteligência Artificial</h3>
-                <p>Arquitetura e implementação de pipelines completos de Machine Learning e produtos com LLMs.</p>
+                <h3>Artificial Intelligence</h3>
+                <p>Architecture and implementation of complete Machine Learning pipelines and products with LLMs.</p>
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">🔍</div>
-                <h3>Integração de APIs Inteligentes</h3>
-                <p>Desenvolvimento de APIs inteligentes para automatização e entrega de soluções escaláveis.</p>
+                <h3>Smart API Integration</h3>
+                <p>Development of smart APIs for automation and delivery of scalable solutions.</p>
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">📊</div>
-                <h3>Tradução Técnica e Negócios</h3>
-                <p>Transformação de requisitos de negócios em soluções técnicas estratégicas.</p>
+                <h3>Technical and Business Translation</h3>
+                <p>Transformation of business requirements into strategic technical solutions.</p>
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">🚀</div>
-                <h3>Análise Funcional e Prototipagem</h3>
-                <p>Levantamento de requisitos e prototipagem rápida com inteligência artificial integrada.</p>
+                <h3>Functional Analysis and Prototyping</h3>
+                <p>Requirements gathering and rapid prototyping with integrated artificial intelligence.</p>
             </div>
         </div>
     </div>
 </section>
 
-
 <section id="badges" class="badges">
     <div class="container">
-        <h2>Meus Badges</h2>
+        <h2>My Badges</h2>
         <div class="badges-grid">
-            <!-- Cole aqui o código de embedding do Credly para cada badge -->
+            <!-- Embed code from Credly for each badge here -->
             <div class="badge-item">
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="08294967-be69-4efa-817f-af0ce1e2952c" data-share-badge-host="https://www.credly.com">
                 </div>
@@ -94,15 +89,14 @@ title: "Página Inicial"
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bf0e01c8-ee64-4a9d-90fe-3907ad80fc3d" data-share-badge-host="https://www.credly.com"></div>
                 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
             </div>
-            <!-- Adicione mais embeds conforme necessário -->
+            <!-- Add more embeds as necessary -->
         </div>
     </div>
 </section>
 
-
 <section id="projects" class="projects">
     <div class="container">
-        <h2>Projetos em Destaque</h2>
+        <h2>Featured Projects</h2>
         <div class="carousel">
             <button class="carousel-prev">❮</button>
             <div class="carousel-wrapper">
@@ -115,13 +109,13 @@ title: "Página Inicial"
 
 <section>
   <div class="container">
-    <h2>Últimos Posts do Blog</h2>
+    <h2>Latest Blog Posts</h2>
     <div class="posts2">
       {% for post in site.posts %}
         <div class="post2">
           <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
           <p>{{ post.excerpt }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Leia mais</a>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more</a>
         </div>
       {% endfor %}
     </div>
@@ -129,10 +123,9 @@ title: "Página Inicial"
 </section>
 
 <script>
-    
-    // JavaScript para animações e interatividade
+    // JavaScript for animations and interactivity
     document.addEventListener('DOMContentLoaded', function() {
-        // Animação suave de rolagem para links de navegação
+        // Smooth scrolling animation for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -142,7 +135,7 @@ title: "Página Inicial"
             });
         });
 
-        // Animação de entrada para elementos quando entram na viewport
+        // Entry animation for elements when they enter the viewport
         const animateOnScroll = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -160,12 +153,12 @@ title: "Página Inicial"
             observer.observe(item);
         });
 
-        // Formulário de contato
+        // Contact form
         const contactForm = document.getElementById('contact-form');
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Aqui você pode adicionar a lógica para enviar o formulário
-            alert('Obrigado pelo seu contato! Retornaremos em breve.');
+            // You can add logic here to send the form
+            alert('Thank you for contacting us! We will get back to you soon.');
             contactForm.reset();
         });
     });
@@ -180,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const prevButton = document.querySelector('.carousel-prev');
         const nextButton = document.querySelector('.carousel-next');
 
-        // Renderiza os projetos
+        // Render the projects
         projects.forEach(project => {
             const projectItem = document.createElement('div');
             projectItem.classList.add('project-item');
@@ -190,26 +183,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="project-image" style="background-image: url('${project.image}'); height: 150px; background-size: cover; border-radius: 8px;"></div>
                 <h3>${project.name}</h3>
                 <p>${project.description}</p>
-                Ver Projeto</a>
+                View Project</a>
             `;
 
             projectGrid.appendChild(projectItem);
         });
 
-        // Configuração do carrossel
-        const projectWidth = projectGrid.children[0].offsetWidth + 20; // largura + gap
-        const visibleProjects = window.innerWidth <= 768 ? 1 : 3; // Responsivo: 1 projeto em telas pequenas, 3 em maiores
+        // Carousel setup
+        const projectWidth = projectGrid.children[0].offsetWidth + 20; // width + gap
+        const visibleProjects = window.innerWidth <= 768 ? 1 : 3; // Responsive: 1 project on small screens, 3 on larger ones
         const totalProjects = projects.length;
         const maxIndex = Math.ceil(totalProjects / visibleProjects) - 1;
         let currentIndex = 0;
 
-        // Atualiza o carrossel
+        // Update the carousel
         const updateCarousel = () => {
             const offset = -(currentIndex * projectWidth * visibleProjects);
             projectGrid.style.transform = `translateX(${offset}px)`;
         };
 
-        // Configura os botões
+        // Set up buttons
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex > 0) ? currentIndex - 1 : maxIndex;
             updateCarousel();
@@ -220,9 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCarousel();
         });
 
-        // Ajusta o carrossel ao redimensionar a janela
+        // Adjust carousel on window resize
         window.addEventListener('resize', () => {
-            currentIndex = 0; // Reinicia o carrossel ao redimensionar
+            currentIndex = 0; // Reset carousel on resize
             updateCarousel();
         });
     }
@@ -256,5 +249,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadProjects();
 });
-
 </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="en">
 
   <head>
   <meta charset="UTF-8">
@@ -41,7 +41,7 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "AI Consulting",
+      "name": "Consultoria de IA",
       "image": "/assets/img/profile.jpg",
       "address": {
         "@type": "PostalAddress",
@@ -88,7 +88,6 @@
         <p>Transforming ideas into innovative AI solutions</p>
         <a href="#about" class="btn">Contact Me</a>
     </div>
-
 </header>
 
 <section id="about" class="about">
@@ -96,21 +95,21 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Hello! I am an electronics engineer with a passion for Artificial Intelligence and technological innovation. My journey combines expertise in developing practical Machine Learning and LLM solutions with a user-centered approach, always striving to turn complex challenges into products that generate real value.</p>
-                <p> My experience allows me to act as a strategic bridge between business demands and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to the implementation of complete pipelines — always with a focus on efficiency and innovation. </p>
+                <p>Hello! I am an electronic engineer with a passion for Artificial Intelligence and technological innovation. My journey combines expertise in developing practical solutions in Machine Learning and LLMs with a user-centered approach, always striving to turn complex challenges into products that deliver real value.</p>
+                <p> My experience allows me to act as a strategic bridge between business needs and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to full pipeline implementation — always focusing on efficiency and innovation. </p>
             </div>
             <div class="about-image">
                 <img src="/assets/img/profile.jpg" alt="My photo" />
             </div>
         </div>
         <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/micaelle-oliveira-souza/" target="_blank" class="social-btn linkedin">
+            <a href="https://www.linkedin.com/in/micaelle-souza/" target="_blank" class="social-btn linkedin">
                 <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://github.com/micaelleos/" target="_blank" class="social-btn github">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="mailto:micaelle.oliveira10@hotmail.com" class="social-btn email">
+            <a href="mailto:micaelle.osouza@gmail.com" class="social-btn email">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
@@ -128,13 +127,13 @@
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">🔍</div>
-                <h3>Integration of Smart APIs</h3>
-                <p>Development of intelligent APIs for automation and delivery of scalable solutions.</p>
+                <h3>Smart API Integration</h3>
+                <p>Development of smart APIs for automation and delivery of scalable solutions.</p>
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">📊</div>
                 <h3>Technical and Business Translation</h3>
-                <p>Transforming business requirements into strategic technical solutions.</p>
+                <p>Transformation of business requirements into strategic technical solutions.</p>
             </div>
             <div class="specialty-item">
                 <div class="specialty-icon">🚀</div>
@@ -149,7 +148,7 @@
     <div class="container">
         <h2>My Badges</h2>
         <div class="badges-grid">
-            <!-- Embed code for each badge -->
+            <!-- Embed code from Credly for each badge here -->
             <div class="badge-item">
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="08294967-be69-4efa-817f-af0ce1e2952c" data-share-badge-host="https://www.credly.com">
                 </div>
@@ -169,7 +168,7 @@
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bf0e01c8-ee64-4a9d-90fe-3907ad80fc3d" data-share-badge-host="https://www.credly.com"></div>
                 <script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
             </div>
-            <!-- Add more embeds as needed -->
+            <!-- Add more embeds as necessary -->
         </div>
     </div>
 </section>
@@ -193,8 +192,8 @@
     <div class="posts2">
       
         <div class="post2">
-          <h3><a href="/2022-08-15/Anaise-Financeira-de-Startups">Financial Analysis of Startups</a></h3>
-          <p><p>The complete project can be found here: <a href="https://github.com/micaelleos/Portfolio-Data-Science/blob/main/ProfitPrediction/dataanalisys.ipynb">Financial Analysis of Startups</a></p>
+          <h3><a href="/2022-08-15/Anaise-Financeira-de-Startups">Análise Financeira de Startups</a></h3>
+          <p><p>O projeto completo pode ser encontrado em: <a href="https://github.com/micaelleos/Portfolio-Data-Science/blob/main/ProfitPrediction/dataanalisys.ipynb">Análise Financeira de Startups</a></p>
 
 </p>
           <a href="/2022-08-15/Anaise-Financeira-de-Startups" class="read-more">Read more</a>
@@ -205,7 +204,6 @@
 </section>
 
 <script>
-    
     // JavaScript for animations and interactivity
     document.addEventListener('DOMContentLoaded', function() {
         // Smooth scrolling animation for navigation links
@@ -218,7 +216,7 @@
             });
         });
 
-        // Animation on entry for elements when they enter the viewport
+        // Entry animation for elements when they enter the viewport
         const animateOnScroll = (entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -240,8 +238,8 @@
         const contactForm = document.getElementById('contact-form');
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Here you can add logic to send the form
-            alert('Thank you for reaching out! We will get back to you soon.');
+            // You can add logic here to send the form
+            alert('Thank you for contacting us! We will get back to you soon.');
             contactForm.reset();
         });
     });
@@ -274,18 +272,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Carousel setup
         const projectWidth = projectGrid.children[0].offsetWidth + 20; // width + gap
-        const visibleProjects = window.innerWidth <= 768 ? 1 : 3; // Responsive: 1 project on small screens, 3 on larger
+        const visibleProjects = window.innerWidth <= 768 ? 1 : 3; // Responsive: 1 project on small screens, 3 on larger ones
         const totalProjects = projects.length;
         const maxIndex = Math.ceil(totalProjects / visibleProjects) - 1;
         let currentIndex = 0;
 
-        // Update carousel
+        // Update the carousel
         const updateCarousel = () => {
             const offset = -(currentIndex * projectWidth * visibleProjects);
             projectGrid.style.transform = `translateX(${offset}px)`;
         };
 
-        // Configure buttons
+        // Set up buttons
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex > 0) ? currentIndex - 1 : maxIndex;
             updateCarousel();
@@ -296,9 +294,9 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCarousel();
         });
 
-        // Adjust the carousel on window resize
+        // Adjust carousel on window resize
         window.addEventListener('resize', () => {
-            currentIndex = 0; // Reset the carousel on resize
+            currentIndex = 0; // Reset carousel on resize
             updateCarousel();
         });
     }
@@ -332,7 +330,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadProjects();
 });
-
 </script>
 
 
@@ -341,38 +338,75 @@ document.addEventListener('DOMContentLoaded', () => {
     <footer>
       <div class="social-layer">
         <div class="social-icons">
-          <p>&copy; 2025 - Micaelle O.S.. All rights reserved.</p>
+          <p>&copy; 2025 - Micaelle O.S.. Todos os direitos reservados.</p>
           <ul>
             
-            <li>
-                <a href="mailto:micaelle.osouza@gmail.com" title="email">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              
-              
-              <li>
-                <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              
-              
-              
-              <li>
-                <a href="https://www.linkedin.com/in/micaelle-oliveira-souza/" title="Follow On LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
+<li>
+  <a href="mailto:micaelle.osouza@gmail.com" title="email">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/micaelle-souza/" title="Follow On LinkedIn">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -381,7 +415,5 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       </div>
     </footer>
-
-    <script src="/assets/js/scripts.js"></script>
   </body>
 </html>
