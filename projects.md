@@ -17,3 +17,8 @@ Link: https://chatytube.streamlit.app/
 Descrição: Discover a new way to study the Bible with AI. This intelligent assistant generates personalized Bible studies instantly, with structured analysis and flexible export options. Ideal for leaders, study groups, and individual use.  
 Imagem: /assets/img/projects/DALL·E 2025-01-12 17.40.58 - A visually captivating digital illustration representing an AI-driven biblical study assistant. The image features an open Bible glowing with a soft, .webp  
 Link: https://ebiagent.streamlit.app/
+
+### ComplyFlow: AI-Powered Regulatory Compliance
+Descrição: ComplyFlow is an intelligent platform that automates regulatory impact analysis for financial institutions. Using AI, LangChain, Streamlit, and OpenAI, the tool reads and summarizes regulatory documents, identifies affected areas, generates compliance matrices, and creates automated action plans. With a structured approval workflow, it enables efficient collaboration between teams, while also offering real-time document editing and a specialized compliance chatbot.
+Imagem: /assets/img/projects/Design sem nome.png
+Link: https://complyflow.streamlit.app/
