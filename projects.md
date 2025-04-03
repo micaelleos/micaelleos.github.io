@@ -19,6 +19,6 @@ Imagem: /assets/img/projects/DALL·E 2025-01-12 17.40.58 - A visually captivatin
 Link: https://ebiagent.streamlit.app/
 
 ### ComplyFlow: AI-Powered Regulatory Compliance
-Descrição: Automates regulatory impact analysis for regulated institutions. The tool reads and summarizes regulatory documents, identifies affected areas, generates compliance matrices, and creates automated action plans. With a structured approval workflow, it enables efficient collaboration between teams, while also offering real-time document editing and a specialized compliance chatbot.
+Descrição: Simplifies regulatory compliance by automating impact analysis for regulated institutions. Quickly extracts key insights, identifies affected areas, and generates action plans—all with AI-driven precision.
 Imagem: /assets/img/projects/Design sem nome.png
 Link: https://complyflow.streamlit.app/
