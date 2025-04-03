@@ -247,12 +247,12 @@ section {
   background-color: #f0f0f0; /* Cor de fundo para quando não houver imagem */
 }
 
-.project-image img {
-  width: 100%; /* Faz a imagem preencher a largura da caixa */
-  height: 100%; /* Faz a imagem preencher a altura da caixa */
-  object-fit: cover; /* Garante o recorte para preencher a caixa */
+project-image img {
+  width: auto; /* Mantém a proporção da imagem */
+  height: 100%; /* Garante que a imagem ocupe toda a altura do container */
+  object-fit: cover; /* Recorta a imagem para preencher o espaço sem distorcer */
+  object-position: center; /* Centraliza a imagem dentro do recorte */
 }
-
 
 .carousel-prev,
 .carousel-next {
