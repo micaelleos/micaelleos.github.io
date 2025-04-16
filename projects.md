@@ -13,6 +13,11 @@ Descrição: Conversational Agent for Exploring YouTube Videos: A conversational
 Imagem: /assets/img/projects/DALL·E 2025-01-11 23.02.44 - A visually striking and futuristic website header for a project about a conversational AI assistant that explores YouTube videos. The design features .webp  
 Link: https://chatytube.streamlit.app/
 
+### SentinelAI — Strategic Media Reputation Intelligence  
+Descrição: Turn media perception into a strategic asset. Autonomous agents to monitor, analyze, and score public news about companies across key dimensions. Recive actionable insights and a proprietary reputation score — helping your business to stay ahead.  
+Imagem: assets/img/projects/ChatGPT Image Apr 16, 2025, 10_11_18 AM.png  
+Link: https://sentinelaiscore.streamlit.app/
+
 ### AgenteEBI: AI for Bible Study  
 Descrição: Discover a new way to study the Bible with AI. This intelligent assistant generates personalized Bible studies instantly, with structured analysis and flexible export options. Ideal for leaders, study groups, and individual use.  
 Imagem: /assets/img/projects/DALL·E 2025-01-12 17.40.58 - A visually captivating digital illustration representing an AI-driven biblical study assistant. The image features an open Bible glowing with a soft, .webp  
