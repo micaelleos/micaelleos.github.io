@@ -15,7 +15,7 @@ Link: https://chatytube.streamlit.app/
 
 ### SentinelAI — Strategic Media Reputation Intelligence  
 Descrição: Turn media perception into a strategic asset. Autonomous agents to monitor, analyze, and score public news about companies across key dimensions. Recive actionable insights and a proprietary reputation score — helping your business to stay ahead.  
-Imagem: assets/img/projects/ChatGPT Image Apr 16, 2025, 10_11_18 AM.png  
+Imagem: /assets/img/projects/sentinelai.png  
 Link: https://sentinelaiscore.streamlit.app/
 
 ### AgenteEBI: AI for Bible Study  
