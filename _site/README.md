@@ -14,9 +14,13 @@ Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few
 1. Fork and clone the AP repo:
     * git clone https://github.com/kssim/ap.git
 2. Install Jekyll:
-    * gem install jekyll
+    rvm uninstall 3.4.1
+    #* gem install jekyll
+    rvm install 3.1.4 # Or another stable version
+    rvm use 3.1.4 --default
 3. Install the theme's dependencies
-    * bundle install
+    * gem install bundler
+    bundle install
 4. Customize the theme
     * update _config.yml
 5. Run the Jekyll server

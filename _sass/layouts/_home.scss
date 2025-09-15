@@ -1,4 +1,28 @@
 /* Estilos CSS */
+.databricks-badge-container {
+  /* Define as dimensões máximas para o contêiner, similar ao que você teria com o iframe da Credly. */
+  /* Ajuste esses valores conforme necessário para o seu layout. */
+  width: 150px; /* Largura similar ao exemplo da Credly */
+  height: 270px; /* Altura similar ao exemplo da Credly */
+  display: flex; /* Usado para centralizar a imagem se ela for menor que o contêiner */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  overflow: hidden; /* Garante que a imagem não ultrapasse os limites do contêiner */
+  border: 1px solid #ccc; /* Opcional: adiciona uma borda para visualizar o contêiner */
+  box-sizing: border-box; /* Inclui padding e border na largura/altura total */
+}
+
+.databricks-badge-image {
+  margin-top: -60px;
+  /* Garante que a imagem ocupe o espaço disponível sem distorcer. */
+  display: block; /* Remove espaço extra abaixo da imagem */
+  max-width: 100%; /* A imagem não será maior que seu contêiner */
+  max-height: 100%; /* A imagem não será maior que seu contêiner */
+  width: auto; /* Mantém a proporção original da largura */
+  height: auto; /* Mantém a proporção original da altura */
+  object-fit: contain; /* Redimensiona a imagem para caber dentro do contêiner, mantendo sua proporção. */
+}
+
 :root {
   --primary-color: #b874e3;
   --secondary-color: #7199ab;
