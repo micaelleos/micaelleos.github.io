@@ -307,15 +307,15 @@ project-image img {
 
 /* Blog Section */
 .posts2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
   gap: 30px;
 }
 
 .post2 {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
