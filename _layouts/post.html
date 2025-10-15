@@ -1,17 +1,18 @@
 ---
 layout: base 
 ---
+<div class = "post-back">
+  <div class="post">
 
-<div class="post">
+    <h2 class="post-title">{{ page.title }}</h2>
+    
+    {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="post-header-image">
+    {% endif %}
 
-  <h2 class="post-title">{{ page.title }}</h2>
-  
-  {% if page.image %}
-  <img src="{{ page.image }}" alt="{{ page.title }}" class="post-header-image">
-  {% endif %}
+    {{ content }}
 
-  {{ content }}
-
+  </div>
 </div>
 
 <div class="pagination">

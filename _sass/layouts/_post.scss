@@ -8,6 +8,10 @@
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+.post-back {
+  background-color: var(--bg-color); /* Fundo suave */
+}
+
 .post-title {
   font-size: 2rem; /* Tamanho reduzido */
   color: #333; /* Cor neutra para o título */
@@ -43,7 +47,7 @@
 
 .pagination a {
   padding: 8px 16px; /* Botões menores */
-  background-color: #4a90e2; /* Azul suave */
+  background-color: #9a77c7; /* Azul suave */
   color: #fff; /* Texto branco */
   text-decoration: none;
   border-radius: 5px;
@@ -52,11 +56,16 @@
 }
 
 .pagination a:hover {
-  background-color: #357ab8; /* Azul escuro ao passar o mouse */
+  background-color: #ffffff; /* Azul escuro ao passar o mouse */
+  color: #9a77c7;
 }
 
 .pagination .top {
   background-color: #555; /* Cor neutra para o botão "topo" */
+}
+
+.pagination .next {
+  color: #fff; /* Cor neutra para o botão "topo" */
 }
 
 .pagination .top:hover {
