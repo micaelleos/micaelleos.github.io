@@ -62,10 +62,10 @@ title: "Home Page"
                 <p>Development of smart APIs for automation and delivery of scalable solutions.</p>
             </div> -->
             <!-- <div class="specialty-item">
-                <div class="specialty-icon">📊</div>
-                <h3>Technical and Business Translation</h3>
-                <p>Transformation of business requirements into strategic technical solutions.</p>
-            </div> -->
+                            <div class="specialty-icon">📊</div>
+                                            <h3>Technical and Business Translation</h3>
+                                                            <p>Transformation of business requirements into strategic technical solutions.</p>
+                                                                        </div> -->
             <div class="specialty-item">
                 <div class="specialty-icon">🚀</div>
                 <h3>Functional Analysis and Prototyping</h3>

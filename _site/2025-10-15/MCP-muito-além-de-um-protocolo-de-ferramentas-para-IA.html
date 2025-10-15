@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MicaelleOS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Google Analytics -->
+  
+  <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'G-R4CWYLGXX1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Consultoria de IA",
+      "image": "/assets/img/profile.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Joinville",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "email":"micaelle.osouza@gmail.com"
+      "url": "https://micaelleos.github.io/",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4CWYLGXX1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R4CWYLGXX1');
+        </script>
+</head>
+
+
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="/">
+          <h2 class="nav-title">MicaelleOS</h2>
+        </a>
+        <ul>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      <div class="post">
+
+  <h2 class="post-title">MCP: muito além de um protocolo de ferramentas para IA</h2>
+  
+  
+  <img src="../assets/img/posts/2025-10-15/Gemini_Generated_Image_3my7j3my7j3my7j3.png" alt="MCP: muito além de um protocolo de ferramentas para IA" class="post-header-image">
+  
+
+  <h2 id="introdução-o-que-é-o-mcp">Introdução: O que é o MCP?</h2>
+
+<p>Muitas pessoas ainda veem o <strong>MCP (Model Context Protocol)</strong> apenas como uma forma de conectar ferramentas a agentes de IA. Mas o MCP vai muito além disso: ele é uma nova camada de <strong>design de solução</strong>, que permite transformar conhecimento em infraestrutura reutilizável.</p>
+
+<p>Criar uma ferramenta para um agente não é apenas escrever uma função. É <strong>projetar uma interface de entendimento</strong> entre humanos e máquinas — pensar cuidadosamente em como a entrada e a saída serão estruturadas para que o agente compreenda o contexto da melhor forma possível. Essa sensibilidade no design é o que gera resultados mais assertivos.</p>
+
+<p>No MCP, um <strong>endpoint de ferramenta (tools/)</strong> define as capacidades disponíveis para o agente. Ele expõe métodos que permitem identificar e executar funções, APIs ou até mesmo outros agentes, que processam solicitações de acordo com um propósito específico.</p>
+
+<p>Mas o verdadeiro poder do MCP vai além disso.</p>
+
+<h2 id="mcp-como-camada-de-orquestração-de-conhecimento">MCP como Camada de Orquestração de Conhecimento</h2>
+
+<p>Em uma arquitetura moderna, o MCP pode atuar como a camada de orquestração de conhecimento entre o backend de dados e os agentes de IA. Ele organiza o que o agente sabe, como ele acessa esse conhecimento e quais ações pode executar.</p>
+
+<p>Além dos endpoints de ferramentas, o MCP traz <strong>endpoints de recursos (resources/) e de prompts (prompts/)</strong>, que são as <strong>principais fundações de valor dos MCP servers.</strong></p>
+
+<p>Esses endpoints abrem uma nova forma de compartilhar conhecimento de domínio de forma estruturada e escalável. Imagine uma empresa que possui um profundo domínio técnico sobre um tema específico. Ao publicar um MCP server, outras plataformas podem <strong>consumir esse conhecimento</strong> sem precisar reconstruí-lo do zero — eliminando o chamado <em>heavy lift</em> de modelagem de conhecimento.</p>
+
+<p>O <strong>endpoint de prompts</strong> permite que uma empresa crie e mantenha seus próprios prompts otimizados para seus casos de uso e ferramentas. Isso evita que cada cliente precise construir prompts do zero, além de facilitar a manutenção e a reutilização em larga escala.</p>
+
+<p>Por fim, o <strong>endpoint de recursos</strong> amplia o contexto dos agentes com documentos, bases de dados e informações específicas — tornando o agente realmente consciente do domínio em que atua.</p>
+
+<p><img src="../assets/img/posts/2025-10-15/Gemini_Generated_Image_3my7j3my7j3my7j3 (1).png" alt="Diagrama do MCP" /></p>
+
+<p>Imagine, por exemplo, uma fintech que publica um MCP server com seu domínio de crédito. Outras aplicações podem usar esse servidor para avaliar riscos, gerar relatórios ou interagir com dados financeiros de forma segura e contextualizada — sem expor dados brutos.</p>
+
+<h2 id="aprendizados-e-insights-de-design">Aprendizados e Insights de Design</h2>
+
+<p>O grande aprendizado aqui é que o design de soluções para IA não é sobre “fazer ferramentas”, mas sobre estruturar conhecimento e intenção. O MCP é um ótimo exemplo de como essa mentalidade se traduz em arquitetura.</p>
+
+<p>Em resumo, o MCP é muito mais do que uma forma de integrar agentes e ferramentas: é um <strong>framework de design de conhecimento</strong>, capaz de transformar domínios organizacionais em <strong>infraestrutura de inteligência reutilizável</strong>.</p>
+
+<p>Essa é a base de um novo paradigma de design de soluções em IA — em que o conhecimento deixa de ser um artefato e passa a ser uma arquitetura.</p>
+
+<p>Nos próximos posts, vou explorar como desenhar um MCP server eficiente e como o design de prompts e recursos influencia diretamente a performance de agentes corporativos.</p>
+
+<h2 id="referências">Referências:</h2>
+
+<p><a href="https://modelcontextprotocol.io/docs/learn/server-concepts">Understanding MCP servers - Model Context Protocol</a></p>
+
+<p><a href="https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/fkbhh/introduction">MCP: Build Rich-Context AI Apps with Anthropic - DeepLearning.AI</a></p>
+
+
+</div>
+
+<div class="pagination">
+  
+  
+    <a href="/2022-08-15/Anaise-Financeira-de-Startups" class="right next">Next</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <div class="social-layer">
+        <div class="social-icons">
+          <p>&copy; 2025 - Micaelle O.S.. Todos os direitos reservados.</p>
+          <ul>
+            
+<li>
+  <a href="mailto:micaelle.osouza@gmail.com" title="email">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/micaelle-souza/" title="Follow On LinkedIn">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
