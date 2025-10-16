@@ -11,6 +11,32 @@ title: "Home Page"
     </div>
 </header>
 
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I am an electronic engineer with a passion for Artificial Intelligence and technological innovation. I architect multi-agent solutions and design cloud-based AI architectures that deliver measurable business impact. My journey combines expertise in developing practical solutions in Machine Learning and LLMs with a user-centered approach, always striving to turn complex challenges into products that deliver real value. </p>
+                <p> My experience allows me to act as a strategic bridge between business needs and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to full pipeline implementation — always focusing on efficiency and innovation. </p>
+            </div>
+            <div class="about-image">
+                <img src="/assets/img/PHOTO-2025-10-16-08-57-12-2.jpg" alt="My photo">
+            </div>
+        </div>
+        <div class="social-buttons">
+            <a href="{{ site.social.linkedin }}" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="{{ site.social.github }}" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:{{ site.author.email }}" class="social-btn email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 
 <section id="specialties" class="specialties">
     <div class="container">
@@ -77,32 +103,6 @@ title: "Home Page"
       {% endfor %}
     </div>
   </div>
-</section>
-
-<section id="about" class="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I am an electronic engineer with a passion for Artificial Intelligence and technological innovation. I architect multi-agent solutions and design cloud-based AI architectures that deliver measurable business impact. My journey combines expertise in developing practical solutions in Machine Learning and LLMs with a user-centered approach, always striving to turn complex challenges into products that deliver real value. </p>
-                <p> My experience allows me to act as a strategic bridge between business needs and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to full pipeline implementation — always focusing on efficiency and innovation. </p>
-            </div>
-            <div class="about-image">
-                <img src="/assets/img/PHOTO-2025-10-16-08-57-12-2.jpg" alt="My photo">
-            </div>
-        </div>
-        <div class="social-buttons">
-            <a href="{{ site.social.linkedin }}" target="_blank" class="social-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="{{ site.social.github }}" target="_blank" class="social-btn github">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:{{ site.author.email }}" class="social-btn email">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-    </div>
 </section>
 
 
