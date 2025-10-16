@@ -5,41 +5,17 @@ title: "Home Page"
 
 <header class="hero">
     <div class="container">
-        <h1>AI Engineer & ML Specialist</h1>
-        <p>Architecting intelligent multi-agent systems and generative AI solutions</p>
-        <a href="#about" class="btn">Contact Me</a>
+        <h1>Multi-Agent Systems Architect</h1>
+        <p>I design AI architectures that transform complex business challenges into intelligent systems.</p>
+        <a href="/portfolio" class="btn">Explore My Projects →</a>
     </div>
 </header>
 
-<section id="about" class="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I am an electronic engineer with a passion for Artificial Intelligence and technological innovation. I architect multi-agent solutions and design cloud-based AI architectures that deliver measurable business impact. My journey combines expertise in developing practical solutions in Machine Learning and LLMs with a user-centered approach, always striving to turn complex challenges into products that deliver real value. </p>
-                <p> My experience allows me to act as a strategic bridge between business needs and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to full pipeline implementation — always focusing on efficiency and innovation. </p>
-            </div>
-            <div class="about-image">
-                <img src="/assets/img/profile.jpg" alt="My photo">
-            </div>
-        </div>
-        <div class="social-buttons">
-            <a href="{{ site.social.linkedin }}" target="_blank" class="social-btn linkedin">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="{{ site.social.github }}" target="_blank" class="social-btn github">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:{{ site.author.email }}" class="social-btn email">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-    </div>
-</section>
 
 <section id="specialties" class="specialties">
     <div class="container">
         <h2>My Specialties</h2>
+        <div class="caixa"><p><i>Specialized in orchestrating autonomous agents, building advanced RAG pipelines, and architecting cloud-based AI solutions from concept to deployment.</i></p></div>
         <div class="specialty-grid">
             <div class="specialty-item">
                 <div class="specialty-icon">🧠</div>
@@ -74,6 +50,61 @@ title: "Home Page"
         </div>
     </div>
 </section>
+
+<section id="projects" class="projects">
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="carousel">
+            <button class="carousel-prev">❮</button>
+            <div class="carousel-wrapper">
+                <div class="project-grid"></div>
+            </div>
+            <button class="carousel-next">❯</button>
+        </div>
+    </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Latest Blog Posts</h2>
+    <div class="posts2">
+      {% for post in site.posts %}
+        <div class="post2">
+          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+          <p>{{ post.info }}</p>
+          <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I am an electronic engineer with a passion for Artificial Intelligence and technological innovation. I architect multi-agent solutions and design cloud-based AI architectures that deliver measurable business impact. My journey combines expertise in developing practical solutions in Machine Learning and LLMs with a user-centered approach, always striving to turn complex challenges into products that deliver real value. </p>
+                <p> My experience allows me to act as a strategic bridge between business needs and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to full pipeline implementation — always focusing on efficiency and innovation. </p>
+            </div>
+            <div class="about-image">
+                <img src="/assets/img/PHOTO-2025-10-16-08-57-12-2.jpg" alt="My photo">
+            </div>
+        </div>
+        <div class="social-buttons">
+            <a href="{{ site.social.linkedin }}" target="_blank" class="social-btn linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="{{ site.social.github }}" target="_blank" class="social-btn github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:{{ site.author.email }}" class="social-btn email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 
 <section id="badges" class="badges">
     <div class="container">
@@ -112,33 +143,8 @@ title: "Home Page"
     </div>
 </section>
 
-<section id="projects" class="projects">
-    <div class="container">
-        <h2>Featured Projects</h2>
-        <div class="carousel">
-            <button class="carousel-prev">❮</button>
-            <div class="carousel-wrapper">
-                <div class="project-grid"></div>
-            </div>
-            <button class="carousel-next">❯</button>
-        </div>
-    </div>
-</section>
 
-<section>
-  <div class="container">
-    <h2>Latest Blog Posts</h2>
-    <div class="posts2">
-      {% for post in site.posts %}
-        <div class="post2">
-          <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-          <p>{{ post.info }}</p>
-          <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more</a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+
 
 <script>
     // JavaScript for animations and interactivity

@@ -103,7 +103,7 @@ section {
 }
 
 .about-image img {
-  max-width: 15rem;
+  max-width: 18rem;
   border-radius: 5%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -305,12 +305,20 @@ project-image img {
   background: #555;
 }
 
+.caixa {
+  width: 100%;
+  margin: 0 auto; /* centraliza horizontalmente */
+  text-align: center; /* centraliza o texto dentro */
+}
+
+
 /* Blog Section */
 .posts2 {
   display: flex;
-  /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
-  gap: 30px;
+  flex-direction: column; /* organiza em coluna (vertical) */
+  gap: 30px; /* espaçamento entre os posts */
 }
+
 
 .post2 {
   background-color: #fff;
