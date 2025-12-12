@@ -85,7 +85,7 @@ ${tags.length > 0 ? `tags: [${tags.join(', ')}]` : ''}
 
 `;
 
-                const fullContent = frontmatter + mdString.parent;
+                const fullContent = frontmatter + mdString;
 
                 // Nome do arquivo no formato Jekyll: YYYY-MM-DD-slug.md
                 const fileName = `${date}-${slug}.md`;
