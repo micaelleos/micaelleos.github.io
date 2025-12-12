@@ -1,0 +1,120 @@
+name: Sync Notion to Jekyll
+
+on:
+  # Roda a cada hora
+  schedule:
+    - cron: '0 * * * *'
+  
+  # Permite rodar manualmente
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: |
+          npm install -g notion-to-md
+          npm install @notionhq/client dotenv
+      
+      - name: Create sync script
+        run: |
+          cat > sync-notion.js << 'SCRIPT_EOF'
+          const { Client } = require('@notionhq/client');
+          const { NotionToMarkdown } = require('notion-to-md');
+          const fs = require('fs');
+          const path = require('path');
+
+          const notion = new Client({ auth: process.env.NOTION_TOKEN });
+          const n2m = new NotionToMarkdown({ notionClient: notion });
+
+          async function syncPosts() {
+            try {
+              // Buscar posts publicados
+              const response = await notion.databases.query({
+                database_id: process.env.NOTION_DATABASE_ID,
+                filter: {
+                  property: 'Published',
+                  checkbox: {
+                    equals: true
+                  }
+                }
+              });
+
+              console.log(`Found ${response.results.length} published posts`);
+
+              // Criar pasta _posts se não existir
+              const postsDir = path.join(process.cwd(), '_posts');
+              if (!fs.existsSync(postsDir)) {
+                fs.mkdirSync(postsDir, { recursive: true });
+              }
+
+              for (const page of response.results) {
+                const pageId = page.id;
+                
+                // Extrair propriedades
+                const title = page.properties.Title?.title[0]?.plain_text || 'Untitled';
+                const slug = page.properties.Slug?.rich_text[0]?.plain_text || 'untitled';
+                const date = page.properties.Date?.date?.start || new Date().toISOString().split('T')[0];
+                const tags = page.properties.Tags?.multi_select?.map(tag => tag.name) || [];
+                const category = page.properties.Category?.select?.name || '';
+
+                // Converter conteúdo para Markdown
+                const mdblocks = await n2m.pageToMarkdown(pageId);
+                const mdString = n2m.toMarkdownString(mdblocks);
+                
+                // Criar frontmatter Jekyll
+                const frontmatter = `---
+layout: post
+title: "${title}"
+date: ${date}
+${category ? `category: ${category}` : ''}
+${tags.length > 0 ? `tags: [${tags.join(', ')}]` : ''}
+---
+
+`;
+
+                const fullContent = frontmatter + mdString.parent;
+
+                // Nome do arquivo no formato Jekyll: YYYY-MM-DD-slug.md
+                const fileName = `${date}-${slug}.md`;
+                const filePath = path.join(postsDir, fileName);
+
+                // Salvar arquivo
+                fs.writeFileSync(filePath, fullContent, 'utf8');
+                console.log(`✓ Synced: ${fileName}`);
+              }
+
+              console.log('Sync completed successfully!');
+            } catch (error) {
+              console.error('Error syncing posts:', error);
+              process.exit(1);
+            }
+          }
+
+          syncPosts();
+          SCRIPT_EOF
+      
+      - name: Run sync
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: node sync-notion.js
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add _posts/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 Sync posts from Notion" && git push)

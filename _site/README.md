@@ -11,7 +11,7 @@ Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few
   * You can manage your project experience just like running a blog.
 
 # Usage
-1. Fork and clone the AP repo:
+1. Fork and clonentn_t55100484707VFeiV6jYmKbKW6G4pZrHigcfyaY51ZI1f7 the AP repo:
     * git clone https://github.com/kssim/ap.git
 2. Install Jekyll:
     rvm uninstall 3.4.1

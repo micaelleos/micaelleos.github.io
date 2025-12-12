@@ -5,8 +5,8 @@ title: "Home Page"
 
 <header class="hero">
     <div class="container">
-        <h1>Multi-Agent Systems Architect</h1>
-        <p>I design AI architectures that transform complex business challenges into intelligent systems.</p>
+        <h1>AI Agent Specialist</h1>
+        <p>Architecting intelligent multi-agent systems and generative AI solutions.</p>
         <a href="/portfolio" class="btn">Explore My Projects →</a>
     </div>
 </header>
