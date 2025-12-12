@@ -87,13 +87,22 @@ jobs:
                 const date = page.properties?.Date?.date?.start || new Date().toISOString().split('T')[0];
                 const tags = page.properties?.Tags?.multi_select?.map(t => t.name) || [];
                 const category = page.properties?.Category?.select?.name || '';
+                const info = page.properties?.Info?.rich_text?.[0]?.plain_text || '';
+                const tech = page.properties?.Tech?.rich_text?.[0]?.plain_text || '';
+                const type = page.properties?.Type?.select?.name || 'post';
+                const image = page.properties?.Image?.url || '';
 
                 const mdblocks = await n2m.pageToMarkdown(pageId);
                 const mdString = n2m.toMarkdownString(mdblocks);
 
-                let frontmatter = `---\nlayout: post\ntitle: "${title}"\ndate: ${date}\n`;
+                let frontmatter = `---\nlayout: post\ntitle: "${title.replace(/"/g, '\\"')}"\n`;
+                if (info) frontmatter += `info: ${info.replace(/"/g, '\\"')}\n`;
+                frontmatter += `date: ${date}\n`;
+                if (tech) frontmatter += `tech: "${tech}"\n`;
+                if (type) frontmatter += `type: ${type}\n`;
+                if (image) frontmatter += `image: ${image}\n`;
                 if (category) frontmatter += `category: ${category}\n`;
-                if (tags.length) frontmatter += `tags: [${tags.join(', ')}]\n`;
+                if (tags.length) frontmatter += `tags: [${tags.map(t => t).join(', ')}]\n`;
                 frontmatter += `---\n\n`;
 
                 const fullContent = frontmatter + mdString;
