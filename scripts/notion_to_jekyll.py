@@ -228,13 +228,37 @@ def sync_notion_to_jekyll():
             
             # Obter conteúdo
             content = get_page_content(page['id'])
-            
-            # Criar frontmatter Jekyll
+
+            # Campos opcionais: info, tech, image
+            info = get_property_value(properties, 'Info') or get_property_value(properties, 'Description')
+            tech = get_property_value(properties, 'Tech') or get_property_value(properties, 'Category')
+            image_prop = get_property_value(properties, 'Image')
+
+            # Preparar imagem (se houver URL, tentar baixar para assets/img/posts/YYYY-MM-DD/)
+            date_prefix = date.split('T')[0]
+            image_path_line = ''
+            if image_prop and isinstance(image_prop, str) and image_prop.startswith('http'):
+                folder = os.path.join('assets', 'img', 'posts', date_prefix)
+                local = download_image(image_prop, folder=folder)
+                # download_image retorna caminho começando com '/'; tornar relativo como nos posts: ../assets/...
+                rel = '..' + local if local.startswith('/') else os.path.join('..', local)
+                image_path_line = f"image: {rel}\n"
+
+            # Criar frontmatter Jekyll com mesmo formato dos posts existentes
             frontmatter = f"""---
 layout: post
 title: "{title}"
 date: {date}
+type: post
 """
+            if info:
+                # manter em uma linha
+                info_clean = str(info).replace('\n', ' ').strip()
+                frontmatter += f"info: {info_clean}\n"
+            if tech:
+                frontmatter += f"tech: \"{tech}\"\n"
+            if image_path_line:
+                frontmatter += image_path_line
             if tags:
                 frontmatter += f"tags: [{', '.join(tags)}]\n"
             

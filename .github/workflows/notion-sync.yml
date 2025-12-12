@@ -38,8 +38,34 @@ jobs:
           const notion = new Client({ auth: process.env.NOTION_TOKEN });
           const n2m = new NotionToMarkdown({ notionClient: notion });
 
+          function sanitizeSlug(text) {
+            return String(text || '')
+              .toLowerCase()
+              .replace(/[^\w\s-]/g, '')
+              .replace(/[\s_]+/g, '-')
+              .replace(/-+/g, '-')
+              .replace(/^-+|-+$/g, '');
+          }
+
+          async function downloadImage(url, folder) {
+            try {
+              await fs.promises.mkdir(folder, { recursive: true });
+              const parsed = new URL(url);
+              let filename = path.basename(parsed.pathname).split('?')[0];
+              if (!filename.includes('.')) filename += '.jpg';
+              const filepath = path.join(folder, filename);
+              const res = await fetch(url);
+              if (!res.ok) throw new Error(`Image download failed ${res.status}`);
+              const arrayBuffer = await res.arrayBuffer();
+              await fs.promises.writeFile(filepath, Buffer.from(arrayBuffer));
+              return filepath;
+            } catch (err) {
+              console.warn('Failed to download image', err.message || err);
+              return null;
+            }
+          }
+
           async function queryDatabase(databaseId, body) {
-            // Prefer the SDK helper when available, otherwise fall back to raw request
             if (notion.databases && typeof notion.databases.query === 'function') {
               return await notion.databases.query(Object.assign({ database_id: databaseId }, body));
             }
@@ -72,9 +98,7 @@ jobs:
                 }
               };
 
-              // Buscar posts publicados (usa fallback se necessário)
               const response = await queryDatabase(process.env.NOTION_DATABASE_ID, filter);
-
               console.log(`Found ${response.results?.length || 0} published posts`);
 
               const postsDir = path.join(process.cwd(), '_posts');
@@ -82,31 +106,68 @@ jobs:
 
               for (const page of (response.results || [])) {
                 const pageId = page.id;
-                const title = page.properties?.Title?.title?.[0]?.plain_text || 'Untitled';
-                const slug = page.properties?.Slug?.rich_text?.[0]?.plain_text || 'untitled';
-                const date = page.properties?.Date?.date?.start || new Date().toISOString().split('T')[0];
+                const title = page.properties?.Title?.title?.[0]?.plain_text || page.properties?.Name?.title?.[0]?.plain_text || 'Untitled';
+                let slug = page.properties?.Slug?.rich_text?.[0]?.plain_text || '';
+                if (!slug) slug = sanitizeSlug(title);
+                const rawDate = page.properties?.Date?.date?.start || new Date().toISOString();
+                const datePrefix = rawDate.split('T')[0];
                 const tags = page.properties?.Tags?.multi_select?.map(t => t.name) || [];
                 const category = page.properties?.Category?.select?.name || '';
-                const info = page.properties?.Info?.rich_text?.[0]?.plain_text || '';
-                const tech = page.properties?.Tech?.rich_text?.[0]?.plain_text || '';
-                const type = page.properties?.Type?.select?.name || 'post';
-                const image = page.properties?.Image?.url || '';
+                const info = (page.properties?.Info?.rich_text?.[0]?.plain_text) || (page.properties?.Description?.rich_text?.[0]?.plain_text) || '';
+                const tech = (page.properties?.Tech?.rich_text?.[0]?.plain_text) || page.properties?.Tech?.select?.name || '';
+
+                // Try to find image: cover > property Image (files/url) > page.properties.Image.url
+                let imageUrl = null;
+                if (page.cover) imageUrl = page.cover.external?.url || page.cover.file?.url || imageUrl;
+                const imgProp = page.properties?.Image;
+                if (imgProp) {
+                  if (imgProp.type === 'files' && imgProp.files && imgProp.files[0]) {
+                    imageUrl = imgProp.files[0].file?.url || imgProp.files[0].external?.url || imageUrl;
+                  } else if (imgProp.type === 'url') {
+                    imageUrl = imgProp.url || imageUrl;
+                  } else if (imgProp.type === 'rich_text') {
+                    imageUrl = imgProp.rich_text?.[0]?.plain_text || imageUrl;
+                  }
+                }
+
+                // Download image if available
+                let imageFront = '';
+                if (imageUrl && imageUrl.startsWith('http')) {
+                  const folder = path.join(process.cwd(), 'assets', 'img', 'posts', datePrefix);
+                  const localPath = await downloadImage(imageUrl, folder);
+                  if (localPath) {
+                    // make relative like ../assets/img/posts/YYYY-MM-DD/filename
+                    const rel = path.join('..', path.relative(process.cwd(), localPath)).replace(/\\/g, '/');
+                    imageFront = `image: ${rel}\n`;
+                  }
+                }
 
                 const mdblocks = await n2m.pageToMarkdown(pageId);
-                const mdString = n2m.toMarkdownString(mdblocks);
+                let mdString = n2m.toMarkdownString(mdblocks);
+                // Garantir que mdString seja uma string; alguns pacotes podem retornar array/objetos
+                if (typeof mdString !== 'string') {
+                  if (Array.isArray(mdString)) {
+                    mdString = mdString.map(part => (typeof part === 'string' ? part : JSON.stringify(part))).join('\n\n');
+                  } else {
+                    mdString = String(mdString);
+                  }
+                }
 
-                let frontmatter = `---\nlayout: post\ntitle: "${title.replace(/"/g, '\\"')}"\n`;
-                if (info) frontmatter += `info: ${info.replace(/"/g, '\\"')}\n`;
-                frontmatter += `date: ${date}\n`;
+                const escTitle = title.replace(/"/g, '\\"').replace(/\n/g, ' ');
+                const escInfo = String(info || '').replace(/"/g, '\\"').replace(/\n/g, ' ');
+
+                let frontmatter = `---\nlayout: post\ntitle: "${escTitle}"\n`;
+                if (escInfo) frontmatter += `info: ${escInfo}\n`;
+                frontmatter += `date: ${datePrefix}\n`;
                 if (tech) frontmatter += `tech: "${tech}"\n`;
-                if (type) frontmatter += `type: ${type}\n`;
-                if (image) frontmatter += `image: ${image}\n`;
+                frontmatter += `type: post\n`;
+                if (imageFront) frontmatter += imageFront;
                 if (category) frontmatter += `category: ${category}\n`;
-                if (tags.length) frontmatter += `tags: [${tags.map(t => t).join(', ')}]\n`;
+                if (tags.length) frontmatter += `tags: [${tags.join(', ')}]\n`;
                 frontmatter += `---\n\n`;
 
                 const fullContent = frontmatter + mdString;
-                const fileName = `${date}-${slug}.md`;
+                const fileName = `${datePrefix}-${slug}.md`;
                 fs.writeFileSync(path.join(postsDir, fileName), fullContent, 'utf8');
                 console.log(`✓ Synced: ${fileName}`);
               }
