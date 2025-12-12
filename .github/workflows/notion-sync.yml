@@ -25,8 +25,7 @@ jobs:
       
       - name: Install dependencies
         run: |
-          npm install -g notion-to-md
-          npm install @notionhq/client dotenv
+          npm install notion-to-md @notionhq/client dotenv
       
       - name: Create sync script
         run: |
