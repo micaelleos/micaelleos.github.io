@@ -77,10 +77,10 @@ jobs:
                 // Criar frontmatter Jekyll
                 const frontmatter = `---
 layout: post
-title: "${title}"
-date: ${date}
-${category ? `category: ${category}` : ''}
-${tags.length > 0 ? `tags: [${tags.join(', ')}]` : ''}
+title: "\${title}"
+date: \${date}
+\${category ? \`category: \${category}\` : ''}
+\${tags.length > 0 ? \`tags: [\${tags.join(', ')}]\` : ''}
 ---
 
 `;
