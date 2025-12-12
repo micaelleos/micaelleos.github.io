@@ -75,15 +75,14 @@ jobs:
                 const mdString = n2m.toMarkdownString(mdblocks);
                 
                 // Criar frontmatter Jekyll
-                const frontmatter = `---
-layout: post
-title: "\${title}"
-date: \${date}
-\${category ? \`category: \${category}\` : ''}
-\${tags.length > 0 ? \`tags: [\${tags.join(', ')}]\` : ''}
----
-
-`;
+                let frontmatter = `---\nlayout: post\ntitle: "${title}"\ndate: ${date}\n`;
+                if (category) {
+                  frontmatter += `category: ${category}\n`;
+                }
+                if (tags.length > 0) {
+                  frontmatter += `tags: [${tags.join(', ')}]\n`;
+                }
+                frontmatter += `---\n\n`;
 
                 const fullContent = frontmatter + mdString;
 
