@@ -153,6 +153,24 @@ jobs:
                   }
                 }
 
+                // Diagnóstico adicional: se ainda houver '[object Object]', logar uma pré-visualização dos blocos
+                if (mdString.indexOf('[object Object]') !== -1 || typeof mdString !== 'string') {
+                  const preview = (arr) => {
+                    try {
+                      const slice = Array.isArray(arr) ? arr.slice(0,3) : [arr];
+                      return JSON.stringify(slice, (k,v)=>{
+                        if (typeof v === 'object' && v !== null) {
+                          // tentar extrair texto útil
+                          if (v.plain_text) return v.plain_text;
+                          if (v.text) return v.text;
+                        }
+                        return v;
+                      }, 2).slice(0,2000);
+                    } catch(e){ return String(arr).slice(0,1000); }
+                  };
+                  console.warn('mdString contains [object Object] or is not string — previewing mdblocks:', preview(mdblocks));
+                }
+
                 const escTitle = title.replace(/"/g, '\\"').replace(/\n/g, ' ');
                 const escInfo = String(info || '').replace(/"/g, '\\"').replace(/\n/g, ' ');
 
