@@ -143,35 +143,64 @@ jobs:
                 }
 
                 const mdblocks = await n2m.pageToMarkdown(pageId);
-                let mdString = n2m.toMarkdownString(mdblocks);
-                // Garantir que mdString seja uma string; alguns pacotes podem retornar array/objetos
-                if (typeof mdString !== 'string') {
-                  if (Array.isArray(mdString)) {
-                    mdString = mdString.map(part => (typeof part === 'string' ? part : JSON.stringify(part))).join('\n\n');
-                  } else {
-                    mdString = String(mdString);
-            
+                
+                // Converter blocos para string: { type, blockId, parent, children }
+                let mdString = '';
+                
+                if (Array.isArray(mdblocks)) {
+                  for (const block of mdblocks) {
+                    if (typeof block === 'string') {
+                      mdString += block + '\n\n';
+                    } else if (block && typeof block === 'object') {
+                      let blockContent = '';
+                      
+                      // Estrutura notion-to-md: o conteúdo está em 'parent'
+                      if (block.parent) {
+                        blockContent = String(block.parent);
+                      }
+                      // Fallback para outras propriedades
+                      else if (block.markdown) {
+                        blockContent = String(block.markdown);
+                      }
+                      else if (block.content) {
+                        blockContent = String(block.content);
+                      }
+                      else if (block.children && Array.isArray(block.children)) {
+                        const processChildren = (children) => {
+                          let content = '';
+                          for (const child of children) {
+                            if (typeof child === 'string') {
+                              content += child + '\n';
+                            } else if (child && typeof child === 'object') {
+                              if (child.parent) {
+                                content += String(child.parent) + '\n';
+                              } else if (child.markdown) {
+                                content += String(child.markdown) + '\n';
+                              } else if (child.children) {
+                                content += processChildren(child.children);
+                              }
+                            }
+                          }
+                          return content;
+                        };
+                        blockContent = processChildren(block.children);
+                      }
+                      
+                      if (blockContent && blockContent.trim()) {
+                        mdString += blockContent + '\n\n';
+                      }
+                    } else {
+                      mdString += String(block) + '\n\n';
+                    }
                   }
-                    console.warn(`Converted mdString to string for page ${mdString}`);
+                } else if (typeof mdblocks === 'string') {
+                  mdString = mdblocks;
+                } else {
+                  mdString = String(mdblocks);
                 }
-
-                // Diagnóstico adicional: se ainda houver '[object Object]', logar uma pré-visualização dos blocos
-                if (mdString.indexOf('[object Object]') !== -1 || typeof mdString !== 'string') {
-                  const preview = (arr) => {
-                    try {
-                      const slice = Array.isArray(arr) ? arr.slice(0,3) : [arr];
-                      return JSON.stringify(slice, (k,v)=>{
-                        if (typeof v === 'object' && v !== null) {
-                          // tentar extrair texto útil
-                          if (v.plain_text) return v.plain_text;
-                          if (v.text) return v.text;
-                        }
-                        return v;
-                      }, 2).slice(0,2000);
-                    } catch(e){ return String(arr).slice(0,1000); }
-                  };
-                  console.warn('mdString contains [object Object] or is not string — previewing mdblocks:', preview(mdblocks));
-                }
+                
+                // Limpeza final
+                mdString = mdString.replace(/\[object Object\]/g, '').trim();
 
                 const escTitle = title.replace(/"/g, '\\"').replace(/\n/g, ' ');
                 const escInfo = String(info || '').replace(/"/g, '\\"').replace(/\n/g, ' ');
