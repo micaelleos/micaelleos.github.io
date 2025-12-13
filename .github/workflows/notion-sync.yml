@@ -150,7 +150,9 @@ jobs:
                     mdString = mdString.map(part => (typeof part === 'string' ? part : JSON.stringify(part))).join('\n\n');
                   } else {
                     mdString = String(mdString);
+            
                   }
+                    console.warn(`Converted mdString to string for page ${mdString}`);
                 }
 
                 // Diagnóstico adicional: se ainda houver '[object Object]', logar uma pré-visualização dos blocos
