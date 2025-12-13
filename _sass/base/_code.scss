@@ -13,8 +13,8 @@ code {
 }
 
 pre {
-  background-color: #2d2d2d; /* Fundo escuro para destacar blocos */
-  color: #f4f4f6; /* Texto claro para contraste */
+  background-color: #d3d3d3; /* Fundo cinza para destacar blocos */
+  color: #000000; /* Texto preto para contraste */
   border-radius: 8px; /* Bordas arredondadas */
   padding: 1.2rem; /* Espaçamento interno maior */
   margin: 0 0 1.5rem; /* Espaço inferior */
@@ -25,13 +25,13 @@ pre {
 
 pre code {
   background-color: transparent; /* Remove o fundo duplicado */
-  color: #f4f4f6; /* Mantém o texto claro */
+  color: #000000; /* Mantém o texto preto */
   font-size: 1rem; /* Mantém o tamanho do código dentro do bloco */
   padding: 0;
 }
 
 .highlight {
-  background-color: #2d2d2d; /* Fundo para realce */
+  background-color: #d3d3d3; /* Fundo cinza para realce */
   border-radius: 8px; /* Bordas arredondadas */
   line-height: 1.6; /* Espaçamento confortável */
   margin: 0 0 1.5rem; /* Espaçamento inferior */
