@@ -1,0 +1,140 @@
+# Traduções do site - PT-BR e EN
+
+# Navegação
+nav:
+  about:
+    pt: "Sobre"
+    en: "About"
+  portfolio:
+    pt: "Portfolio"
+    en: "Portfolio"
+  blog:
+    pt: "Blog"
+    en: "Blog"
+
+# Botões
+buttons:
+  explore_projects:
+    pt: "Explore Meus Projetos →"
+    en: "Explore My Projects →"
+  read_more:
+    pt: "Leia mais"
+    en: "Read more"
+  see_project:
+    pt: "Ver projeto"
+    en: "View Project"
+
+# Paginação
+pagination:
+  prev:
+    pt: "Anterior"
+    en: "Prev"
+  next:
+    pt: "Próximo"
+    en: "Next"
+  top:
+    pt: "Topo"
+    en: "Top"
+
+# Página Inicial
+home:
+  hero:
+    title:
+      pt: "Especialista em Agentes de IA"
+      en: "AI Agent Specialist"
+    subtitle:
+      pt: "Arquitetando sistemas inteligentes multi-agentes e soluções de IA generativa."
+      en: "Architecting intelligent multi-agent systems and generative AI solutions."
+
+  about:
+    title:
+      pt: "Sobre Mim"
+      en: "About Me"
+    bio_1:
+      pt: "Olá! Sou engenheira eletrônica com paixão por Inteligência Artificial e inovação tecnológica. Arquiteto soluções multi-agentes e projeto arquiteturas de IA baseadas em nuvem que entregam impacto mensurável aos negócios. Minha jornada combina expertise em desenvolvimento de soluções práticas em Machine Learning e LLMs com uma abordagem centrada no usuário, sempre buscando transformar desafios complexos em produtos que entregam valor real."
+      en: "Hello! I am an electronic engineer with a passion for Artificial Intelligence and technological innovation. I architect multi-agent solutions and design cloud-based AI architectures that deliver measurable business impact. My journey combines expertise in developing practical solutions in Machine Learning and LLMs with a user-centered approach, always striving to turn complex challenges into products that deliver real value."
+    bio_2:
+      pt: "Minha experiência me permite atuar como uma ponte estratégica entre necessidades de negócio e as melhores soluções técnicas, traduzindo requisitos complexos em ferramentas intuitivas e poderosas. Hoje, ajudo empresas e projetos a construir soluções de IA escaláveis e integradas, desde a definição arquitetural até a implementação completa do pipeline — sempre com foco em eficiência e inovação."
+      en: "My experience allows me to act as a strategic bridge between business needs and the best technical solutions, translating complex requirements into intuitive and powerful tools. Today, I help companies and projects build scalable and integrated AI solutions, from architectural definition to full pipeline implementation — always focusing on efficiency and innovation."
+
+  specialties:
+    title:
+      pt: "Minhas Especialidades"
+      en: "My Specialties"
+    subtitle:
+      pt: "Especializado em orquestrar agentes autônomos, construir pipelines RAG avançados e arquitetar soluções de IA baseadas em nuvem, do conceito ao deploy."
+      en: "Specialized in orchestrating autonomous agents, building advanced RAG pipelines, and architecting cloud-based AI solutions from concept to deployment."
+
+    ai:
+      title:
+        pt: "Inteligência Artificial"
+        en: "Artificial Intelligence"
+      desc:
+        pt: "Arquitetura e implementação de pipelines completos de Machine Learning e produtos com LLMs."
+        en: "Architecture and implementation of complete Machine Learning pipelines and products with LLMs."
+
+    agents:
+      title:
+        pt: "Agentes de IA e Sistemas Multi-Agentes"
+        en: "AI Agents & Multi-Agent Systems"
+      desc:
+        pt: "LangChain, LangGraph, padrões ReAct, orquestração de agentes e automação de workflows complexos com impacto mensurável nos negócios."
+        en: "LangChain, LangGraph, ReAct patterns, agent orchestration, and complex workflow automation with measurable business impact."
+
+    cloud:
+      title:
+        pt: "Arquitetura de IA Multi-Cloud"
+        en: "Multi-Cloud AI Architecture"
+      desc:
+        pt: "Soluções enterprise em AWS Bedrock, GCP Vertex AI e Azure OpenAI Studio com otimização de custos e planejamento de escalabilidade."
+        en: "Enterprise-grade solutions on AWS Bedrock, GCP Vertex AI, and Azure OpenAI Studio with cost optimization and scalability planning."
+
+    prototyping:
+      title:
+        pt: "Análise Funcional e Prototipagem"
+        en: "Functional Analysis and Prototyping"
+      desc:
+        pt: "Levantamento de requisitos e prototipagem rápida com inteligência artificial integrada."
+        en: "Requirements gathering and rapid prototyping with integrated artificial intelligence."
+
+  projects:
+    title:
+      pt: "Projetos em Destaque"
+      en: "Featured Projects"
+
+  blog:
+    title:
+      pt: "Últimas Postagens do Blog"
+      en: "Latest Blog Posts"
+
+  badges:
+    title:
+      pt: "Minhas Conquistas"
+      en: "My Badges"
+    academy_label:
+      pt: "Academy Accreditation - Databricks Fundamentals"
+      en: "Academy Accreditation - Databricks Fundamentals"
+
+# Página de Portfolio
+portfolio:
+  title:
+    pt: "Portfolio"
+    en: "Portfolio"
+  subtitle:
+    pt: "Projetos que Transformam Ideias em Soluções"
+    en: "Projects that Transform Ideas into Solutions"
+  description:
+    pt: "Explore meu portfólio de projetos que combinam Inteligência Artificial, inovação e estratégia para criar soluções práticas e escaláveis. Cada um é resultado de trabalho focado em resolver problemas reais, causando impacto no mundo real."
+    en: "Explore my portfolio of projects that combine Artificial Intelligence, innovation, and strategy to create practical and scalable solutions. Each one is the result of work focused on solving real problems, making an impact in the real world."
+
+# Footer
+footer:
+  rights:
+    pt: "Todos os direitos reservados."
+    en: "All rights reserved."
+
+# Language Switcher
+language:
+  switch_to:
+    pt: "Switch to English"
+    en: "Mudar para Português"

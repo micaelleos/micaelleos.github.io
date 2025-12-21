@@ -1,11 +1,13 @@
 ---
-layout: base 
+layout: base
 ---
+{% assign current_lang = page.lang | default: site.default_lang %}
+
 <div class = "post-back">
   <div class="post">
 
     <h2 class="post-title">{{ page.title }}</h2>
-    
+
     {% if page.image %}
     <img src="{{ page.image }}" alt="{{ page.title }}" class="post-header-image">
     {% endif %}
@@ -16,12 +18,12 @@ layout: base
 </div>
 
 <div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left next">Prev</a>
+  {% if page.next.url and page.next.lang == current_lang %}
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left next">{{ site.data.translations.pagination.prev[current_lang] }}</a>
   {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right next">Next</a>
+  {% if page.previous.url and page.previous.lang == current_lang %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right next">{{ site.data.translations.pagination.next[current_lang] }}</a>
   {% endif %}
 
-  <a href="#" class="top">Top</a>
+  <a href="#" class="top">{{ site.data.translations.pagination.top[current_lang] }}</a>
 </div>

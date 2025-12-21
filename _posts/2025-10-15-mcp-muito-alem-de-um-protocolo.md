@@ -2,8 +2,11 @@
 layout: post
 title:  "MCP: muito além de um protocolo de ferramentas para IA"
 info: O MCP (Model Context Protocol) é muito mais que um protocolo para conectar agentes de IA a ferramentas — ele atua como uma camada de design de conhecimento, que organiza, compartilha e reutiliza o domínio técnico de uma organização por meio de endpoints de ferramentas, recursos e prompts, transformando conhecimento em infraestrutura inteligente.
+date: 2025-10-15
+lang: pt
+permalink: /pt/2025-10-15/mcp-muito-alem-de-um-protocolo
 tech: "MCP"
-type: post 
+type: post
 image: ../assets/img/posts/2025-10-15/Gemini_Generated_Image_3my7j3my7j3my7j3.png
 ---
 

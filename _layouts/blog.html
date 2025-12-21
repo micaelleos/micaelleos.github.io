@@ -1,39 +1,29 @@
 ---
-layout: base 
+layout: base
 ---
+{% assign current_lang = page.lang | default: site.default_lang %}
 
 <div class="blog">
-  {% for post in paginator.posts %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="blog-item">
-      <div>
-        <h1 class="blog-title">{{ post.title }}</h1>
-        <div class="blog-line"></div>
+  {% for post in site.posts %}
+    {% if post.lang == current_lang %}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="blog-item">
+        <div>
+          <h1 class="blog-title">{{ post.title }}</h1>
+          <div class="blog-line"></div>
 
-        <div class="blog-content"> 
-          <span class="blog-icon">
-              <span class="blog-icon-text">{{ post.info }}</span>
-          </span>
-          </br>
-          <span class="blog-icon">
-              <i class="fa fa-calendar-alt"></i><span class="blog-icon-text">{{ post.date | date: "%B %d, %Y" }}</span>
-          </span>
-          </br>
+          <div class="blog-content">
+            <span class="blog-icon">
+                <span class="blog-icon-text">{{ post.info }}</span>
+            </span>
+            </br>
+            <span class="blog-icon">
+                <i class="fa fa-calendar-alt"></i><span class="blog-icon-text">{{ post.date | date: "%B %d, %Y" }}</span>
+            </span>
+            </br>
+          </div>
         </div>
-      </div>
-    </a>
-    </br>
+      </a>
+      </br>
+    {% endif %}
   {% endfor %}
-</div>
-
-<div class="pagination-wrapper">
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left next">Prev</a>
-    {% endif %}
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right next">Next</a>
-    {% endif %}
-
-    <span>{{ paginator.page }}</span>
-  </div>
 </div>

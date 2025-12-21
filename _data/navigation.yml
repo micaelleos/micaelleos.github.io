@@ -1,0 +1,17 @@
+# Navegação por idioma
+
+pt:
+  - title: "Sobre"
+    url: "/pt/#about"
+  - title: "Portfolio"
+    url: "/pt/portfolio/"
+  - title: "Blog"
+    url: "/pt/blog/"
+
+en:
+  - title: "About"
+    url: "/en/#about"
+  - title: "Portfolio"
+    url: "/en/portfolio/"
+  - title: "Blog"
+    url: "/en/blog/"

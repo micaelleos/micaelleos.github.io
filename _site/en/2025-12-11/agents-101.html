@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MicaelleOS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Language and SEO -->
+  
+  
+  <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/2025-12-11/agents-101" />
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/en/2025-12-11/agents-101" />
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/2025-12-11/agents-101" />
+  <meta name="language" content="en">
+
+  <!-- Google Analytics -->
+  
+  <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'G-R4CWYLGXX1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Consultoria de IA",
+      "image": "/assets/img/profile.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Joinville",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "email":"micaelle.osouza@gmail.com"
+      "url": "https://micaelleos.github.io/",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4CWYLGXX1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R4CWYLGXX1');
+        </script>
+</head>
+
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+<div class="language-switcher">
+  <a href="/pt/blog/" class="lang-toggle" title="Mudar para Português">
+    
+      <span class="flag">🇧🇷</span> PT
+    
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>
+
+
+    <nav class="nav">
+      <div class="nav-container">
+        
+        <a href="/en/">
+          <h2 class="nav-title">MicaelleOS</h2>
+        </a>
+        <ul>
+          
+            <li><a href="/en/#about">About</a></li>
+          
+            <li><a href="/en/portfolio/">Portfolio</a></li>
+          
+            <li><a href="/en/blog/">Blog</a></li>
+          
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      
+
+<div class = "post-back">
+  <div class="post">
+
+    <h2 class="post-title">Agents 101: Understanding the Fundamentals of AI Agents</h2>
+
+    
+
+    <h3 id="why-you-need-to-understand-ai-agents-even-if-youre-not-a-developer">Why you need to understand AI agents (even if you’re not a developer)</h3>
+
+<p>Recently, I started working as an AI specialist on an ambitious project: developing software that uses generative AI to render UI components directly on the user’s screen. It’s the kind of project that seems straight out of a futuristic story, but is becoming increasingly real.</p>
+
+<p>However, while working with the team, I noticed something: despite generative AI being on the rise and widely discussed, <strong>many people still don’t understand the fundamentals of AI Agents</strong>. And that’s a problem.</p>
+
+<p>Why? Because <strong>the entire team’s understanding is essential for the success of any AI solution</strong>. For example, functional professionals in particular are the ones who bring the real demand, understand customer needs, and define use cases that make a difference. Without knowledge of AI agent fundamentals, it’s difficult to design solutions that actually work.</p>
+
+<p>With that in mind, I put together this post with an introduction to the basic concepts of AI agents, in accessible language, so that anyone can understand and contribute better to generative AI projects.</p>
+
+<h2 id="the-fundamental-equation-what-is-an-ai-agent">The Fundamental Equation: What is an AI Agent?</h2>
+
+<p>An AI agent can be defined in the following practical way:</p>
+
+<p><code class="language-plaintext highlighter-rouge">AI Agent = LLM + Tools + Prompt (use case)</code></p>
+
+<p>Each part of this equation is important, and we’ll break them all down below:</p>
+
+<h3 id="llm-is-not-the-same-as-agent">LLM is not the same as Agent</h3>
+
+<p>Here’s the first important revelation: <strong>an LLM (Large Language Model) alone is NOT an AI agent</strong>. Think of the LLM as a powerful brain that knows how to reason, plan, create structured texts, and answer complex questions. But, in the end, all this brain produces is <strong>just text</strong>.</p>
+
+<p>It’s like having an extremely intelligent person locked in a room without a phone, without internet, without access to the outside world. They can think, analyze, create brilliant ideas… but they can’t <strong>act</strong> in the real world. <strong>An AI agent goes beyond: it can act.</strong></p>
+
+<p>In the early days of generative AI, when you chatted with ChatGPT and it only answered your questions, you were interacting with a simple LLM. But today, when you use an assistant that can schedule meetings on your calendar, send emails, query databases, and make decisions about which action to execute… then you’re interacting with an <strong>agent</strong>.</p>
+
+<h2 id="how-llms-work-the-sophisticated-autocomplete">How LLMs Work: The Sophisticated Autocomplete</h2>
+
+<p>We can consider an LLM as if it were an extremely sophisticated autocomplete. Just like when writing a sentence on your phone, your keyboard suggests the next word, the LLM also does this, but on a much larger scale. The LLM has the ability to handle an absurd amount of text, identifying probabilistic relationships between words, and using this information to predict the next ones. All this taking into account what’s inside its context.</p>
+
+<h3 id="the-importance-of-context">The Importance of Context</h3>
+
+<p>Here’s a secret many people don’t know: <strong>every time you send a message to an LLM via API (or chat), it needs to receive ALL the conversation history again to give you a response</strong>.</p>
+
+<p>Let me illustrate with an example:</p>
+
+<blockquote>
+  <blockquote>
+    <p><strong>You:</strong> “What is the capital of France?”</p>
+  </blockquote>
+
+  <blockquote>
+    <p><strong>LLM:</strong> “Paris”</p>
+  </blockquote>
+
+  <blockquote>
+    <p><strong>You:</strong> “How many inhabitants does it have?”</p>
+  </blockquote>
+</blockquote>
+
+<p>To answer the second question, the LLM needs to receive:</p>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>Your first question (“What is the capital of France?”)</p>
+    </li>
+    <li>
+      <p>Its answer (“Paris”)</p>
+    </li>
+    <li>
+      <p>Your second question (“How many inhabitants does it have?”)</p>
+    </li>
+  </ol>
+</blockquote>
+
+<p>Only then can it understand that “it” refers to “Paris”. <strong>The LLM doesn’t have real memory</strong> — it simply receives the entire context again with each interaction. In fact, memory is controlled by the software that calls the LLM.</p>
+
+<h3 id="whats-the-consequence-of-this">What’s the consequence of this?</h3>
+
+<p>This means that the LLM’s knowledge is <strong>limited to what’s inside its context window</strong>. Everything you put there will end up influencing the response in one way or another. That’s why it’s very important to be careful with what we send:</p>
+
+<p>❌ <strong>Unnecessary information</strong> creates noise</p>
+
+<p>❌ <strong>Disorganized data</strong> confuses the model</p>
+
+<p>❌ <strong>Very large context</strong> increases costs and latency</p>
+
+<p>✅ <strong>Lean but complete context</strong> generates accurate responses</p>
+
+<h2 id="tools-what-makes-an-agent-powerful">Tools: What Makes an Agent Powerful</h2>
+
+<p>Tools allow the agent to take <strong>concrete and external actions</strong>, giving it the ability to interact with the real world based on its own judgment.</p>
+
+<h3 id="what-can-be-a-tool">What can be a tool?</h3>
+
+<p>Practically anything that allows the agent to do something: <strong>query a database, search the internet, create documents, access external APIs…</strong></p>
+
+<h3 id="how-tools-work-in-practice">How Tools Work in Practice</h3>
+
+<p>Here’s something important: <strong>the LLM doesn’t execute tools directly</strong>. It requests the software to execute a certain tool, at its own choice, and then return the execution result to it. The flow is like this:</p>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>The LLM analyzes the situation</p>
+    </li>
+    <li>
+      <p>The LLM <strong>requests</strong> the execution of a tool</p>
+    </li>
+    <li>
+      <p>The software you built <strong>executes</strong> the tool</p>
+    </li>
+    <li>
+      <p>The result is returned to the LLM</p>
+    </li>
+    <li>
+      <p>The LLM uses the result to continue reasoning</p>
+    </li>
+  </ol>
+</blockquote>
+
+<p>For the LLM to have the ability to judge, understand, and use a tool, it’s important that <strong>you describe the tools in natural language for the LLM.</strong> This way, it understands when and how to use them.</p>
+
+<p>See a real example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s">"name"</span><span class="p">:</span> <span class="s">"fetch_customer_data"</span><span class="p">,</span>
+
+  <span class="s">"description"</span><span class="p">:</span> <span class="s">"Fetches complete registration information of a customer
+  by CPF. Returns name, email, phone, address, and account status.
+  Use this tool when you need to verify customer data
+  or when the customer requests information about their registration."</span><span class="p">,</span>
+
+  <span class="s">"input"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"cpf"</span><span class="p">:</span> <span class="s">"string with 11 digits (numbers only, no dots or dashes)"</span>
+  <span class="p">},</span>
+
+  <span class="s">"output"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"name"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"cpf"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"email"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"phone"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"address"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span> <span class="s">"string (active/inactive)"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The LLM <strong>reads</strong> this and understands:</p>
+
+<blockquote>
+  <ul>
+    <li>
+      <p>What the tool does</p>
+    </li>
+    <li>
+      <p>When it should use it</p>
+    </li>
+    <li>
+      <p>What it needs to provide (CPF)</p>
+    </li>
+    <li>
+      <p>What it will receive back</p>
+    </li>
+  </ul>
+</blockquote>
+
+<p>This functional description is important because the agent <strong>decides on its own</strong> when to use each tool based on the situation. For this, it needs a clear understanding of how it can use the tool.</p>
+
+<h2 id="agent-optimization-tips">Agent Optimization Tips</h2>
+
+<p>Now that we understand the fundamental parts of an agent, let’s talk about one of the most important concepts: <strong>Context Engineering</strong>. Below is a fundamental principle:</p>
+
+<blockquote>
+  <p>If the agent needs to accomplish an important task, give it ALL the necessary tools and knowledge, formatted to make its work as EASY as possible, but nothing beyond that.</p>
+</blockquote>
+
+<p>This may seem obvious, but unfortunately it’s where most AI projects fail.</p>
+
+<h3 id="the-essential-checklist">The Essential Checklist</h3>
+
+<p>Every time you’re designing an agent, ask these three questions:</p>
+
+<p><strong>1️⃣ Does the agent have the necessary information within its context?</strong></p>
+
+<p>If it needs to know the company name, service hours, return policies… is this in the system prompt?</p>
+
+<p><strong>2️⃣ If not, does it have tools to fetch this information?</strong></p>
+
+<p>If it doesn’t know the customer’s history in advance, can it query the CRM? If it doesn’t know all the products, can it search the catalog?</p>
+
+<p><strong>3️⃣ Is the information formatted optimally?</strong></p>
+
+<p>Is data structured and are descriptions clear? Is there additional data that doesn’t matter for the task and might confuse the LLM?</p>
+
+<p><strong>By passing through this sieve, your agent has everything to succeed.</strong></p>
+
+<h3 id="benefits-of-well-done-context-engineering">Benefits of well-done Context Engineering:</h3>
+
+<p><strong>Drastically reduces costs</strong></p>
+
+<p>Well-done context engineering can reduce token consumption. For example: putting 200 tokens of essential information in the prompt prevents the agent from making 3-4 unnecessary searches of 1000+ tokens each.</p>
+
+<p><strong>Agent gets less lost</strong></p>
+
+<p>With clear context and adequate tools, the agent knows exactly what to do. No need to “guess” or try multiple approaches.</p>
+
+<p><strong>Faster and more accurate responses</strong></p>
+
+<p>With the right context, the agent gets it right the first time. Happy user, efficient system.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Now you have the fundamental knowledge about how AI agents work. If you’re working on AI projects, use this knowledge to:</p>
+
+<blockquote>
+  <ul>
+    <li>
+      <p>Question agent designs</p>
+    </li>
+    <li>
+      <p>Contribute better to technical discussions</p>
+    </li>
+    <li>
+      <p>Propose more effective use cases knowing about possibilities and limitations</p>
+    </li>
+  </ul>
+</blockquote>
+
+<p><strong>Generative AI is changing how we work. But to take advantage of it well, we need to understand its fundamentals.</strong></p>
+
+<hr />
+
+<p><strong>About the author:</strong> Micaelle is an AI agents specialist at Accenture Song, working on solution architecture and multi-agent systems. She works with ML, multi-cloud environments (AWS Bedrock, GCP Vertex AI, Azure OpenAI) and frameworks like LangChain and LangGraph, delivering enterprise AI solutions for finance and telecom clients.</p>
+
+
+  </div>
+</div>
+
+<div class="pagination">
+  
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <div class="social-layer">
+        <div class="social-icons">
+          <p>&copy; 2025 - Micaelle O.S.. All rights reserved.</p>
+          <ul>
+            
+<li>
+  <a href="mailto:micaelle.osouza@gmail.com" title="email">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/micaelle-souza/" title="Follow On LinkedIn">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

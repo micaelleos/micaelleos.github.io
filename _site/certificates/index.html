@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
   <head>
   <meta charset="UTF-8">
@@ -16,6 +16,14 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Language and SEO -->
+  
+  
+  <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/certificates/" />
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/en/certificates/" />
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/certificates/" />
+  <meta name="language" content="pt">
 
   <!-- Google Analytics -->
   
@@ -68,28 +76,102 @@
 
 
   <body>
+    
+
+
+
+
+
+
+
+
+
+<div class="language-switcher">
+  <a href="/en/" class="lang-toggle" title="Switch to English">
+    
+      <span class="flag">🇺🇸</span> EN
+    
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>
+
+
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
+        
+        <a href="/pt/">
           <h2 class="nav-title">MicaelleOS</h2>
         </a>
         <ul>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/blog/">Blog</a></li>
+          
+            <li><a href="/pt/#about">Sobre</a></li>
+          
+            <li><a href="/pt/portfolio/">Portfolio</a></li>
+          
+            <li><a href="/pt/blog/">Blog</a></li>
+          
         </ul>
     </div>
   </nav>
 
     <main>
-      <div class="certificates">
+      
+
+<div class="certificates">
   
     <a href="/certificates/Certificado - Data Science_ analise e visualização de dados_.pdf" class="portfolio-item">
       <div>
         <h1 class="portfolio-title">Data Science: analise e visualização de dados</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Alura</span>
           </span>
@@ -107,7 +189,7 @@
         <h1 class="portfolio-title">Estatística com Python: frequências e medidas</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Alura</span>
           </span>
@@ -125,7 +207,7 @@
         <h1 class="portfolio-title">Linux I: conhecendo e utilizando o terminal</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Alura</span>
           </span>
@@ -143,7 +225,7 @@
         <h1 class="portfolio-title">Coursera: Neural Networks and Deep Learning</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Deeplearning.Ai</span>
           </span>
@@ -161,7 +243,7 @@
         <h1 class="portfolio-title">Coursera: Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Deeplearning.Ai</span>
           </span>
@@ -179,7 +261,7 @@
         <h1 class="portfolio-title">Coursera: Convolutional Neural Networks</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Deeplearning.Ai</span>
           </span>
@@ -197,7 +279,7 @@
         <h1 class="portfolio-title">Coursera: Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Deeplearning.Ai</span>
           </span>
@@ -215,7 +297,7 @@
         <h1 class="portfolio-title">Kaggle: Feature Engineering</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Kaggle</span>
           </span>
@@ -233,7 +315,7 @@
         <h1 class="portfolio-title">Coding Tank | Python</h1>
         <div class="portfolio-line"></div>
 
-        <div class="portfolio-content"> 
+        <div class="portfolio-content">
           <span class="portfolio-icon">
               <i class="fa fa-university"></i><span class="portfolio-icon-text"> Let's Code</span>
           </span>

@@ -1,32 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Portuguese Home -->
+  <url>
+    <loc>http://localhost:4000/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:4000/en/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-  <loc>https://micaelleos.github.io/</loc>
-  <lastmod>2025-01-12T20:11:11+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://micaelleos.github.io/portfolio/</loc>
-  <lastmod>2025-01-12T20:11:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://micaelleos.github.io/blog/</loc>
-  <lastmod>2025-01-12T20:11:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://micaelleos.github.io/2022-08-15/Anaise-Financeira-de-Startups</loc>
-  <lastmod>2025-01-12T20:11:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <!-- English Home -->
+  <url>
+    <loc>http://localhost:4000/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:4000/en/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
+  <!-- Blog Posts -->
+  
+    <url>
+      <loc>http://localhost:4000/en/2025-12-11/agents-101</loc>
+      <lastmod>2025-12-11T00:00:02+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/pt/2025-12-11/agents-101</loc>
+      <lastmod>2025-12-11T00:00:01+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/pt/2025-10-15/mcp-muito-alem-de-um-protocolo</loc>
+      <lastmod>2025-10-15T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/en/2025-10-15/mcp-much-more-than-a-protocol</loc>
+      <lastmod>2025-10-15T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/en/2022-08-15/financial-analysis-of-startups</loc>
+      <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/pt/2022-08-15/analise-financeira-de-startups</loc>
+      <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  
+
+  <!-- Static Pages -->
+  
+    <url>
+      <loc>http://localhost:4000/pt/blog/</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.9</priority>
+    </url>
+    <url>
+      <loc>http://localhost:4000/pt/portfolio/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
+      <loc>http://localhost:4000/en/blog/</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.9</priority>
+    </url>
+    <url>
+      <loc>http://localhost:4000/en/portfolio/</loc>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
 
 </urlset>

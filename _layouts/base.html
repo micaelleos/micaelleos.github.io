@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: site.default_lang }}">
 
   {% include head.html %}
 
   <body>
+    {% include language-switcher.html %}
+
     <nav class="nav">
       <div class="nav-container">
-        <a href="{{ site.baseurl }}/">
+        {% assign current_lang = page.lang | default: site.default_lang %}
+        <a href="{{ '/' | append: current_lang | append: '/' | prepend: site.baseurl }}">
           <h2 class="nav-title">{{ site.title }}</h2>
         </a>
         <ul>
-          <li><a href="{{ '/#about' | prepend: site.baseurl }}">About</a></li>
-          <li><a href="{{ '/portfolio' | prepend: site.baseurl }}/">Portfolio</a></li>
-          <li><a href="{{ '/blog' | prepend: site.baseurl }}/">Blog</a></li>
+          {% for item in site.data.navigation[current_lang] %}
+            <li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+          {% endfor %}
         </ul>
     </div>
   </nav>
@@ -24,7 +27,7 @@
     <footer>
       <div class="social-layer">
         <div class="social-icons">
-          <p>&copy; {{ site.time | date: '%Y' }} - {{ site.author.name }}. Todos os direitos reservados.</p>
+          <p>&copy; {{ site.time | date: '%Y' }} - {{ site.author.name }}. {{ site.data.translations.footer.rights[current_lang] }}</p>
           <ul>
             {% include icons.html %}
           </ul>

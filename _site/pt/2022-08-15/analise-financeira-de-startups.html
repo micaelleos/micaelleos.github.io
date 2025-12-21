@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
   <head>
   <meta charset="UTF-8">
@@ -16,6 +16,14 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Language and SEO -->
+  
+  
+  <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/2022-08-15/analise-financeira-de-startups" />
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/en/2022-08-15/analise-financeira-de-startups" />
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/2022-08-15/analise-financeira-de-startups" />
+  <meta name="language" content="pt">
 
   <!-- Google Analytics -->
   
@@ -68,25 +76,99 @@
 
 
   <body>
+    
+
+
+
+
+
+
+
+
+
+<div class="language-switcher">
+  <a href="/en/blog/" class="lang-toggle" title="Switch to English">
+    
+      <span class="flag">🇺🇸</span> EN
+    
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>
+
+
     <nav class="nav">
       <div class="nav-container">
-        <a href="/">
+        
+        <a href="/pt/">
           <h2 class="nav-title">MicaelleOS</h2>
         </a>
         <ul>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/portfolio/">Portfolio</a></li>
-          <li><a href="/blog/">Blog</a></li>
+          
+            <li><a href="/pt/#about">Sobre</a></li>
+          
+            <li><a href="/pt/portfolio/">Portfolio</a></li>
+          
+            <li><a href="/pt/blog/">Blog</a></li>
+          
         </ul>
     </div>
   </nav>
 
     <main>
-      <div class = "post-back">
+      
+
+<div class = "post-back">
   <div class="post">
 
     <h2 class="post-title">Análise Financeira de Startups</h2>
-    
+
     
     <img src="https://vradvogados.com.br/wp-content/uploads/2024/11/071124_2.png" alt="Análise Financeira de Startups" class="post-header-image">
     
@@ -1013,11 +1095,9 @@ Acurácia do conjunto de teste: 0.9999999999999999
 
 <div class="pagination">
   
-    <a href="/2025-10-15/MCP-muito-al%C3%A9m-de-um-protocolo-de-ferramentas-para-IA" class="left next">Prev</a>
-  
   
 
-  <a href="#" class="top">Top</a>
+  <a href="#" class="top">Topo</a>
 </div>
 
     </main>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MicaelleOS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Language and SEO -->
+  
+  
+  <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/2022-08-15/financial-analysis-of-startups" />
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/en/2022-08-15/financial-analysis-of-startups" />
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/2022-08-15/financial-analysis-of-startups" />
+  <meta name="language" content="en">
+
+  <!-- Google Analytics -->
+  
+  <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'G-R4CWYLGXX1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Consultoria de IA",
+      "image": "/assets/img/profile.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Joinville",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "email":"micaelle.osouza@gmail.com"
+      "url": "https://micaelleos.github.io/",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4CWYLGXX1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R4CWYLGXX1');
+        </script>
+</head>
+
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+<div class="language-switcher">
+  <a href="/pt/blog/" class="lang-toggle" title="Mudar para Português">
+    
+      <span class="flag">🇧🇷</span> PT
+    
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>
+
+
+    <nav class="nav">
+      <div class="nav-container">
+        
+        <a href="/en/">
+          <h2 class="nav-title">MicaelleOS</h2>
+        </a>
+        <ul>
+          
+            <li><a href="/en/#about">About</a></li>
+          
+            <li><a href="/en/portfolio/">Portfolio</a></li>
+          
+            <li><a href="/en/blog/">Blog</a></li>
+          
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      
+
+<div class = "post-back">
+  <div class="post">
+
+    <h2 class="post-title">Financial Analysis of Startups</h2>
+
+    
+    <img src="https://vradvogados.com.br/wp-content/uploads/2024/11/071124_2.png" alt="Financial Analysis of Startups" class="post-header-image">
+    
+
+    <p>The complete project can be found at: <a href="https://github.com/micaelleos/Portfolio-Data-Science/blob/main/ProfitPrediction/dataanalisys.ipynb">Financial Analysis of Startups</a></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>The profit earned by a company over a given period depends on several factors such as costs and investments in administrative sectors, marketing, research and development, etc. The task of predicting profit is important for goal setting. These goals become strategic guidelines for the company’s continuous growth. For fast-growing companies, such as startups, knowing these forecasts becomes more than important—it’s essential for the company’s survival.</p>
+
+<p>The database was obtained from: <a href="https://raw.githubusercontent.com/amankharwal/Website-data/master/Startups.csv">https://raw.githubusercontent.com/amankharwal/Website-data/master/Startups.csv</a></p>
+
+<p>Keywords: <em>data prediction</em>, <em>data modeling</em>, <em>Linear Regression</em>, <em>Bayesian Regression</em>, <em>Clustering</em>, <em>K-means</em>, <em>Cross-validation</em>, <em>Market segmentation</em>.</p>
+
+<h2 id="importing-libraries">Importing Libraries</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span>  <span class="n">mean_absolute_error</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span><span class="p">,</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">BayesianRidge</span><span class="p">,</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span><span class="n">cross_val_score</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="n">warnings</span><span class="p">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s">'ignore'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="initial-database-analysis">Initial Database Analysis</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dados</span><span class="p">.</span><span class="n">info</span><span class="p">()</span>
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 50 entries, 0 to 49
+Data columns (total 5 columns):
+ #   Column           Non-Null Count  Dtype
+---  ------           --------------  -----
+ 0   R&amp;D Spend        50 non-null     float64
+ 1   Administration   50 non-null     float64
+ 2   Marketing Spend  50 non-null     float64
+ 3   State            50 non-null     object
+ 4   Profit           50 non-null     float64
+dtypes: float64(4), object(1)
+memory usage: 2.1+ KB
+</code></pre></div></div>
+
+<p>The database has no null data.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The columns present in the DataFrame are:
+ Index(['R&amp;D Spend', 'Administration', 'Marketing Spend', 'State', 'Profit'], dtype='object')
+</code></pre></div></div>
+
+<h2 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h2>
+
+<p>Which states are present in the dataset?</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>States listed in dataset: ['New York' 'California' 'Florida']
+
+Number of companies per state listed in dataset:
+New York      17
+California    17
+Florida       16
+Name: State, dtype: int64
+</code></pre></div></div>
+
+<p>Basic dataset statistics:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dados</span><span class="p">.</span><span class="n">describe</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>All variables have a direct correlation with profit.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sns</span><span class="p">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">dados</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The variables with the greatest influence on startup profit are:</p>
+
+<ul>
+  <li>R&amp;D Spend (research and development expenses)</li>
+  <li>Marketing Spend (marketing expenses)</li>
+</ul>
+
+<p>The highest monetary return for startups comes from investments in R&amp;D. Administration expenses have little relationship with startup profit.</p>
+
+<p>From the correlation graph, it’s possible to see that the relationship between profit and R&amp;D costs in startups is almost linear and well-behaved. This relationship can be better seen in the graph displayed below. Unlike marketing costs, which also have a high correlation with profit but don’t show a well-behaved graph.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="p">.</span><span class="n">lmplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">"Profit"</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">"R&amp;D Spend"</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">scatter_kws</span><span class="o">=</span><span class="p">{</span><span class="s">"s"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">"alpha"</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">figure</span><span class="p">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">'Relationship Profit X R&amp;D Costs of Startups'</span><span class="p">,</span><span class="n">xlabel</span><span class="o">=</span><span class="s">'Profit'</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s">'R&amp;D Cost'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/posts/2022-08-15/output_21_1.png" alt="png" /></p>
+
+<h2 id="analyzing-profit-by-state">Analyzing Profit by State</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="p">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s">'State'</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s">'Profit'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">figure</span><span class="p">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">"Distribution of Profits by State"</span><span class="p">,</span><span class="n">ylabel</span><span class="o">=</span><span class="s">"Profit"</span><span class="p">,</span><span class="n">xlabel</span><span class="o">=</span><span class="s">'State'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><img src="/assets/img/posts/2022-08-15/output_23_1.png" alt="png" /></p>
+
+<p>On average, startups in the three states have similar profits.</p>
+
+<h2 id="predictive-modeling">Predictive Modeling</h2>
+
+<h3 id="linear-regression">Linear Regression</h3>
+
+<p>Using Linear Regression to predict startup profits based on R&amp;D, Administration, and Marketing expenses.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span><span class="p">,</span> <span class="n">r2_score</span>
+
+<span class="c1"># Preparing data
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">dados</span><span class="p">[[</span><span class="s">'R&amp;D Spend'</span><span class="p">,</span> <span class="s">'Administration'</span><span class="p">,</span> <span class="s">'Marketing Spend'</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">dados</span><span class="p">[</span><span class="s">'Profit'</span><span class="p">]</span>
+
+<span class="c1"># Splitting into training and test sets
+</span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Training the model
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Predictions
+</span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluation
+</span><span class="n">mae</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Mean Absolute Error: </span><span class="si">{</span><span class="n">mae</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"R² Score: </span><span class="si">{</span><span class="n">r2</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="bayesian-regression">Bayesian Regression</h3>
+
+<p>Applying Bayesian Regression for more robust predictions.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">BayesianRidge</span>
+
+<span class="c1"># Training Bayesian model
+</span><span class="n">bayesian_model</span> <span class="o">=</span> <span class="n">BayesianRidge</span><span class="p">()</span>
+<span class="n">bayesian_model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Predictions
+</span><span class="n">y_pred_bayesian</span> <span class="o">=</span> <span class="n">bayesian_model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Evaluation
+</span><span class="n">mae_bayesian</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_bayesian</span><span class="p">)</span>
+<span class="n">r2_bayesian</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_bayesian</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Bayesian MAE: </span><span class="si">{</span><span class="n">mae_bayesian</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Bayesian R² Score: </span><span class="si">{</span><span class="n">r2_bayesian</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="market-segmentation-with-k-means">Market Segmentation with K-Means</h2>
+
+<p>Applying clustering to identify different startup profiles.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+
+<span class="c1"># Normalizing data
+</span><span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># K-Means
+</span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">clusters</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">)</span>
+
+<span class="c1"># Adding clusters to dataframe
+</span><span class="n">dados</span><span class="p">[</span><span class="s">'Cluster'</span><span class="p">]</span> <span class="o">=</span> <span class="n">clusters</span>
+
+<span class="c1"># Visualizing clusters
+</span><span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="p">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">dados</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s">'R&amp;D Spend'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'Profit'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s">'Cluster'</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s">'viridis'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Startup Segmentation by Cluster'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'R&amp;D Spend'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Profit'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>This analysis revealed that:</p>
+
+<ol>
+  <li><strong>R&amp;D investment is the most important factor</strong> for startup profit</li>
+  <li><strong>Marketing also has a significant impact</strong>, though less predictable</li>
+  <li><strong>Administrative costs have minimal correlation</strong> with profit</li>
+  <li><strong>Geographic location (state) doesn’t significantly impact</strong> average profit</li>
+  <li><strong>Predictive models</strong> can accurately forecast profit based on expense patterns</li>
+  <li><strong>Market segmentation</strong> identified distinct startup profiles that can guide investment strategies</li>
+</ol>
+
+<p>For fast-growing startups, these insights are essential for:</p>
+<ul>
+  <li>Setting realistic growth goals</li>
+  <li>Optimizing resource allocation</li>
+  <li>Prioritizing R&amp;D and marketing investments</li>
+  <li>Making data-driven strategic decisions</li>
+</ul>
+
+<hr />
+
+<p><strong>Keywords:</strong> data prediction, data modeling, Linear Regression, Bayesian Regression, Clustering, K-means, Cross-validation, Market segmentation</p>
+
+<p><strong>Tools:</strong> Python, Pandas, Scikit-learn, Seaborn, Matplotlib</p>
+
+
+  </div>
+</div>
+
+<div class="pagination">
+  
+    <a href="/en/2025-10-15/mcp-much-more-than-a-protocol" class="left next">Prev</a>
+  
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <div class="social-layer">
+        <div class="social-icons">
+          <p>&copy; 2025 - Micaelle O.S.. All rights reserved.</p>
+          <ul>
+            
+<li>
+  <a href="mailto:micaelle.osouza@gmail.com" title="email">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/micaelle-souza/" title="Follow On LinkedIn">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

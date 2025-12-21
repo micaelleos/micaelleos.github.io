@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
   <head>
   <meta charset="UTF-8">
@@ -23,7 +23,7 @@
   <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/portfolio/" />
   <link rel="alternate" hreflang="en" href="http://localhost:4000/en/portfolio/" />
   <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/portfolio/" />
-  <meta name="language" content="pt">
+  <meta name="language" content="en">
 
   <!-- Google Analytics -->
   
@@ -87,9 +87,9 @@
 
 
 <div class="language-switcher">
-  <a href="/en/" class="lang-toggle" title="Switch to English">
+  <a href="/pt/portfolio/" class="lang-toggle" title="Mudar para Português">
     
-      <span class="flag">🇺🇸</span> EN
+      <span class="flag">🇧🇷</span> PT
     
   </a>
 </div>
@@ -146,16 +146,16 @@
     <nav class="nav">
       <div class="nav-container">
         
-        <a href="/pt/">
+        <a href="/en/">
           <h2 class="nav-title">MicaelleOS</h2>
         </a>
         <ul>
           
-            <li><a href="/pt/#about">Sobre</a></li>
+            <li><a href="/en/#about">About</a></li>
           
-            <li><a href="/pt/portfolio/">Portfolio</a></li>
+            <li><a href="/en/portfolio/">Portfolio</a></li>
           
-            <li><a href="/pt/blog/">Blog</a></li>
+            <li><a href="/en/blog/">Blog</a></li>
           
         </ul>
     </div>
@@ -358,9 +358,9 @@ a:hover {
 <section class="portfolio-intro">
     <div class="intro-content">
         <h1>Portfolio</h1>
-        <h2>Projetos que Transformam Ideias em Soluções</h2>
+        <h2>Projects that Transform Ideas into Solutions</h2>
         <p>
-            Explore meu portfólio de projetos que combinam Inteligência Artificial, inovação e estratégia para criar soluções práticas e escaláveis. Cada um é resultado de trabalho focado em resolver problemas reais, causando impacto no mundo real.
+            Explore my portfolio of projects that combine Artificial Intelligence, innovation, and strategy to create practical and scalable solutions. Each one is the result of work focused on solving real problems, making an impact in the real world.
         </p>
     </div>
 </section>
@@ -373,7 +373,7 @@ a:hover {
 <script>
 // Função para carregar e processar o arquivo Markdown
 async function loadProjects() {
-    const currentLang = 'pt';
+    const currentLang = 'en';
     const projectFile = currentLang === 'pt' ? '/pt/projects.md' : '/en/projects.md';
     const response = await fetch(projectFile);
     const markdown = await response.text();
@@ -391,7 +391,7 @@ async function loadProjects() {
         <div class="portfolio-info">
         <h2>${project.name}</h2>
         <p>${project.description}</p>
-        <a href="${project.link}" target="_blank">Ver projeto</a>
+        <a href="${project.link}" target="_blank">View Project</a>
         </div>
         <div class="portfolio-image">
         <a href="${project.link}" target="_blank">
@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', loadProjects);
     <footer>
       <div class="social-layer">
         <div class="social-icons">
-          <p>&copy; 2025 - Micaelle O.S.. Todos os direitos reservados.</p>
+          <p>&copy; 2025 - Micaelle O.S.. All rights reserved.</p>
           <ul>
             
 <li>

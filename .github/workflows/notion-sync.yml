@@ -116,6 +116,9 @@ jobs:
                 const info = (page.properties?.Info?.rich_text?.[0]?.plain_text) || (page.properties?.Description?.rich_text?.[0]?.plain_text) || '';
                 const tech = (page.properties?.Tech?.rich_text?.[0]?.plain_text) || page.properties?.Tech?.select?.name || '';
 
+                // NEW: Extract language
+                const language = page.properties?.Language?.select?.name || 'pt';
+
                 // Try to find image: cover > property Image (files/url) > page.properties.Image.url
                 let imageUrl = null;
                 if (page.cover) imageUrl = page.cover.external?.url || page.cover.file?.url || imageUrl;
@@ -130,10 +133,10 @@ jobs:
                   }
                 }
 
-                // Download image if available
+                // Download image if available (language-specific folder)
                 let imageFront = '';
                 if (imageUrl && imageUrl.startsWith('http')) {
-                  const folder = path.join(process.cwd(), 'assets', 'img', 'posts', datePrefix);
+                  const folder = path.join(process.cwd(), 'assets', 'img', 'posts', language, datePrefix);
                   const localPath = await downloadImage(imageUrl, folder);
                   if (localPath) {
                     // make relative like ../assets/img/posts/YYYY-MM-DD/filename
@@ -202,12 +205,36 @@ jobs:
                 // Limpeza final
                 mdString = mdString.replace(/\[object Object\]/g, '').trim();
 
+                // Processar imagens no markdown (baixar URLs externas)
+                const imageRegex = /!\[([^\]]*)\]\((https?:\/\/[^\)]+)\)/g;
+                const imageMatches = [...mdString.matchAll(imageRegex)];
+                const imageFolder = path.join(process.cwd(), 'assets', 'img', 'posts', language, datePrefix);
+
+                for (const match of imageMatches) {
+                  const fullMatch = match[0];
+                  const altText = match[1];
+                  const imageUrl = match[2];
+
+                  // Baixar a imagem
+                  const localPath = await downloadImage(imageUrl, imageFolder);
+                  if (localPath) {
+                    // Criar caminho relativo
+                    const rel = path.join('..', path.relative(process.cwd(), localPath)).replace(/\\/g, '/');
+                    // Substituir no markdown
+                    const newImageRef = `![${altText}](${rel})`;
+                    mdString = mdString.replace(fullMatch, newImageRef);
+                    console.log(`  ✓ Downloaded image: ${path.basename(localPath)}`);
+                  }
+                }
+
                 const escTitle = title.replace(/"/g, '\\"').replace(/\n/g, ' ');
                 const escInfo = String(info || '').replace(/"/g, '\\"').replace(/\n/g, ' ');
 
                 let frontmatter = `---\nlayout: post\ntitle: "${escTitle}"\n`;
                 if (escInfo) frontmatter += `info: ${escInfo}\n`;
                 frontmatter += `date: ${datePrefix}\n`;
+                frontmatter += `lang: ${language}\n`;
+                frontmatter += `permalink: /${language}/${datePrefix}/${slug}\n`;
                 if (tech) frontmatter += `tech: "${tech}"\n`;
                 frontmatter += `type: post\n`;
                 if (imageFront) frontmatter += imageFront;
@@ -216,9 +243,9 @@ jobs:
                 frontmatter += `---\n\n`;
 
                 const fullContent = frontmatter + mdString;
-                const fileName = `${datePrefix}-${slug}.md`;
+                const fileName = `${datePrefix}-${slug}-${language}.md`;
                 fs.writeFileSync(path.join(postsDir, fileName), fullContent, 'utf8');
-                console.log(`✓ Synced: ${fileName}`);
+                console.log(`✓ Synced: ${fileName} [${language.toUpperCase()}]`);
               }
 
               console.log('Sync completed successfully!');

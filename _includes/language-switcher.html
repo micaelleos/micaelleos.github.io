@@ -1,0 +1,83 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign other_lang = "en" %}
+{% if current_lang == "en" %}
+  {% assign other_lang = "pt" %}
+{% endif %}
+
+{% comment %}
+  Detectar tipo de página atual e construir URL alternativa
+{% endcomment %}
+{% assign current_path = page.url | remove_first: "/" | split: "/" %}
+{% assign page_type = current_path[1] | default: "home" %}
+
+{% if page_type == "home" or current_path.size == 1 %}
+  {% if other_lang == "pt" %}
+    {% assign alt_url = "/pt/" %}
+  {% else %}
+    {% assign alt_url = "/en/" %}
+  {% endif %}
+{% elsif page.layout == "post" %}
+  {% comment %}Encontrar post traduzido{% endcomment %}
+  {% assign post_slug = page.url | split: "/" | last | remove: ".html" %}
+  {% assign alt_url = "/" | append: other_lang | append: "/blog/" %}
+{% else %}
+  {% assign alt_url = page.url | replace: current_lang, other_lang %}
+{% endif %}
+
+<div class="language-switcher">
+  <a href="{{ alt_url }}" class="lang-toggle" title="{{ site.data.translations.language.switch_to[current_lang] }}">
+    {% if other_lang == "pt" %}
+      <span class="flag">🇧🇷</span> PT
+    {% else %}
+      <span class="flag">🇺🇸</span> EN
+    {% endif %}
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>

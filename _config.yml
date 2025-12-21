@@ -67,7 +67,26 @@ collections:
 
 
 # Idioma padrão do site
-default_lang: "en"
+default_lang: "pt"
 
 # Configuração de idioma (pode ser 'en' ou 'pt' por exemplo)
 lang: "pt"
+
+# Idiomas suportados
+languages: ["pt", "en"]
+
+# Defaults por idioma
+defaults:
+  - scope:
+      path: "pt"
+    values:
+      lang: "pt"
+  - scope:
+      path: "en"
+    values:
+      lang: "en"
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"

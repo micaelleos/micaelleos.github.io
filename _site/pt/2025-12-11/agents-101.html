@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MicaelleOS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Language and SEO -->
+  
+  
+  <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/2025-12-11/agents-101" />
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/en/2025-12-11/agents-101" />
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/2025-12-11/agents-101" />
+  <meta name="language" content="pt">
+
+  <!-- Google Analytics -->
+  
+  <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'G-R4CWYLGXX1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Consultoria de IA",
+      "image": "/assets/img/profile.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Joinville",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "email":"micaelle.osouza@gmail.com"
+      "url": "https://micaelleos.github.io/",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4CWYLGXX1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R4CWYLGXX1');
+        </script>
+</head>
+
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+<div class="language-switcher">
+  <a href="/en/blog/" class="lang-toggle" title="Switch to English">
+    
+      <span class="flag">🇺🇸</span> EN
+    
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>
+
+
+    <nav class="nav">
+      <div class="nav-container">
+        
+        <a href="/pt/">
+          <h2 class="nav-title">MicaelleOS</h2>
+        </a>
+        <ul>
+          
+            <li><a href="/pt/#about">Sobre</a></li>
+          
+            <li><a href="/pt/portfolio/">Portfolio</a></li>
+          
+            <li><a href="/pt/blog/">Blog</a></li>
+          
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      
+
+<div class = "post-back">
+  <div class="post">
+
+    <h2 class="post-title">Agents 101: Entendendo os Fundamentos de Agentes de IA</h2>
+
+    
+
+    <h3 id="por-que-você-precisa-entender-agentes-de-ia-mesmo-não-sendo-desenvolvedor">Por que você precisa entender agentes de IA (mesmo não sendo desenvolvedor)</h3>
+
+<p>Recentemente, comecei atuar como especialista de IA em um projeto ambicioso: desenvolver um software que utiliza IA generativa para renderizar componentes de UI diretamente na tela do usuário. É o tipo de projeto que parece saído de uma história futurista, mas que está se tornando cada vez mais realidade.</p>
+
+<p>No entanto, enquanto trabalhava com o time, percebi algo: apesar da IA generativa estar em alta e ser amplamente discutida, <strong>muitas pessoas ainda não entendem os fundamentos de Agentes de IA</strong>. E isso é um problema.</p>
+
+<p>Por quê? Porque <strong>o entendimento de todo time é essencial para o sucesso de qualquer solução de IA</strong>. Por exemplo, profissionais funcionais em especial são os que trazem a demanda real, entendem as necessidades do cliente e definem os casos de uso que fazem a diferença. Sem o conhecimento de fundamentos de agentes de IA, fica difícil desenhar soluções que realmente funcionem.</p>
+
+<p>Foi pensando nisso que montei esse post, com uma introdução aos conceitos básicos de agentes de IA, em linguagem acessível, para que qualquer pessoa possa entender e contribuir melhor para projetos de IA generativa.</p>
+
+<h2 id="a-equação-fundamental-o-que-é-um-agente-de-ia">A Equação Fundamental: O que é um Agente de IA?</h2>
+
+<p>Um agente de IA pode ser definido da seguinte forma prática:</p>
+
+<p><code class="language-plaintext highlighter-rouge">Agente de IA = LLM + Tools + Prompt (caso de uso)</code></p>
+
+<p>Cada parte dessa equação é importante, e a seguir vamos destrinchar todas elas:</p>
+
+<h3 id="llm-não-é-o-mesmo-que-agente">LLM não é o mesmo que Agente</h3>
+
+<p>Aqui está a primeira revelação importante: <strong>uma LLM (Large Language Model) sozinha NÃO é um agente de IA</strong>. Pense na LLM como um cérebro poderoso, que sabe raciocinar, planejar, criar textos estruturados e responder perguntas complexas. Mas, no final das contas, tudo que esse cérebro produz é <strong>apenas texto</strong>.</p>
+
+<p>É como ter uma pessoa extremamente inteligente trancada em uma sala sem telefone, sem internet, sem acesso ao mundo exterior. Ela pode pensar, analisar, criar ideias brilhantes… mas não pode <strong>agir</strong> no mundo real. <strong>Um agente de IA vai além: ele pode agir.</strong></p>
+
+<p>Nos primórdios da IA generativa, quando você conversava com o ChatGPT, e ele apenas respondia suas perguntas, você estava interagindo com uma LLM simples. Mas hoje, quando você usa um assistente que consegue agendar reuniões no seu calendário, enviar e-mails, consultar bases de dados e tomar decisões sobre qual ação executar… aí você está interagindo com um <strong>agente</strong>.</p>
+
+<h2 id="como-llms-funcionam-o-autocompletar-sofisticado">Como LLMs Funcionam: O Autocompletar Sofisticado</h2>
+
+<p>Podemos considerar uma LLM como se fosse um autocompletar extremamente sofisticado. Assim como, ao escrever uma frase no seu celular, o seu teclado te sugerir a próxima palavra, a LLM também faz isso, mas em um escala muito maior. A LLM tem a capacidade de lidar com uma quantidade absurda de texto, identificando relações probabilísticas entre as palavras, e utilizando essas informações para prever as próximas. Tudo isso levando em consideração o que há dentro do seu contexto.</p>
+
+<h3 id="a-importância-do-contexto">A importância do Contexto</h3>
+
+<p>Aqui está um segredo que muita gente não sabe: <strong>toda vez que você envia uma mensagem para uma LLM via API (ou chat), ela precisa receber TODO o histórico da conversa de novo, para te devolver uma resposta</strong>.</p>
+
+<p>Deixe-me ilustrar com um exemplo:</p>
+
+<blockquote>
+  <p><strong>Você:</strong> “Qual é a capital da França?”</p>
+
+  <p><strong>LLM:</strong> “Paris”</p>
+
+  <p><strong>Você:</strong> “Quantos habitantes ela tem?”</p>
+</blockquote>
+
+<p>Para responder a segunda pergunta, a LLM precisa receber:</p>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>Sua primeira pergunta (“Qual é a capital da França?”)</p>
+    </li>
+    <li>
+      <p>A resposta dela (“Paris”)</p>
+    </li>
+    <li>
+      <p>Sua segunda pergunta (“Quantos habitantes ela tem?”)</p>
+    </li>
+  </ol>
+</blockquote>
+
+<p>Só assim ela consegue entender que “ela” se refere a “Paris”. <strong>A LLM não tem memória real</strong> — ela simplesmente recebe todo o contexto novamente a cada interação. Na verdade, a memória é controlada pelo software que chama a LLM.</p>
+
+<h3 id="qual-a-consequência-disso">Qual a consequência disso?</h3>
+
+<p>Isso significa que o conhecimento da LLM está <strong>limitado ao que está dentro da sua janela de contexto</strong>. Tudo que você coloca ali vai acabar influenciando na resposta, de um jeito ou de outro. Por isso, é muito importante ter cuidado com o que enviamos:</p>
+
+<p>❌ <strong>Informações desnecessárias</strong> criam ruído</p>
+
+<p>❌ <strong>Dados desorganizados</strong> confundem o modelo</p>
+
+<p>❌ <strong>Contexto muito grande</strong> aumenta custos e latência</p>
+
+<p>✅ <strong>Contexto enxuto mas completo</strong> gera respostas precisas</p>
+
+<h2 id="ferramentas-tools-o-que-torna-um-agente-poderoso">Ferramentas (Tools): O Que Torna um Agente Poderoso</h2>
+
+<p>As ferramentas permitem que o agente tome <strong>ações concretas e externas</strong>, dando a ele a capacidade de interagir com o mundo real a partir do seu próprio julgamento.</p>
+
+<h3 id="o-que-pode-ser-uma-ferramenta">O que pode ser uma ferramenta?</h3>
+
+<p>Praticamente qualquer coisa que permita ao agente fazer algo: <strong>consultar um banco de dados, buscar na internet, criar documentos, acessar APIs externas…</strong></p>
+
+<h3 id="como-ferramentas-funcionam-na-prática">Como Ferramentas Funcionam na Prática</h3>
+
+<p>Aqui está algo importante: <strong>a LLM não executa as ferramentas diretamente</strong>. Ela solicita ao software para que execute determinada ferramenta, a sua própria escolha, e depois devolva a ela o resultado da execução. O fluxo é assim:</p>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>A LLM analisa a situação</p>
+    </li>
+    <li>
+      <p>A LLM <strong>solicita</strong> a execução de uma ferramenta</p>
+    </li>
+    <li>
+      <p>O software que você construiu <strong>executa</strong> a ferramenta</p>
+    </li>
+    <li>
+      <p>O resultado é devolvido para a LLM</p>
+    </li>
+    <li>
+      <p>A LLM usa o resultado para continuar o raciocínio</p>
+    </li>
+  </ol>
+</blockquote>
+
+<p>Para que a LLM tenha a capacidade de julgar, entender e utilizar uma ferramenta, é importante que <strong>você descreva as ferramentas em linguagem natural para a LLM.</strong> Desta forma e ela entende quando e como usá-las.</p>
+
+<h2 id="dicas-de-otimização-de-agentes">Dicas de Otimização de Agentes</h2>
+
+<p>Agora que já entendemos as partes fundamentais de um agente, vamos falar sobre um dos conceitos mais importante: <strong>Context Engineering</strong>. Abaixo segue um princípio fundamental:</p>
+
+<blockquote>
+  <p>Se o agente precisa cumprir uma tarefa importante, dê a ele TODAS as ferramentas e conhecimento necessários, formatados de forma a FACILITAR ao máximo o trabalho dele, mas nada além disso.</p>
+</blockquote>
+
+<p>Isso pode parece óbvio, mas infelizmente é onde a maioria dos projetos de IA falha.</p>
+
+<h3 id="o-checklist-essencial">O Checklist Essencial</h3>
+
+<p>Toda vez que você estiver desenhando um agente, faça essas três perguntas:</p>
+
+<p><strong>1️⃣ O agente tem as informações necessárias dentro do seu contexto?</strong></p>
+
+<p>Se ele precisa saber o nome da empresa, horário de atendimento, políticas de devolução… isso está no prompt do sistema?</p>
+
+<p><strong>2️⃣ Se não, ele tem ferramentas para buscar essas informações?</strong></p>
+
+<p>Se ele não sabe de antemão o histórico do cliente, tem como consultar o CRM? Se não conhece todos os produtos, pode buscar no catálogo?</p>
+
+<p><strong>3️⃣ As informações estão formatadas de forma otimizada?</strong></p>
+
+<p>Dados estão estruturados e as descrições estão claras? Há dados adicionais que não importam para a tarefa e podem confundir a LLM?</p>
+
+<p><strong>Passando por esse crivo, seu agente tem tudo para ter sucesso.</strong></p>
+
+<h2 id="conclusão">Conclusão</h2>
+
+<p>Agora você tem o conhecimento fundamental sobre como agentes de IA funcionam. Se você está trabalhando em projetos de IA, use esse conhecimento para:</p>
+
+<blockquote>
+  <ul>
+    <li>
+      <p>Questionar designs de agentes</p>
+    </li>
+    <li>
+      <p>Contribuir melhor em discussões técnicas</p>
+    </li>
+    <li>
+      <p>Propor casos de uso mais efetivos sabendo sobre possibilidades e limitações</p>
+    </li>
+  </ul>
+</blockquote>
+
+<p><strong>A IA generativa está mudando como trabalhamos. Mas para aproveitá-la bem, precisamos entender seus fundamentos.</strong></p>
+
+<hr />
+
+<p><strong>Sobre a autora:</strong> Micaelle é especialista em agentes de AI na Accenture Song, atuando em arquitetura de soluções e sistemas multi-agentes. Trabalha com ML, ambientes multi-cloud (AWS Bedrock, GCP Vertex AI, Azure OpenAI) e frameworks como LangChain e LangGraph, entregando soluções enterprise de IA para clientes de finanças e telecom.</p>
+
+
+  </div>
+</div>
+
+<div class="pagination">
+  
+  
+    <a href="/pt/2025-10-15/mcp-muito-alem-de-um-protocolo" class="right next">Próximo</a>
+  
+
+  <a href="#" class="top">Topo</a>
+</div>
+
+    </main>
+
+    <footer>
+      <div class="social-layer">
+        <div class="social-icons">
+          <p>&copy; 2025 - Micaelle O.S.. Todos os direitos reservados.</p>
+          <ul>
+            
+<li>
+  <a href="mailto:micaelle.osouza@gmail.com" title="email">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/micaelle-souza/" title="Follow On LinkedIn">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

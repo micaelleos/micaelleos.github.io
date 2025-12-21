@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MicaelleOS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Language and SEO -->
+  
+  
+  <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/2025-10-15/mcp-much-more-than-a-protocol" />
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/en/2025-10-15/mcp-much-more-than-a-protocol" />
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/2025-10-15/mcp-much-more-than-a-protocol" />
+  <meta name="language" content="en">
+
+  <!-- Google Analytics -->
+  
+  <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'G-R4CWYLGXX1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Consultoria de IA",
+      "image": "/assets/img/profile.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Joinville",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "email":"micaelle.osouza@gmail.com"
+      "url": "https://micaelleos.github.io/",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4CWYLGXX1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R4CWYLGXX1');
+        </script>
+</head>
+
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+<div class="language-switcher">
+  <a href="/pt/blog/" class="lang-toggle" title="Mudar para Português">
+    
+      <span class="flag">🇧🇷</span> PT
+    
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>
+
+
+    <nav class="nav">
+      <div class="nav-container">
+        
+        <a href="/en/">
+          <h2 class="nav-title">MicaelleOS</h2>
+        </a>
+        <ul>
+          
+            <li><a href="/en/#about">About</a></li>
+          
+            <li><a href="/en/portfolio/">Portfolio</a></li>
+          
+            <li><a href="/en/blog/">Blog</a></li>
+          
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      
+
+<div class = "post-back">
+  <div class="post">
+
+    <h2 class="post-title">MCP: much more than a tools protocol for AI</h2>
+
+    
+    <img src="../assets/img/posts/2025-10-15/Gemini_Generated_Image_3my7j3my7j3my7j3.png" alt="MCP: much more than a tools protocol for AI" class="post-header-image">
+    
+
+    <h2 id="introduction-what-is-mcp">Introduction: What is MCP?</h2>
+
+<p>Many people still see <strong>MCP (Model Context Protocol)</strong> only as a way to connect tools to AI agents. But MCP goes far beyond that: it’s a new layer of <strong>solution design</strong> that allows transforming knowledge into reusable infrastructure.</p>
+
+<p>Creating a tool for an agent is not just writing a function. It’s <strong>designing an understanding interface</strong> between humans and machines — carefully thinking about how input and output will be structured so the agent comprehends the context in the best possible way. This design sensitivity is what generates more assertive results.</p>
+
+<p>In MCP, a <strong>tool endpoint (tools/)</strong> defines the capabilities available to the agent. It exposes methods that allow identifying and executing functions, APIs, or even other agents that process requests according to a specific purpose.</p>
+
+<p>But the true power of MCP goes beyond that.</p>
+
+<h2 id="mcp-as-a-knowledge-orchestration-layer">MCP as a Knowledge Orchestration Layer</h2>
+
+<p>In a modern architecture, MCP can act as the knowledge orchestration layer between the data backend and AI agents. It organizes what the agent knows, how it accesses that knowledge, and which actions it can execute.</p>
+
+<p>Beyond tool endpoints, MCP brings <strong>resource endpoints (resources/) and prompt endpoints (prompts/)</strong>, which are the <strong>main value foundations of MCP servers.</strong></p>
+
+<p>These endpoints open a new way of sharing domain knowledge in a structured and scalable manner. Imagine a company that has deep technical domain expertise on a specific topic. By publishing an MCP server, other platforms can <strong>consume that knowledge</strong> without needing to rebuild it from scratch — eliminating the so-called <em>heavy lift</em> of knowledge modeling.</p>
+
+<p>The <strong>prompt endpoint</strong> allows a company to create and maintain its own optimized prompts for its use cases and tools. This prevents each client from having to build prompts from scratch, while also facilitating maintenance and large-scale reusability.</p>
+
+<p>Finally, the <strong>resource endpoint</strong> expands the agents’ context with documents, databases, and specific information — making the agent truly aware of the domain in which it operates.</p>
+
+<p><img src="../assets/img/posts/2025-10-15/Gemini_Generated_Image_3my7j3my7j3my7j3 (1).png" alt="MCP Diagram" /></p>
+
+<p>Imagine, for example, a fintech that publishes an MCP server with its credit domain. Other applications can use this server to assess risks, generate reports, or interact with financial data securely and contextually — without exposing raw data.</p>
+
+<h2 id="design-learnings-and-insights">Design Learnings and Insights</h2>
+
+<p>The great learning here is that designing AI solutions is not about “making tools,” but about structuring knowledge and intention. MCP is a great example of how this mindset translates into architecture.</p>
+
+<p>In summary, MCP is much more than a way to integrate agents and tools: it’s a <strong>knowledge design framework</strong>, capable of transforming organizational domains into <strong>reusable intelligence infrastructure</strong>.</p>
+
+<p>This is the foundation of a new paradigm for AI solution design — where knowledge stops being an artifact and becomes an architecture.</p>
+
+<p>In upcoming posts, I’ll explore how to design an efficient MCP server and how the design of prompts and resources directly influences the performance of corporate agents.</p>
+
+<h2 id="references">References:</h2>
+
+<p><a href="https://modelcontextprotocol.io/docs/learn/server-concepts">Understanding MCP servers - Model Context Protocol</a></p>
+
+<p><a href="https://learn.deeplearning.ai/courses/mcp-build-rich-context-ai-apps-with-anthropic/lesson/fkbhh/introduction">MCP: Build Rich-Context AI Apps with Anthropic - DeepLearning.AI</a></p>
+
+
+  </div>
+</div>
+
+<div class="pagination">
+  
+  
+    <a href="/en/2022-08-15/financial-analysis-of-startups" class="right next">Next</a>
+  
+
+  <a href="#" class="top">Top</a>
+</div>
+
+    </main>
+
+    <footer>
+      <div class="social-layer">
+        <div class="social-icons">
+          <p>&copy; 2025 - Micaelle O.S.. All rights reserved.</p>
+          <ul>
+            
+<li>
+  <a href="mailto:micaelle.osouza@gmail.com" title="email">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/micaelle-souza/" title="Follow On LinkedIn">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

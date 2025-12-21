@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://micaelleos.github.io/sitemap.xml
