@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             projectItem.innerHTML = `
                 <a href="${project.link}" target="_blank">
-                <div class="project-image" style="background-image: url('${project.image}'); height: 150px; background-size: cover; border-radius: 8px;"></div>
+                <div class="project-image" style="background-image: url('${project.image}'); height: 150px; background-size: cover; background-position: center 50%; border-radius: 8px;"></div>
                 <h3>${project.name}</h3>
                 <p>${project.description}</p>
                 {{ site.data.translations.buttons.see_project.pt }}</a>

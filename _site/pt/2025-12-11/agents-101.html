@@ -171,7 +171,9 @@
 
     
 
-    <h3 id="por-que-você-precisa-entender-agentes-de-ia-mesmo-não-sendo-desenvolvedor">Por que você precisa entender agentes de IA (mesmo não sendo desenvolvedor)</h3>
+    <p><img src="../assets/img/posts/pt/2025-12-11/Gemini_Generated_Image_hvrv4chvrv4chvrv.png" alt="Gemini_Generated_Image_hvrv4chvrv4chvrv.png" /></p>
+
+<h3 id="por-que-você-precisa-entender-agentes-de-ia-mesmo-não-sendo-desenvolvedor">Por que você precisa entender agentes de IA (mesmo não sendo desenvolvedor)</h3>
 
 <p>Recentemente, comecei atuar como especialista de IA em um projeto ambicioso: desenvolver um software que utiliza IA generativa para renderizar componentes de UI diretamente na tela do usuário. É o tipo de projeto que parece saído de uma história futurista, mas que está se tornando cada vez mais realidade.</p>
 
@@ -208,11 +210,17 @@
 <p>Deixe-me ilustrar com um exemplo:</p>
 
 <blockquote>
-  <p><strong>Você:</strong> “Qual é a capital da França?”</p>
+  <blockquote>
+    <p><strong>Você:</strong> “Qual é a capital da França?”</p>
+  </blockquote>
 
-  <p><strong>LLM:</strong> “Paris”</p>
+  <blockquote>
+    <p><strong>LLM:</strong> “Paris”</p>
+  </blockquote>
 
-  <p><strong>Você:</strong> “Quantos habitantes ela tem?”</p>
+  <blockquote>
+    <p><strong>Você:</strong> “Quantos habitantes ela tem?”</p>
+  </blockquote>
 </blockquote>
 
 <p>Para responder a segunda pergunta, a LLM precisa receber:</p>
@@ -231,7 +239,7 @@
   </ol>
 </blockquote>
 
-<p>Só assim ela consegue entender que “ela” se refere a “Paris”. <strong>A LLM não tem memória real</strong> — ela simplesmente recebe todo o contexto novamente a cada interação. Na verdade, a memória é controlada pelo software que chama a LLM.</p>
+<p>Só assim ela consegue entender que “ela” se refere a “Paris”. <strong>A LLM não tem memória real</strong> — ela simplesmente recebe todo o contexto novamente a cada interação.  Na verdade, a memória é controlada pelo software que chama a LLM.</p>
 
 <h3 id="qual-a-consequência-disso">Qual a consequência disso?</h3>
 
@@ -251,7 +259,7 @@
 
 <h3 id="o-que-pode-ser-uma-ferramenta">O que pode ser uma ferramenta?</h3>
 
-<p>Praticamente qualquer coisa que permita ao agente fazer algo: <strong>consultar um banco de dados, buscar na internet, criar documentos, acessar APIs externas…</strong></p>
+<p>Praticamente qualquer coisa que permita ao agente fazer algo: c<strong>onsultar um banco de dados, buscar na internet, criar documentos, acessar APIs externas…</strong></p>
 
 <h3 id="como-ferramentas-funcionam-na-prática">Como Ferramentas Funcionam na Prática</h3>
 
@@ -279,6 +287,52 @@
 
 <p>Para que a LLM tenha a capacidade de julgar, entender e utilizar uma ferramenta, é importante que <strong>você descreva as ferramentas em linguagem natural para a LLM.</strong> Desta forma e ela entende quando e como usá-las.</p>
 
+<p>Veja um exemplo real:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s">"nome"</span><span class="p">:</span> <span class="s">"buscar_dados_cliente"</span><span class="p">,</span>
+  
+  <span class="s">"descricao"</span><span class="p">:</span> <span class="s">"Busca informações cadastrais completas de um cliente 
+  pelo CPF. Retorna nome, email, telefone, endereço e status da conta. 
+  Use esta ferramenta quando precisar verificar dados de um cliente 
+  ou quando o cliente pedir informações sobre seu cadastro."</span><span class="p">,</span>
+  
+  <span class="s">"entrada"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"cpf"</span><span class="p">:</span> <span class="s">"string com 11 dígitos (apenas números, sem pontos ou traços)"</span>
+  <span class="p">},</span>
+  
+  <span class="s">"saida"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"nome"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"cpf"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span> 
+    <span class="s">"email"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"telefone"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"endereco"</span><span class="p">:</span> <span class="s">"string"</span><span class="p">,</span>
+    <span class="s">"status"</span><span class="p">:</span> <span class="s">"string (ativo/inativo)"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>A LLM <strong>lê</strong> isso e entende:</p>
+
+<blockquote>
+  <ul>
+    <li>
+      <p>O que a ferramenta faz</p>
+    </li>
+    <li>
+      <p>Quando deve usá-la</p>
+    </li>
+    <li>
+      <p>O que precisa fornecer (CPF)</p>
+    </li>
+    <li>
+      <p>O que vai receber de volta</p>
+    </li>
+  </ul>
+</blockquote>
+
+<p>Essa descrição funcional é importante, pois o agente <strong>decide sozinho</strong> quando usar cada ferramenta baseado na situação. Para isso, ele precisa ter um entendimento claro de como ele pode usar a ferramenta.</p>
+
 <h2 id="dicas-de-otimização-de-agentes">Dicas de Otimização de Agentes</h2>
 
 <p>Agora que já entendemos as partes fundamentais de um agente, vamos falar sobre um dos conceitos mais importante: <strong>Context Engineering</strong>. Abaixo segue um princípio fundamental:</p>
@@ -303,9 +357,23 @@
 
 <p><strong>3️⃣ As informações estão formatadas de forma otimizada?</strong></p>
 
-<p>Dados estão estruturados e as descrições estão claras? Há dados adicionais que não importam para a tarefa e podem confundir a LLM?</p>
+<p>Dados estão estruturados e as descrições estão claras? Há dados adicionais que não importam para a tarefa e podem confundir a LLM ?</p>
 
 <p><strong>Passando por esse crivo, seu agente tem tudo para ter sucesso.</strong></p>
+
+<h3 id="benefícios-do-context-engineering-bem-feito">Benefícios do Context Engineering bem feito:</h3>
+
+<p><strong>Reduz custos drasticamente</strong></p>
+
+<p>Context engineering bem feito pode reduzir o consumo de tokens. Por exemplo: colocar 200 tokens de informação essencial no prompt evita que o agente faça 3-4 buscas desnecessárias de 1000+ tokens cada.</p>
+
+<p><strong>Agente se perde menos</strong></p>
+
+<p>Com contexto claro e ferramentas adequadas, o agente sabe exatamente o que fazer. Não precisa “adivinhar” ou tentar múltiplas abordagens.</p>
+
+<p><strong>Respostas mais rápidas e precisas</strong></p>
+
+<p>Com o contexto certo, o agente acerta de primeira. Usuário feliz, sistema eficiente.</p>
 
 <h2 id="conclusão">Conclusão</h2>
 
@@ -349,7 +417,7 @@
     <footer>
       <div class="social-layer">
         <div class="social-icons">
-          <p>&copy; 2025 - Micaelle O.S.. Todos os direitos reservados.</p>
+          <p>&copy; 2026 - Micaelle O.S.. Todos os direitos reservados.</p>
           <ul>
             
 <li>

@@ -1,3 +1,8 @@
+### RedaçãoIA: ENEM Essay Correction with AI
+Description: Platform that uses artificial intelligence to correct and provide detailed feedback on essays in the ENEM format. Evaluates competencies, highlights areas for improvement, and helps students grow as writers.
+Image: /assets/img/projects/ChatGPT Image 24 de abr. de 2026, 06_44_30.png
+Link: https://www.redacaoia.com/
+
 ### GRI SCORE: ESG Report Analysis with AI
 Description: Artificial intelligence to analyze ESG reports, detect greenwashing, and accurately assess risks. Includes interactive search via smart chat (RAG).
 Image: /assets/img/projects/DALL·E 2025-01-11 18.03.09 - A sleek and modern digital card showcasing a technology-themed design. The card highlights the concept of ESG (Environmental, Social, and Governance) .webp

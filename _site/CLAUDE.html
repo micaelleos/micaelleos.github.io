@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>CLAUDE.md | MicaelleOS</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="CLAUDE.md" />
+<meta name="author" content="Micaelle O.S." />
+<meta property="og:locale" content="pt" />
+<meta name="description" content="Personal blog and portfolio website." />
+<meta property="og:description" content="Personal blog and portfolio website." />
+<link rel="canonical" href="http://localhost:4000/CLAUDE" />
+<meta property="og:url" content="http://localhost:4000/CLAUDE" />
+<meta property="og:site_name" content="MicaelleOS" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="CLAUDE.md" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Micaelle O.S."},"description":"Personal blog and portfolio website.","headline":"CLAUDE.md","url":"http://localhost:4000/CLAUDE"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=fe74398b221f048a91f23f31e2ee7fa8998ba0a0">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'G-R4CWYLGXX1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="http://localhost:4000/">MicaelleOS</a></h1>
+      
+
+      <h1 id="claudemd">CLAUDE.md</h1>
+
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+
+<h2 id="commands">Commands</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install dependencies</span>
+bundle <span class="nb">install</span>
+
+<span class="c"># Serve locally with live reload</span>
+bundle <span class="nb">exec </span>jekyll serve
+
+<span class="c"># Build site</span>
+bundle <span class="nb">exec </span>jekyll build
+
+<span class="c"># Manually trigger Notion sync (requires env vars)</span>
+<span class="nv">NOTION_TOKEN</span><span class="o">=</span>... <span class="nv">NOTION_DATABASE_ID</span><span class="o">=</span>... python3 scripts/notion_to_jekyll.py
+</code></pre></div></div>
+
+<h2 id="architecture">Architecture</h2>
+
+<p>This is a <strong>bilingual Jekyll static site</strong> (PT-BR + English) deployed to GitHub Pages via the <code class="language-plaintext highlighter-rouge">github-pages</code> gem.</p>
+
+<h3 id="multilingual-system">Multilingual System</h3>
+
+<p>Language support is custom (no plugin). Every page/post declares <code class="language-plaintext highlighter-rouge">lang: pt</code> or <code class="language-plaintext highlighter-rouge">lang: en</code> in frontmatter and uses a matching <code class="language-plaintext highlighter-rouge">permalink</code> that starts with <code class="language-plaintext highlighter-rouge">/pt/</code> or <code class="language-plaintext highlighter-rouge">/en/</code>. The <code class="language-plaintext highlighter-rouge">index.html</code> at root redirects to <code class="language-plaintext highlighter-rouge">/pt/</code> by default (<code class="language-plaintext highlighter-rouge">default_lang: "pt"</code> in <code class="language-plaintext highlighter-rouge">_config.yml</code>).</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">_data/translations.yml</code> — all UI strings keyed by component and language (<code class="language-plaintext highlighter-rouge">site.data.translations.home.hero.title.pt</code>)</li>
+  <li><code class="language-plaintext highlighter-rouge">_data/navigation.yml</code> — nav links per language</li>
+  <li><code class="language-plaintext highlighter-rouge">_includes/language-switcher.html</code> — renders the PT/EN toggle</li>
+  <li><code class="language-plaintext highlighter-rouge">pt/</code> and <code class="language-plaintext highlighter-rouge">en/</code> — language-specific page source files (index, portfolio, projects)</li>
+</ul>
+
+<h3 id="posts">Posts</h3>
+
+<p>Posts live in <code class="language-plaintext highlighter-rouge">_posts/</code> with filename <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-{slug}-{lang}.md</code>. Required frontmatter:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">..."</span>
+<span class="na">info</span><span class="pi">:</span> <span class="s2">"</span><span class="s">..."</span>         <span class="c1"># short description shown in blog listing</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">YYYY-MM-DD</span>
+<span class="na">lang</span><span class="pi">:</span> <span class="s">pt</span>            <span class="c1"># or en</span>
+<span class="na">permalink</span><span class="pi">:</span> <span class="s">/pt/YYYY-MM-DD/slug</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">Tag1</span><span class="pi">,</span> <span class="nv">Tag2</span><span class="pi">]</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Blog listing pages (<code class="language-plaintext highlighter-rouge">pt/blog/</code>, <code class="language-plaintext highlighter-rouge">en/blog/</code>) filter <code class="language-plaintext highlighter-rouge">site.posts</code> by <code class="language-plaintext highlighter-rouge">post.lang</code>.</p>
+
+<h3 id="projects-carousel">Projects Carousel</h3>
+
+<p>The homepage carousel (<code class="language-plaintext highlighter-rouge">pt/index.md</code>, <code class="language-plaintext highlighter-rouge">en/index.md</code>) loads projects via a <code class="language-plaintext highlighter-rouge">fetch()</code> call at runtime against <code class="language-plaintext highlighter-rouge">/pt/projects.md</code> or <code class="language-plaintext highlighter-rouge">/en/projects.md</code>. Those files use a custom Markdown schema parsed by inline JS:</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">### Project Name</span>
+Descrição: Short description
+Imagem: /path/to/image.jpg
+Link: https://...
+</code></pre></div></div>
+
+<h3 id="notion--jekyll-sync">Notion → Jekyll Sync</h3>
+
+<p><code class="language-plaintext highlighter-rouge">.github/workflows/notion-sync.yml</code> runs hourly. It uses a self-contained Node.js script (written inline in the workflow) that queries the Notion database for pages with <code class="language-plaintext highlighter-rouge">Published: true</code>, converts them to Jekyll posts using <code class="language-plaintext highlighter-rouge">notion-to-md</code>, and commits the result to <code class="language-plaintext highlighter-rouge">_posts/</code>. Required GitHub secrets: <code class="language-plaintext highlighter-rouge">NOTION_TOKEN</code>, <code class="language-plaintext highlighter-rouge">NOTION_DATABASE_ID</code>.</p>
+
+<p>The Notion database must have these properties: <code class="language-plaintext highlighter-rouge">Title</code>, <code class="language-plaintext highlighter-rouge">Slug</code>, <code class="language-plaintext highlighter-rouge">Date</code>, <code class="language-plaintext highlighter-rouge">Published</code> (checkbox), <code class="language-plaintext highlighter-rouge">Language</code> (select: <code class="language-plaintext highlighter-rouge">pt</code> or <code class="language-plaintext highlighter-rouge">en</code>), <code class="language-plaintext highlighter-rouge">Info</code>, <code class="language-plaintext highlighter-rouge">Tech</code>, <code class="language-plaintext highlighter-rouge">Tags</code>, <code class="language-plaintext highlighter-rouge">Image</code>.</p>
+
+<h3 id="layouts">Layouts</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">base.html</code> — wraps all pages with nav and footer; reads <code class="language-plaintext highlighter-rouge">page.lang</code> for language-aware nav</li>
+  <li><code class="language-plaintext highlighter-rouge">post.html</code> — blog post layout</li>
+  <li><code class="language-plaintext highlighter-rouge">portfolio.html</code> / <code class="language-plaintext highlighter-rouge">about.html</code> / <code class="language-plaintext highlighter-rouge">blog.html</code> / <code class="language-plaintext highlighter-rouge">certificates.html</code> — section-specific layouts</li>
+</ul>
+
+<h3 id="styles">Styles</h3>
+
+<p>Sass source is in <code class="language-plaintext highlighter-rouge">_sass/</code> (partials in <code class="language-plaintext highlighter-rouge">_sass/base/</code> and <code class="language-plaintext highlighter-rouge">_sass/layouts/</code>), compiled via <code class="language-plaintext highlighter-rouge">_sass/main.scss</code>. Assets (fonts, images, PDFs) live in <code class="language-plaintext highlighter-rouge">assets/</code>.</p>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/micaelleos/micaelleos.github.io/edit/gh-pages/CLAUDE.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
