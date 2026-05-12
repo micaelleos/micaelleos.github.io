@@ -97,6 +97,14 @@ home:
         pt: "Levantamento de requisitos e prototipagem rápida com inteligência artificial integrada."
         en: "Requirements gathering and rapid prototyping with integrated artificial intelligence."
 
+    cloud_arch:
+      title:
+        pt: "Arquitetura Cloud e Deploy"
+        en: "Cloud Architecture & Deployment"
+      desc:
+        pt: "Desenho de arquiteturas cloud para produtos de IA em AWS e GCP, com deploy em produção, otimização de custos e escalabilidade."
+        en: "Cloud architecture design for AI products on AWS and GCP, with production deployment, cost optimization, and scalability."
+
   projects:
     title:
       pt: "Projetos em Destaque"
@@ -114,6 +122,9 @@ home:
     academy_label:
       pt: "Academy Accreditation - Databricks Fundamentals"
       en: "Academy Accreditation - Databricks Fundamentals"
+    ml_engineer_label:
+      pt: "Databricks Certified Machine Learning Engineer Associate"
+      en: "Databricks Certified Machine Learning Engineer Associate"
 
 # Página de Portfolio
 portfolio:

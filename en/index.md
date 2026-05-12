@@ -55,14 +55,14 @@ permalink: /en/
                 <p>{{ site.data.translations.home.specialties.agents.desc.en }}</p>
             </div>
             <div class="specialty-item">
-                <div class="specialty-icon">☁️</div>
-                <h3>{{ site.data.translations.home.specialties.cloud.title.en }}</h3>
-                <p>{{ site.data.translations.home.specialties.cloud.desc.en }}</p>
-            </div>
-            <div class="specialty-item">
                 <div class="specialty-icon">🚀</div>
                 <h3>{{ site.data.translations.home.specialties.prototyping.title.en }}</h3>
                 <p>{{ site.data.translations.home.specialties.prototyping.desc.en }}</p>
+            </div>
+            <div class="specialty-item">
+                <div class="specialty-icon">🏗️</div>
+                <h3>{{ site.data.translations.home.specialties.cloud_arch.title.en }}</h3>
+                <p>{{ site.data.translations.home.specialties.cloud_arch.desc.en }}</p>
             </div>
         </div>
     </div>
@@ -113,6 +113,14 @@ permalink: /en/
                     <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/133676259" alt="Databricks Badge" style="width:150px; height:270px;" class="databricks-badge-image">
                 </a>
                     <p style = "margin-top:-120px">{{ site.data.translations.home.badges.academy_label.en }}</p>
+                </div>
+            </div>
+            <div class="badge-item">
+                <div class="badge-item" style=" border: 1px solid #e2e2e2; margin-top: -20px; padding: 35px 0px 0px 10px; border-radius: 0;">
+                <a href="https://credentials.databricks.com/0458f56b-a0f4-4276-b6a6-8caa7b096f0f#acc.Nqns7Bg0" target="_blank">
+                    <img src="https://www.databricks.com/sites/default/files/2025-10/Associate-badge-ML.png?v=1761077024" alt="Databricks ML Engineer Badge" style="width:150px; height:150px;" class="databricks-badge-image">
+                </a>
+                    <p style = "margin-top:-120px">{{ site.data.translations.home.badges.ml_engineer_label.en }}</p>
                 </div>
             </div>
             <div class="badge-item">

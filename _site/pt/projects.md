@@ -3,7 +3,7 @@ Descrição: Jordan é um professor de inglês com IA que identifica exatamente 
 Imagem: /assets/img/projects/ChatGPT Image 12 de mai. de 2026, 09_29_33.png
 Link: https://jordan-english-teacher.web.app/
 
-### Estella Tutora de Español con IA
+### Estella Tutora de Español con IAa
 Descrição: Estella é uma professora de espanhol com IA que identifica exatamente onde você está e te desafia na medida certa — nem fácil demais, nem difícil demais. Sessões de voz, escrita e lições que evoluem conforme você evolui.
 Imagem: /assets/img/projects/ChatGPT Image 12 de mai. de 2026, 09_31_17.png
 Link: https://estella-spanish-teacher.web.app/
