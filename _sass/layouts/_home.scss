@@ -144,24 +144,42 @@ section {
 }
 
 /* Grade responsiva */
-.badges-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adapta a grade automaticamente */
-  gap: 20px; /* Reduzido para melhorar em telas menores */
-  justify-items: center;
-  justify-content: center;
+.badges-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.badges-carousel .carousel-wrapper {
+  width: 930px;
+  max-width: calc(100% - 80px);
+  overflow: hidden;
+}
+
+.badges-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .badges-carousel .carousel-wrapper {
+    width: 360px;
+  }
 }
 
 /* Estilo do item de badge */
 .badge-item {
+  flex: 0 0 170px;
+  width: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 10px; /* Adicionado para um espaço interno melhor */
-  border-radius: 10px; /* Bordas arredondadas */
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Efeito hover */

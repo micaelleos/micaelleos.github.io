@@ -280,7 +280,10 @@
 <section id="badges" class="badges">
     <div class="container">
         <h2>My Badges</h2>
-        <div class="badges-grid">
+        <div class="carousel badges-carousel">
+            <button class="carousel-prev badges-prev">❮</button>
+            <div class="carousel-wrapper">
+            <div class="badges-track">
             <div class="badge-item">
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="08294967-be69-4efa-817f-af0ce1e2952c" data-share-badge-host="https://www.credly.com">
                 </div>
@@ -295,11 +298,11 @@
                 </div>
             </div>
             <div class="badge-item">
-                <div class="badge-item" style=" border: 1px solid #e2e2e2; margin-top: -20px; padding: 35px 0px 0px 10px; border-radius: 0;">
+                <div style="text-align: center; border: 1px solid #e2e2e2; padding: 25px 10px 0px 10px; border-radius: 0; margin-top: -15px;">
                 <a href="https://credentials.databricks.com/0458f56b-a0f4-4276-b6a6-8caa7b096f0f#acc.Nqns7Bg0" target="_blank">
-                    <img src="https://www.databricks.com/sites/default/files/2025-10/Associate-badge-ML.png?v=1761077024" alt="Databricks ML Engineer Badge" style="width:150px; height:150px;" class="databricks-badge-image" />
+                    <img src="https://www.databricks.com/sites/default/files/2025-10/Associate-badge-ML.png?v=1761077024" alt="Databricks ML Engineer Badge" style="max-width:105px; height:auto; display:block; margin:0 auto;" />
                 </a>
-                    <p style="margin-top:-120px">Databricks Certified Machine Learning Engineer Associate</p>
+                    <p style="margin-top: 8px; font-size: 0.8rem;">Databricks Certified Machine Learning Engineer Associate</p>
                 </div>
             </div>
             <div class="badge-item">
@@ -316,6 +319,9 @@
                 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bf0e01c8-ee64-4a9d-90fe-3907ad80fc3d" data-share-badge-host="https://www.credly.com"></div>
                 <script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
             </div>
+            </div>
+            </div>
+            <button class="carousel-next badges-next">❯</button>
         </div>
     </div>
 </section>
@@ -451,6 +457,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     loadProjects();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const badgesTrack = document.querySelector('.badges-track');
+    const badgesPrev = document.querySelector('.badges-prev');
+    const badgesNext = document.querySelector('.badges-next');
+
+    if (!badgesTrack) return;
+
+    const itemWidth = 170 + 20;
+    const visibleBadges = window.innerWidth <= 768 ? 2 : 5;
+    const totalBadges = badgesTrack.children.length;
+    const maxIndex = Math.ceil(totalBadges / visibleBadges) - 1;
+    let badgeIndex = 0;
+
+    const updateBadgeCarousel = () => {
+        badgesTrack.style.transform = `translateX(${-(badgeIndex * itemWidth * visibleBadges)}px)`;
+    };
+
+    badgesPrev.addEventListener('click', () => {
+        badgeIndex = badgeIndex > 0 ? badgeIndex - 1 : maxIndex;
+        updateBadgeCarousel();
+    });
+
+    badgesNext.addEventListener('click', () => {
+        badgeIndex = badgeIndex < maxIndex ? badgeIndex + 1 : 0;
+        updateBadgeCarousel();
+    });
+
+    window.addEventListener('resize', () => { badgeIndex = 0; updateBadgeCarousel(); });
 });
 </script>
 
