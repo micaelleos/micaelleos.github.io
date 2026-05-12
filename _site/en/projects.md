@@ -8,7 +8,7 @@ Description: Estella is an AI Spanish teacher that identifies exactly where you 
 Image: /assets/img/projects/ChatGPT Image 12 de mai. de 2026, 09_31_17.png
 Link: https://estella-spanish-teacher.web.app/
 
-### RedaçãoIA - ENEM Essay Correction with AI
+### RedaçãoIA: ENEM Essay Correction with AI
 Description: Platform that uses artificial intelligence to correct and provide detailed feedback on essays in the ENEM format. Evaluates competencies, highlights areas for improvement, and helps students grow as writers.
 Image: /assets/img/projects/ChatGPT Image 24 de abr. de 2026, 06_44_30.png
 Link: https://www.redacaoia.com/

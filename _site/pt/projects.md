@@ -8,7 +8,7 @@ Descrição: Estella é uma professora de espanhol com IA que identifica exatame
 Imagem: /assets/img/projects/ChatGPT Image 12 de mai. de 2026, 09_31_17.png
 Link: https://estella-spanish-teacher.web.app/
 
-### RedaçãoIA - Correção de Redação ENEM com IA
+### RedaçãoIA: Correção de Redação ENEM com IA
 Descrição: Plataforma que usa inteligência artificial para corrigir e dar feedback detalhado em redações no formato ENEM. Avalia competências, aponta pontos de melhoria e ajuda estudantes a evoluir na escrita.
 Imagem: /assets/img/projects/ChatGPT Image 24 de abr. de 2026, 06_44_30.png
 Link: https://www.redacaoia.com/
