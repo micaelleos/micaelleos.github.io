@@ -1,4 +1,14 @@
-### RedaçãoIA: Correção de Redação ENEM com IA
+### Jordan AI English Tutor
+Descrição: Jordan é um professor de inglês com IA que identifica exatamente onde você está e te desafia na medida certa — nunca fácil demais, nunca difícil demais. Sessões de voz, prática de escrita e lições que crescem com você.
+Imagem: /assets/img/projects/ChatGPT Image 12 de mai. de 2026, 09_29_33.png
+Link: https://jordan-english-teacher.web.app/
+
+### Estella: Profesora de Español con IA
+Descrição: Estella é uma professora de espanhol com IA que identifica exatamente onde você está e te desafia na medida certa — nem fácil demais, nem difícil demais. Sessões de voz, escrita e lições que evoluem conforme você evolui.
+Imagem: /assets/img/projects/ChatGPT Image 12 de mai. de 2026, 09_31_17.png
+Link: https://estella-spanish-teacher.web.app/
+
+### RedaçãoIA - Correção de Redação ENEM com IA
 Descrição: Plataforma que usa inteligência artificial para corrigir e dar feedback detalhado em redações no formato ENEM. Avalia competências, aponta pontos de melhoria e ajuda estudantes a evoluir na escrita.
 Imagem: /assets/img/projects/ChatGPT Image 24 de abr. de 2026, 06_44_30.png
 Link: https://www.redacaoia.com/
