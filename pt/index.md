@@ -284,18 +284,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const badgesTrack = document.querySelector('.badges-track');
     const badgesPrev = document.querySelector('.badges-prev');
     const badgesNext = document.querySelector('.badges-next');
+    const badgesWrapper = document.querySelector('.badges-carousel .carousel-wrapper');
 
-    if (!badgesTrack) return;
+    if (!badgesTrack || !badgesWrapper) return;
 
-    const itemWidth = 170 + 20;
-    const visibleBadges = window.innerWidth <= 768 ? 2 : 5;
+    const gap = 20;
+    let visibleBadges = window.innerWidth <= 768 ? 2 : 5;
     const totalBadges = badgesTrack.children.length;
-    const maxIndex = Math.ceil(totalBadges / visibleBadges) - 1;
+    let maxIndex = Math.ceil(totalBadges / visibleBadges) - 1;
     let badgeIndex = 0;
 
+    function getItemWidth() {
+        return (badgesWrapper.offsetWidth - (visibleBadges - 1) * gap) / visibleBadges;
+    }
+
+    function applyLayout() {
+        visibleBadges = window.innerWidth <= 768 ? 2 : 5;
+        maxIndex = Math.ceil(totalBadges / visibleBadges) - 1;
+        const iw = getItemWidth();
+        Array.from(badgesTrack.children).forEach(item => {
+            item.style.flex = `0 0 ${iw}px`;
+            item.style.width = `${iw}px`;
+        });
+    }
+
     const updateBadgeCarousel = () => {
-        badgesTrack.style.transform = `translateX(${-(badgeIndex * itemWidth * visibleBadges)}px)`;
+        const iw = getItemWidth();
+        badgesTrack.style.transform = `translateX(${-(badgeIndex * visibleBadges * (iw + gap))}px)`;
     };
+
+    applyLayout();
 
     badgesPrev.addEventListener('click', () => {
         badgeIndex = badgeIndex > 0 ? badgeIndex - 1 : maxIndex;
@@ -307,6 +325,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateBadgeCarousel();
     });
 
-    window.addEventListener('resize', () => { badgeIndex = 0; updateBadgeCarousel(); });
+    window.addEventListener('resize', () => {
+        badgeIndex = 0;
+        applyLayout();
+        updateBadgeCarousel();
+    });
 });
 </script>

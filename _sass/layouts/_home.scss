@@ -151,8 +151,8 @@ section {
 }
 
 .badges-carousel .carousel-wrapper {
-  width: 930px;
-  max-width: calc(100% - 80px);
+  flex: none;
+  width: calc(100% - 80px);
   overflow: hidden;
 }
 
