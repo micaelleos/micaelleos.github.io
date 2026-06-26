@@ -20,6 +20,8 @@
   {% comment %}Encontrar post traduzido{% endcomment %}
   {% assign post_slug = page.url | split: "/" | last | remove: ".html" %}
   {% assign alt_url = "/" | append: other_lang | append: "/blog/" %}
+{% elsif page.alt_url %}
+  {% assign alt_url = page.alt_url %}
 {% else %}
   {% assign alt_url = page.url | replace: current_lang, other_lang %}
 {% endif %}

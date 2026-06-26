@@ -1,0 +1,277 @@
+---
+layout: base
+---
+{% assign current_lang = page.lang | default: site.default_lang %}
+
+<style>
+:root {
+    --primary-color: #b874e3;
+    --secondary-color: #7199ab;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+}
+
+body {
+    font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, p { margin: 0; }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover { color: var(--secondary-color); }
+
+.books-intro {
+    text-align: left;
+    color: var(--text-color);
+    border-bottom: 1px solid #ddd;
+    padding: 80px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.books-intro h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+.books-intro h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.3;
+}
+
+.books-intro p {
+    font-size: 1rem;
+    max-width: 700px;
+    color: var(--text-color);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-item {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.book-cover {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.book-cover img {
+    width: 300px;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: translateY(-4px);
+}
+
+.book-cover-placeholder {
+    width: 200px;
+    height: 280px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    box-shadow: 6px 6px 20px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.book-info h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.book-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
+
+.book-format-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #f0e6fb;
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.book-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.book-topics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.book-topics li {
+    font-size: 0.95rem;
+    color: #555;
+    padding-left: 20px;
+    position: relative;
+}
+
+.book-topics li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.book-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.btn-amazon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-amazon:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .books-intro { padding: 40px 40px; }
+    .books-list { padding: 50px 25px; gap: 60px; }
+    .book-item { gap: 40px; padding: 40px; }
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 25px;
+        gap: 30px;
+    }
+
+    .book-cover { width: 100%; justify-content: center; }
+
+    .book-info h2 { font-size: 1.3rem; }
+
+    .books-intro { padding: 30px 30px; }
+    .books-list { padding: 30px 15px; gap: 40px; }
+}
+
+@media (max-width: 480px) {
+    .books-intro { padding: 20px 20px; }
+    .books-list { padding: 20px 10px; gap: 30px; }
+    .book-item { padding: 20px 15px; }
+}
+</style>
+
+<section class="books-intro">
+    <div class="intro-content">
+        <h1>{{ site.data.translations.books.title[current_lang] }}</h1>
+        <h2>{{ site.data.translations.books.subtitle[current_lang] }}</h2>
+        <p>{{ site.data.translations.books.description[current_lang] }}</p>
+    </div>
+</section>
+
+<section class="books-list">
+    {% assign books = site.data.books[current_lang] %}
+    {% for book in books %}
+    <div class="book-item">
+        <div class="book-cover">
+            {% if book.cover %}
+                <a href="{{ book.amazon_url }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ book.cover }}" alt="{{ book.title }}">
+                </a>
+            {% else %}
+                <div class="book-cover-placeholder">{{ book.title }}</div>
+            {% endif %}
+        </div>
+        <div class="book-info">
+            <h2>{{ book.title }}</h2>
+            <p class="book-meta">
+                {{ site.data.translations.books.by[current_lang] }} {{ book.author }}
+                {% if book.format %}<br><span class="book-format-badge">{{ book.format }}</span>{% endif %}
+            </p>
+            <p class="book-description">{{ book.description }}</p>
+            {% if book.topics %}
+            <ul class="book-topics">
+                {% for topic in book.topics %}
+                <li>{{ topic }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <div class="book-actions">
+                <a class="btn-amazon" href="{{ book.amazon_url }}" target="_blank" rel="noopener noreferrer">
+                    {{ site.data.translations.books.buy_button[current_lang] }}
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>

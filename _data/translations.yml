@@ -138,6 +138,24 @@ portfolio:
     pt: "Explore meu portfólio de projetos que combinam Inteligência Artificial, inovação e estratégia para criar soluções práticas e escaláveis. Cada um é resultado de trabalho focado em resolver problemas reais, causando impacto no mundo real."
     en: "Explore my portfolio of projects that combine Artificial Intelligence, innovation, and strategy to create practical and scalable solutions. Each one is the result of work focused on solving real problems, making an impact in the real world."
 
+# Página de Livros
+books:
+  title:
+    pt: "Livros"
+    en: "Books"
+  subtitle:
+    pt: "Publicações Técnicas"
+    en: "Technical Publications"
+  description:
+    pt: "Alguns temas que estudo e trabalho também viram livros. Aqui você encontra minhas publicações disponíveis na Amazon."
+    en: "Some of the topics I study and work with also become books. Here you'll find my publications available on Amazon."
+  by:
+    pt: "por"
+    en: "by"
+  buy_button:
+    pt: "Comprar na Amazon →"
+    en: "Buy on Amazon →"
+
 # Footer
 footer:
   rights:

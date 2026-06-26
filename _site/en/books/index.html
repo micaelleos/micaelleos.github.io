@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MicaelleOS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Language and SEO -->
+  
+  
+  <link rel="alternate" hreflang="pt" href="http://localhost:4000/pt/books/" />
+  <link rel="alternate" hreflang="en" href="http://localhost:4000/en/books/" />
+  <link rel="alternate" hreflang="x-default" href="http://localhost:4000/pt/books/" />
+  <meta name="language" content="en">
+
+  <!-- Google Analytics -->
+  
+  <script>
+      (function(i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function() {
+              (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+          a = s.createElement(o),
+              m = s.getElementsByTagName(o)[0];
+          a.async = 1;
+          a.src = g;
+          m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'G-R4CWYLGXX1', 'auto');
+      ga('send', 'pageview');
+
+  </script>
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Consultoria de IA",
+      "image": "/assets/img/profile.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Joinville",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "email":"micaelle.osouza@gmail.com"
+      "url": "https://micaelleos.github.io/",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "priceRange": "$$"
+    }
+    </script>
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4CWYLGXX1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-R4CWYLGXX1');
+        </script>
+</head>
+
+
+  <body>
+    
+
+
+
+
+
+
+
+
+
+<div class="language-switcher">
+  <a href="/pt/livros/" class="lang-toggle" title="Mudar para Português">
+    
+      <span class="flag">🇧🇷</span> PT
+    
+  </a>
+</div>
+
+<style>
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color, #b874e3);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color, #b874e3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle:hover {
+  background: var(--primary-color, #b874e3);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flag {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-toggle {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+</style>
+
+
+    <nav class="nav">
+      <div class="nav-container">
+        
+        <a href="/en/">
+          <h2 class="nav-title">MicaelleOS</h2>
+        </a>
+        <ul>
+          
+            <li><a href="/en/#about">About</a></li>
+          
+            <li><a href="/en/portfolio/">Portfolio</a></li>
+          
+            <li><a href="/en/blog/">Blog</a></li>
+          
+            <li><a href="/en/books/">Books</a></li>
+          
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      
+
+<style>
+:root {
+    --primary-color: #b874e3;
+    --secondary-color: #7199ab;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+}
+
+body {
+    font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, p { margin: 0; }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover { color: var(--secondary-color); }
+
+.books-intro {
+    text-align: left;
+    color: var(--text-color);
+    border-bottom: 1px solid #ddd;
+    padding: 80px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.books-intro h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+.books-intro h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.3;
+}
+
+.books-intro p {
+    font-size: 1rem;
+    max-width: 700px;
+    color: var(--text-color);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-item {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.book-cover {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.book-cover img {
+    width: 300px;
+    border-radius: 6px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.book-cover img:hover {
+    transform: translateY(-4px);
+}
+
+.book-cover-placeholder {
+    width: 200px;
+    height: 280px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    box-shadow: 6px 6px 20px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.book-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.book-info h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.book-meta {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+}
+
+.book-format-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #f0e6fb;
+    color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.book-description {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.book-topics {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.book-topics li {
+    font-size: 0.95rem;
+    color: #555;
+    padding-left: 20px;
+    position: relative;
+}
+
+.book-topics li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.book-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.btn-amazon {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-amazon:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .books-intro { padding: 40px 40px; }
+    .books-list { padding: 50px 25px; gap: 60px; }
+    .book-item { gap: 40px; padding: 40px; }
+}
+
+@media (max-width: 768px) {
+    .book-item {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 25px;
+        gap: 30px;
+    }
+
+    .book-cover { width: 100%; justify-content: center; }
+
+    .book-info h2 { font-size: 1.3rem; }
+
+    .books-intro { padding: 30px 30px; }
+    .books-list { padding: 30px 15px; gap: 40px; }
+}
+
+@media (max-width: 480px) {
+    .books-intro { padding: 20px 20px; }
+    .books-list { padding: 20px 10px; gap: 30px; }
+    .book-item { padding: 20px 15px; }
+}
+</style>
+
+<section class="books-intro">
+    <div class="intro-content">
+        <h1>Books</h1>
+        <h2>Technical Publications</h2>
+        <p>Some of the topics I study and work with also become books. Here you'll find my publications available on Amazon.</p>
+    </div>
+</section>
+
+<section class="books-list">
+    
+    
+    <div class="book-item">
+        <div class="book-cover">
+            
+                <a href="https://www.amazon.com.br/gp/aw/d/B0H6JYND79?storeType=ebooks" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/img/books/rlhf-book.jpg" alt="RLHF and Language Model Evaluation: From Mathematical Theory to Production Monitoring">
+                </a>
+            
+        </div>
+        <div class="book-info">
+            <h2>RLHF and Language Model Evaluation: From Mathematical Theory to Production Monitoring</h2>
+            <p class="book-meta">
+                by Micaelle O. Souza
+                <br><span class="book-format-badge">Kindle eBook</span>
+            </p>
+            <p class="book-description">Master the complete lifecycle of modern language model alignment. This book provides a practical and rigorous guide to RLHF (Reinforcement Learning from Human Feedback), DPO, Constitutional AI, RLAIF, and modern LLM evaluation. Covering both theory and implementation, you'll learn how alignment systems are built, optimized, evaluated, and monitored in production environments.
+</p>
+            
+            <ul class="book-topics">
+                
+                <li>Mathematical foundations of RLHF, PPO, reward modeling, and preference optimization</li>
+                
+                <li>Modern alignment methods including DPO, KTO, ORPO, Constitutional AI, and RLAIF</li>
+                
+                <li>Hands-on implementations using the Hugging Face ecosystem</li>
+                
+                <li>Multidimensional evaluation of toxicity, bias, factuality, helpfulness, and harmlessness</li>
+                
+                <li>Production monitoring, guardrails, observability, and drift detection</li>
+                
+            </ul>
+            
+            <div class="book-actions">
+                <a class="btn-amazon" href="https://www.amazon.com.br/gp/aw/d/B0H6JYND79?storeType=ebooks" target="_blank" rel="noopener noreferrer">
+                    Buy on Amazon →
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+    </main>
+
+    <footer>
+      <div class="social-layer">
+        <div class="social-icons">
+          <p>&copy; 2026 - Micaelle O.S.. All rights reserved.</p>
+          <ul>
+            
+<li>
+  <a href="mailto:micaelle.osouza@gmail.com" title="email">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/https://github.com/micaelleos/" title="Follow On GitHub">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://www.linkedin.com/in/micaelle-souza/" title="Follow On LinkedIn">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

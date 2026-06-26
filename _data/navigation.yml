@@ -7,6 +7,8 @@ pt:
     url: "/pt/portfolio/"
   - title: "Blog"
     url: "/pt/blog/"
+  - title: "Livros"
+    url: "/pt/livros/"
 
 en:
   - title: "About"
@@ -15,3 +17,5 @@ en:
     url: "/en/portfolio/"
   - title: "Blog"
     url: "/en/blog/"
+  - title: "Books"
+    url: "/en/books/"

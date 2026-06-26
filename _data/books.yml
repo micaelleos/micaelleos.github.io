@@ -1,0 +1,37 @@
+pt:
+  - title: "RLHF e Avaliação de Modelos de Linguagem: Da Teoria Matemática ao Monitoramento em Produção"
+    author: "Micaelle O. Souza"
+    format: "eBook Kindle"
+    cover: "/assets/img/books/rlhf-book.jpg"
+    amazon_url: "https://www.amazon.com.br/gp/aw/d/B0H6JYND79?storeType=ebooks"
+    description: >
+      Domine o ciclo de vida completo do alinhamento de modelos de linguagem modernos.
+      Este livro oferece um guia prático e rigoroso sobre RLHF (Reinforcement Learning from Human Feedback),
+      DPO, Constitutional AI, RLAIF e avaliação moderna de LLMs.
+      Cobrindo teoria e implementação, você aprenderá como sistemas de alinhamento são construídos,
+      otimizados, avaliados e monitorados em ambientes de produção.
+    topics:
+      - "Fundamentos matemáticos de RLHF, PPO, modelagem de recompensa e otimização de preferências"
+      - "Métodos modernos de alinhamento incluindo DPO, KTO, ORPO, Constitutional AI e RLAIF"
+      - "Implementações práticas usando o ecossistema Hugging Face"
+      - "Avaliação multidimensional de toxicidade, viés, factualidade, utilidade e inofensividade"
+      - "Monitoramento em produção, guardrails, observabilidade e detecção de drift"
+
+en:
+  - title: "RLHF and Language Model Evaluation: From Mathematical Theory to Production Monitoring"
+    author: "Micaelle O. Souza"
+    format: "Kindle eBook"
+    cover: "/assets/img/books/rlhf-book.jpg"
+    amazon_url: "https://www.amazon.com.br/gp/aw/d/B0H6JYND79?storeType=ebooks"
+    description: >
+      Master the complete lifecycle of modern language model alignment.
+      This book provides a practical and rigorous guide to RLHF (Reinforcement Learning from Human Feedback),
+      DPO, Constitutional AI, RLAIF, and modern LLM evaluation.
+      Covering both theory and implementation, you'll learn how alignment systems are built,
+      optimized, evaluated, and monitored in production environments.
+    topics:
+      - "Mathematical foundations of RLHF, PPO, reward modeling, and preference optimization"
+      - "Modern alignment methods including DPO, KTO, ORPO, Constitutional AI, and RLAIF"
+      - "Hands-on implementations using the Hugging Face ecosystem"
+      - "Multidimensional evaluation of toxicity, bias, factuality, helpfulness, and harmlessness"
+      - "Production monitoring, guardrails, observability, and drift detection"
